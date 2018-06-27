@@ -4,21 +4,21 @@ public class Activity控件 {
 
 	private void Activity跳转() {
 		// 1、普通跳转
-		Intent intent = new Intent(LoginActivity.this,MainTab.class);
+		Intent intent = new Intent(Activity1.this,Activity2.class);
 		startActivity(intent);									
 		finish();
 
 		// 2、跳转传值  跳转传递 “你们好”
-		Intent intent = new Intent(See_chenpin_Activity.this,See_chenpin_info_Activity.class);
-		intent.putExtra("ChanPinID", "你们好");
+		Intent intent = new Intent(Activity1.this,Activity2.class);
+		intent.putExtra("data", "你们好");
 		startActivity(intent);
 		//接收
 		Intent intent = getIntent();
-		String ChanPinID = intent.getStringExtra("ChanPinID").toString().trim();
+		String data = intent.getStringExtra("data").toString().trim();
 
 		// 3、跳转传值（List）
 		Intent intent=new Intent();
-		intent.setClass(Me_Activity.this, Me_JiaoYi_Activity.class);
+		intent.setClass(Activity1.this,Activity2.class);
 		Bundle bundle=new Bundle();
 		bundle.putParcelableArrayList("list", (ArrayList)a);
 		intent.putExtras(bundle);
