@@ -1,10 +1,10 @@
-Android应用程序签名打包（AS）
+﻿Android应用程序签名打包（AS）
 
 使用Android studio对Android应用签名步骤：
 
 第一步：
 
-![image](/1.知识点记录/img/1110462-20170317191822260-1093760701.png)
+![image](https://github.com/Forever2017/CodeNotes/blob/master/1.%E7%9F%A5%E8%AF%86%E7%82%B9%E8%AE%B0%E5%BD%95/img/1110462-20170317191822260-1093760701.png)
 
 第二步：
 
