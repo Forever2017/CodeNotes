@@ -1,0 +1,3 @@
+1、文字选中颜色修改。    setting-Editor-Color Scheme - General - Editor - Selection background 
+2、
+
