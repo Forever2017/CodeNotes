@@ -10,10 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.pvt.base.BaseViewHolder;
-import com.pvt.bean.HomeBean;
 import com.pvt.bean.RoomsBean;
-import com.pvt.pvtvideo.ActivityRoomList;
-import com.pvt.pvtvideo.ActivityRoomVideo;
+import com.video.ui.ActivityRoomVideo;
 import com.pvt.pvtvideo.R;
 
 import java.util.List;
@@ -57,6 +55,8 @@ public class AdapterRoomList extends RecyclerView.Adapter {
 
                // 进入房间
                 Intent intent = new Intent(context, ActivityRoomVideo.class);
+                intent.putExtra("livePlatformId",list.get(position).getLivePlatformId());
+                intent.putExtra("no",list.get(position).getNo());
                 context.startActivity(intent);
 
             }

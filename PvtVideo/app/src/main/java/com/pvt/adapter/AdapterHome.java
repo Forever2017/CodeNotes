@@ -55,6 +55,7 @@ public class AdapterHome extends RecyclerView.Adapter {
 
                 // Toast.makeText(context,"点击："+list.get(position).getName(),Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(context, ActivityRoomList.class);
+                intent.putExtra("id",list.get(position).getId());
                 context.startActivity(intent);
 
             }

@@ -38,7 +38,7 @@
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <activity
-            android:name=".ActivityRoomVideo"
+            android:name="com.video.ui.ActivityRoomVideo"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"

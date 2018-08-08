@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.db.core.Core;
+import com.db.core.UserDB;
 import com.loopj.android.http.RequestParams;
 import com.loopj.android.http.TextHttpResponseHandler;
 import com.pvt.adapter.AdapterRoomList;
@@ -23,10 +25,12 @@ public class ActivityRoomList extends AppCompatActivity {
     private AdapterRoomList adapter;
     private List<RoomsBean.RoomBean> list;
 
+    private String id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room_list);
+        id = getIntent().getStringExtra("id");
         init();
         data();
     }
@@ -49,9 +53,9 @@ public class ActivityRoomList extends AppCompatActivity {
         // userId=161be15eeeea48f384ae3bba624f60d0
         RequestParams params = new RequestParams();
         params.put("app","nice");
-        params.put("livePluginId","63b3ffc1ec5c4e97b9ae83a6d211105b");
-        params.put("token","0f8420f60e4a43ca9b4d60e59919f5a9");
-        params.put("userId","161be15eeeea48f384ae3bba624f60d0");
+        params.put("livePluginId",id);
+        params.put("token", Core.userDb.getToken());
+        params.put("userId",Core.userDb.getId());
 
         HttpUtils.post(HttpUtils.ROOM_LIST, params, new TextHttpResponseHandler() {
             @Override
