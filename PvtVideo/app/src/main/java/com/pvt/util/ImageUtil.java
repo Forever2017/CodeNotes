@@ -4,10 +4,13 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Base64;
 
-public class MoreUtil {
+public class ImageUtil {
 
 
-    public static Bitmap stringToBitmap(String string) {
+    /**
+     * String转Base64图片
+     */
+    public static Bitmap strToBase64(String string) {
         Bitmap bitmap = null;
         try {
             byte[] bitmapArray = Base64.decode(string.split(",")[1], Base64.DEFAULT);
@@ -17,7 +20,6 @@ public class MoreUtil {
         }
         return bitmap;
     }
-
 
 
 }

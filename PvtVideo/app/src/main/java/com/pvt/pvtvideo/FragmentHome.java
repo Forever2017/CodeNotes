@@ -14,6 +14,7 @@ import com.loopj.android.http.RequestParams;
 import com.loopj.android.http.TextHttpResponseHandler;
 import com.pvt.adapter.AdapterHome;
 import com.pvt.bean.HomeBean;
+import com.pvt.bean.RoomsBean;
 import com.pvt.util.GsonUtils;
 import com.pvt.util.HttpUtils;
 
@@ -64,28 +65,28 @@ public class FragmentHome extends Fragment{
 
 
 
+
+
     public void data(){
         RequestParams params = new RequestParams();
-        HttpUtils.post(HttpUtils.HOME_LIST, params, new TextHttpResponseHandler() {
+        HttpUtils.post(HttpUtils.HOME_LIST, params, new HttpUtils.AsyncHttp() {
             @Override
-            public void onSuccess(int statusCode, Header[] headers, String responseString) {
-                if(statusCode == 200){
-                    HomeBean hb =  GsonUtils.parseJson(responseString,HomeBean.class);
+            public void onSuccess(String responseString) {
+                super.onSuccess(responseString);
+                HomeBean hb =  GsonUtils.parseJson(responseString,HomeBean.class);
 
-                    list.clear();
-                    list.addAll(hb.getResult().getFlatbeds());
+                list.clear();
+                list.addAll(hb.getResult().getFlatbeds());
 
-                    adapter.notifyDataSetChanged();
-
-
-                }
+                adapter.notifyDataSetChanged();
             }
 
             @Override
-            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+            public void NetworkError() {
+                super.NetworkError();
             }
-
         });
+
 
 
 

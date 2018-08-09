@@ -36,11 +36,12 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    /*BottomNavigation底部导航栏   github： https://github.com/Ashok-Varma/BottomNavigation*/
+    /* BottomNavigation底部导航栏   github： https://github.com/Ashok-Varma/BottomNavigation*/
     implementation 'com.ashokvarma.android:bottom-navigation-bar:2.0.4'
     /* GSON解析*/
     implementation 'com.google.code.gson:gson:2.4'
-    /*网络交互框架 android-async-http*/
+    /* 网络交互框架 android-async-http*/
     implementation 'com.loopj.android:android-async-http:1.4.9'
-
+    /* Sqlite数据库框架  LitePal  */
+    implementation 'org.litepal.android:core:2.0.0'
 }

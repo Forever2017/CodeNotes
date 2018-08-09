@@ -1,18 +1,25 @@
 package com.video.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
-import com.db.core.Core;
+import com.db.bean.PvtDB;
+import com.db.util.DButil;
 import com.loopj.android.http.RequestParams;
 import com.loopj.android.http.TextHttpResponseHandler;
 import com.pili.pldroid.player.widget.PLVideoView;
 import com.pvt.bean.RoomInfoBean;
 import com.pvt.bean.RoomsBean;
+import com.pvt.pvtvideo.ActivityRegistered;
+import com.pvt.pvtvideo.ActivityRoomList;
 import com.pvt.pvtvideo.R;
 import com.pvt.util.GsonUtils;
 import com.pvt.util.HttpUtils;
 import com.video.util.MediaController;
+
+import org.litepal.LitePal;
 
 import cz.msebera.android.httpclient.Header;
 
@@ -43,24 +50,30 @@ public class ActivityRoomVideo extends AppCompatActivity {
         params.put("app","nice");
         params.put("livePluginId",livePlatformId);
         params.put("no", no);
-        params.put("userId",Core.userDb.getId());
 
-        HttpUtils.post(HttpUtils.ROOM_INFO, params, new TextHttpResponseHandler() {
+        params.put("userId", DButil.PvtDBvaule("userId"));
+
+        HttpUtils.post(HttpUtils.ROOM_INFO, params, new HttpUtils.AsyncHttp() {
             @Override
-            public void onSuccess(int statusCode, Header[] headers, String responseString) {
-                if(statusCode == 200){
-
-                    RoomInfoBean rib =  GsonUtils.parseJson(responseString,RoomInfoBean.class);
+            public void onSuccess(String responseString) {
+                super.onSuccess(responseString);
+                RoomInfoBean rib =  GsonUtils.parseJson(responseString,RoomInfoBean.class);
+                
+                if(rib.getType().equals("true")){
                     setting(rib.getResult().getPlayUrl());
-
+                }else{
+                    Toast.makeText(getApplicationContext(),rib.getMessage(),Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(ActivityRoomVideo.this,ActivityRegistered.class));
                 }
+
             }
 
             @Override
-            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+            public void NetworkError() {
+                super.NetworkError();
             }
-
         });
+
 
 
 

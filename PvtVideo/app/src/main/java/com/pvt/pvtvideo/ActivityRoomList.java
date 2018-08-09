@@ -1,18 +1,24 @@
 package com.pvt.pvtvideo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.Toast;
 
-import com.db.core.Core;
-import com.db.core.UserDB;
+import com.db.bean.PvtDB;
+import com.db.util.DButil;
 import com.loopj.android.http.RequestParams;
 import com.loopj.android.http.TextHttpResponseHandler;
 import com.pvt.adapter.AdapterRoomList;
+import com.pvt.bean.CodeBean;
 import com.pvt.bean.RoomsBean;
 import com.pvt.util.GsonUtils;
 import com.pvt.util.HttpUtils;
+import com.pvt.util.ImageUtil;
+
+import org.litepal.LitePal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,28 +60,30 @@ public class ActivityRoomList extends AppCompatActivity {
         RequestParams params = new RequestParams();
         params.put("app","nice");
         params.put("livePluginId",id);
-        params.put("token", Core.userDb.getToken());
-        params.put("userId",Core.userDb.getId());
 
-        HttpUtils.post(HttpUtils.ROOM_LIST, params, new TextHttpResponseHandler() {
+        params.put("token", DButil.PvtDBvaule("token"));
+        params.put("userId",DButil.PvtDBvaule("userId"));
+
+        HttpUtils.post(HttpUtils.ROOM_LIST, params, new HttpUtils.AsyncHttp() {
             @Override
-            public void onSuccess(int statusCode, Header[] headers, String responseString) {
-                if(statusCode == 200){
-                    RoomsBean hb =  GsonUtils.parseJson(responseString,RoomsBean.class);
+            public void onSuccess(String responseString) {
+                super.onSuccess(responseString);
+                RoomsBean hb =  GsonUtils.parseJson(responseString,RoomsBean.class);
 
+                if(hb.getType().equals("true")){
                     list.clear();
                     list.addAll(hb.getResult());
-
                     adapter.notifyDataSetChanged();
-
-
+                }else{
+                    Toast.makeText(getApplicationContext(),hb.getMessage(),Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(ActivityRoomList.this,ActivityRegistered.class));
                 }
             }
 
             @Override
-            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+            public void NetworkError() {
+                super.NetworkError();
             }
-
         });
 
 
