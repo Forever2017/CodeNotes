@@ -2,6 +2,7 @@ package com.pvt.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.drawee.view.SimpleDraweeView;
 import com.pvt.base.BaseViewHolder;
 import com.pvt.bean.HomeBean;
 import com.pvt.pvtvideo.ActivityRoomList;
@@ -36,16 +38,7 @@ public class AdapterHome extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
 
-        //在这部分做对UI的操作
-        /*((HalderViewHolder) holder).iv.setImageResource(list.get(position).getHead());
-        ((HalderViewHolder) holder).tv.setText(list.get(position).getName());                //由于RecycleView没有提供对item的点击事件，暂时是
-        ((HalderViewHolder) holder).item.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                context.startActivity(new Intent(context, ZhiBoActivity.class));
-            }
-        });*/
-
+        ((HalderViewHolder) holder).img.setImageURI(Uri.parse(list.get(position).getLogo()));
 
         ((HalderViewHolder) holder).title.setText(list.get(position).getName());
 
@@ -53,7 +46,6 @@ public class AdapterHome extends RecyclerView.Adapter {
             @Override
             public void onClick(View view) {
 
-                // Toast.makeText(context,"点击："+list.get(position).getName(),Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(context, ActivityRoomList.class);
                 intent.putExtra("id",list.get(position).getId());
                 context.startActivity(intent);
@@ -69,7 +61,7 @@ public class AdapterHome extends RecyclerView.Adapter {
 
 
     class HalderViewHolder extends BaseViewHolder {
-        ImageView img;
+        SimpleDraweeView img;
         TextView title;
 
         public HalderViewHolder(View rootView) {
