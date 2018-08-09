@@ -50,8 +50,6 @@ public class ActivityRoomList extends AppCompatActivity {
 
     }
 
-
-
     public void data(){
         // app=nice
         // livePluginId=63b3ffc1ec5c4e97b9ae83a6d211105b
@@ -71,9 +69,11 @@ public class ActivityRoomList extends AppCompatActivity {
                 RoomsBean hb =  GsonUtils.parseJson(responseString,RoomsBean.class);
 
                 if(hb.getType().equals("true")){
-                    list.clear();
-                    list.addAll(hb.getResult());
-                    adapter.notifyDataSetChanged();
+                    if(hb.getResult()!=null&&hb.getResult().size()>0){
+                        list.clear();
+                        list.addAll(hb.getResult());
+                        adapter.notifyDataSetChanged();
+                    }
                 }else{
                     Toast.makeText(getApplicationContext(),hb.getMessage(),Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(ActivityRoomList.this,ActivityRegistered.class));
@@ -88,5 +88,11 @@ public class ActivityRoomList extends AppCompatActivity {
 
 
 
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        data();
     }
 }
