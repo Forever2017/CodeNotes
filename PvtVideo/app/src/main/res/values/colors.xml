@@ -150,6 +150,4 @@
     <color name="crimson">#dc143c</color><!--暗深红色 -->
     <color name="plum">#dda0dd</color><!--洋李色 -->
     <color name="gainsboro">#dcdcdc</color><!--淡灰色 -->
-
-    <color name="grey_transparent">#40808080</color><!--灰色 -->
 </resources>

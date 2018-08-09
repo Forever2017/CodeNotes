@@ -2,7 +2,6 @@ package com.pvt.adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.facebook.drawee.view.SimpleDraweeView;
 import com.pvt.base.BaseViewHolder;
 import com.pvt.bean.RoomsBean;
 import com.video.ui.ActivityRoomVideo;
@@ -38,7 +36,16 @@ public class AdapterRoomList extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
 
-        ((HalderViewHolder) holder).img.setImageURI(Uri.parse(list.get(position).getImage()));
+        //在这部分做对UI的操作
+        /*((HalderViewHolder) holder).iv.setImageResource(list.get(position).getHead());
+        ((HalderViewHolder) holder).tv.setText(list.get(position).getName());                //由于RecycleView没有提供对item的点击事件，暂时是
+        ((HalderViewHolder) holder).item.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                context.startActivity(new Intent(context, ZhiBoActivity.class));
+            }
+        });*/
+
 
         ((HalderViewHolder) holder).title.setText(list.get(position).getNicename());
 
@@ -63,7 +70,7 @@ public class AdapterRoomList extends RecyclerView.Adapter {
 
 
     class HalderViewHolder extends BaseViewHolder {
-        SimpleDraweeView img;
+        ImageView img;
         TextView title;
 
         public HalderViewHolder(View rootView) {
