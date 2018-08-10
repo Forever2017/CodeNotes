@@ -26,9 +26,6 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-
-    implementation files('libs/pldroid-player-2.1.4.jar')
-
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     implementation 'com.android.support:design:26.1.0'
@@ -36,6 +33,11 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
+
+    /* 百度OCR文字解析*/
+    implementation files('libs/ocr-sdk.jar')
+    /* 七牛云播放器SDK*/
+    implementation files('libs/pldroid-player-2.1.4.jar')
     /* BottomNavigation底部导航栏  */
     implementation 'com.ashokvarma.android:bottom-navigation-bar:2.0.4'
     /* GSON解析*/
@@ -46,4 +48,25 @@ dependencies {
     implementation 'org.litepal.android:core:2.0.0'
     /* 图片加载框架 Fresco */
     implementation 'com.facebook.fresco:fresco:0.12.0'
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     android:padding="50dp">
 
-    <ImageView
+
+    <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/RegImg"
         android:layout_width="180dp"
         android:layout_height="70dp"
         android:layout_toEndOf="@+id/RegEdit"
         android:scaleType="fitXY"
-        android:src="@color/grey" />
+        fresco:placeholderImage="@color/grey" />
+
+    <TextView
+        android:id="@+id/OcrState"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content" />
 
     <EditText
         android:id="@+id/RegEdit"
@@ -21,11 +28,13 @@
         android:hint="输入.." />
 
     <Button
+        android:id="@+id/Fuck"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:text="识别" />
+        android:text="太烂了！清空自己手输！" />
 
-    <Button android:id="@+id/RegOk"
+    <Button
+        android:id="@+id/RegOk"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:text="确认" />

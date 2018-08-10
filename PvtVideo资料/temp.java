@@ -1,53 +1,3 @@
-1、推送 、 满意度 问卷反馈
-https://www.jiguang.cn/jpush/#/app/89d30fb3d3fffbb385cd44f0/push_history/list?type=notification
-579990093@sinyi.com.cn   Sinyi168
-
-RegistrationID = 1104a89792841e0e9a3
-
-
-http://docs.jiguang.cn/jpush/client/Android/android_senior/
-
-http://10.100.250.153:8080/help
-
-
-http://222.73.113.158:8080/LimitBuyCondition/Questionnaire?q=1&m=17349712737
-
-
-Questionnaire?q=1&m=17349712737
-
-
-GetAppSendMsgByUserNoModuleType
-http://222.73.113.141:9998/api/Message/GetAppSendMsgByUserNoModuleType?strUserNo=570015270&ModuleType=Other
-{
-  "sEcho": 1,
-  "iDisplayStart": 0,
-  "iDisplayLength": 10,
-  "PageIndex": 1,
-  "PageSize": 5
-}
-
-strUserNo=570015270
-ModuleType=Other
-
-
-
-570015270
-
-###########################################################################################################
-2、 1.委托新增 -> 只有租赁居住和租赁非居住才会提示 Msg 提示
-      2.推送类型 推送类型Case_Requirement
-	  
-	  
-	  aaa:{"toke"："safgasdgasdfasdfasafsahdf "}
-	  
-	  
-{"Status":200,"ServerTime":"2018-08-03 18:21:43",
-
-"Result":{"Msg":"新增成功"},
-
-"Msg":"操作成功"}
-	  
-
 ###########################################################################################################
 
 //最大列表
@@ -114,7 +64,11 @@ no=1514119&userId=69dfcfce49f64159bc25e77be3e1b9a3
      http://api.yy2025.com/api/zhibo/flatbedAnchor/list?app=nice&livePluginId=63b3ffc1ec5c4e97b9ae83a6d211105b&token=0f8420f60e4a43ca9b4d60e59919f5a9&userId=161be15eeeea48f384ae3bba624f60d0
      */
     /*获取当前直播info
-     http://api.yy2025.com/api/zhibo/flatbedAnchor/info?app=nice&livePluginId=63b3ffc1ec5c4e97b9ae83a6d211105b&no=241213&userId=dfdcbc7f97074ca19b0a7c9dbb648ad6
+     http://api.yy2025.com/api/zhibo/flatbedAnchor/info?
+	 app=nice
+	 &livePluginId=63b3ffc1ec5c4e97b9ae83a6d211105b
+	 &no=241213
+	 &userId=dfdcbc7f97074ca19b0a7c9dbb648ad6
      */
 	  
 	  
@@ -140,11 +94,61 @@ no=1514119&userId=69dfcfce49f64159bc25e77be3e1b9a3
 	  
 	  
 	  
-	  
-	  
-	  
-	  
-	  
+//房间详情	  
+http://api.yy2025.com/api/zhibo/flatbedAnchor/info?app=nice&livePluginId=63b3ffc1ec5c4e97b9ae83a6d211105b&no=62093&userId=de0aa3bbbf834eaf86d3d7f52acddb97
+	
+	 app=nice //写死
+	 &livePluginId=63b3ffc1ec5c4e97b9ae83a6d211105b //无所谓
+	 &no=241213  //房间号码(永远不会变，如果查询不出来，就是list没有返回 关闭？或者未直播？)
+	 &userId=dfdcbc7f97074ca19b0a7c9dbb648ad6 // 需要新的	"用户会员已过期",
+	 
+	 
+{
+"code": "02",
+"type": false,
+"message": "用户会员已过期",
+"result": null
+}  
+	
+{  正常的数据
+"code": "00",
+"type": true,
+"message": "操作成功",
+"result": {
+	"no": "1283424",
+	"image": "http://o.qingsonghr.com/public/attachment/201807/20/04/5b50f8d5d0b2d.png?x-oss-process=image/resize,m_mfit,h_260,w_260",
+	"quantity": 409,
+	"is_follow": false,
+	"groupId": "@TGS#aJEMYOLFH",
+	"appId": "1400115259",
+	"livePlatformId": "63b3ffc1ec5c4e97b9ae83a6d211105b",
+	"nicename": "YH蒙蒙",
+	"imageThumb": "http://o.qingsonghr.com/public/attachment/201807/20/04/5b50f8d5d0b2d.png?x-oss-process=image/resize,m_mfit,h_150,w_150",
+	"title": "",
+	"roomId": "582670",
+	"playUrl": "http://a10.shahao44.top/live/582670_1be1a68e1776e9bce095.flv?auth_key=1533909462-0-0-a63f36414ab0c243739defcd5c7bfa99"
+	}
+}
+	
+{  房间号码返回
+	"code": "00",
+	"type": true,
+	"message": "操作成功",
+	"result": {
+	"no": "",
+	"image": "",
+	"quantity": 0,
+	"is_follow": false,
+	"groupId": "",
+	"appId": "",
+	"livePlatformId": "",
+	"nicename": "",
+	"imageThumb": "",
+	"title": "",
+	"roomId": "",
+	"playUrl": ""
+}
+  
 	  
 	  
 	  

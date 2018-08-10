@@ -4,10 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.db.bean.PvtDB;
+import com.db.bean.RoomBeanDB;
 import com.db.util.DButil;
 import com.loopj.android.http.RequestParams;
 import com.loopj.android.http.TextHttpResponseHandler;
@@ -31,6 +33,9 @@ public class ActivityRoomVideo extends AppCompatActivity implements View.OnClick
 
     private String livePlatformId, no;
     private LinearLayout VideoTool;
+    private RoomInfoBean.RoomBean rb;
+    private Button star;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,18 +43,14 @@ public class ActivityRoomVideo extends AppCompatActivity implements View.OnClick
         livePlatformId = getIntent().getStringExtra("livePlatformId");
         no = getIntent().getStringExtra("no");
 
+        star = findViewById(R.id.star);
         VideoTool = findViewById(R.id.VideoTool);
-
         mVideoView = findViewById(R.id.PLVideoView);
-        mVideoView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-            }
-        });
+        star.setOnClickListener(this);
 
         data();
-        //  setting("");
+
     }
 
     public void data() {
@@ -71,7 +72,11 @@ public class ActivityRoomVideo extends AppCompatActivity implements View.OnClick
                 RoomInfoBean rib = GsonUtils.parseJson(responseString, RoomInfoBean.class);
 
                 if (rib.getType().equals("true")) {
-                    setting(rib.getResult().getPlayUrl());
+                    rb = rib.getResult();
+                    setting(rb.getPlayUrl());
+                    otherConfig();
+
+                    VideoTool.setVisibility(View.VISIBLE);
                 } else {
                     Toast.makeText(getApplicationContext(), rib.getMessage(), Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(ActivityRoomVideo.this, ActivityRegistered.class));
@@ -123,6 +128,54 @@ public class ActivityRoomVideo extends AppCompatActivity implements View.OnClick
 
     }
 
+    private void otherConfig() {
+        //收藏
+        if (LitePal.where("no = ?", rb.getNo()).find(RoomBeanDB.class).size() > 0) {
+            //已收藏
+            star.setText("已收藏");
+        } else {
+            //未收藏
+            star.setText("收藏");
+        }
+
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+           /* case R.id.PLVideoView:
+
+                Toast.makeText(getApplicationContext(),"点击",Toast.LENGTH_LONG).show();
+                if(VideoTool.getVisibility() == View.GONE)  VideoTool.setVisibility(View.GONE);
+                else VideoTool.setVisibility(View.VISIBLE);
+
+                break;*/
+            case R.id.star:
+                if (star.getText().toString().equals("收藏")) {
+                    //未收藏，新增数据库
+
+                    if (new RoomBeanDB(rb).save()) {
+                        Toast.makeText(getApplicationContext(), "收藏成功.", Toast.LENGTH_SHORT).show();
+                        star.setText("已收藏");
+                    } else
+                        Toast.makeText(getApplicationContext(), "收藏失败!", Toast.LENGTH_SHORT).show();
+
+                } else {
+                    //已收藏，删除数据库
+                    if (LitePal.deleteAll(RoomBeanDB.class, "no = ?", rb.getNo())>0) {
+                        Toast.makeText(getApplicationContext(), "删除收藏成功.", Toast.LENGTH_SHORT).show();
+                        star.setText("收藏");
+                    } else
+                        Toast.makeText(getApplicationContext(), "删除收藏败!", Toast.LENGTH_SHORT).show();
+
+                }
+                break;
+
+        }
+
+    }
+
+
     @Override
     protected void onRestart() {
         super.onRestart();
@@ -147,17 +200,5 @@ public class ActivityRoomVideo extends AppCompatActivity implements View.OnClick
         mVideoView.stopPlayback();
     }
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.PLVideoView:
 
-                Toast.makeText(getApplicationContext(),"点击",Toast.LENGTH_LONG).show();
-                if(VideoTool.getVisibility() == View.GONE)  VideoTool.setVisibility(View.GONE);
-                else VideoTool.setVisibility(View.VISIBLE);
-
-                break;
-        }
-
-    }
 }

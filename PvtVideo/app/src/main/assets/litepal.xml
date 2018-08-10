@@ -10,6 +10,7 @@
     <!--list 配置映射类。-->
     <list>
         <mapping class="com.db.bean.PvtDB" />
+        <mapping class="com.db.bean.RoomBeanDB" />
     </list>
 
     <!--

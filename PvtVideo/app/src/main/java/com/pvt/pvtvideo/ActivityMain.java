@@ -16,7 +16,7 @@ public class ActivityMain extends AppCompatActivity {
 
     BottomNavigationBar bottomNavigationBar;
 
-    Fragment FragmentHome;
+    Fragment FragmentHome,FragmentStar;
     Fragment FragmentOther;
 
     @Override
@@ -27,6 +27,7 @@ public class ActivityMain extends AppCompatActivity {
         bottomNavigationBar = findViewById(R.id.bottom_navigation_bar);
 
         FragmentHome = new FragmentHome();
+        FragmentStar = new FragmentStar();
         FragmentOther = new FragmentOther();
 
         bottomNavigationBar.setMode(BottomNavigationBar.MODE_FIXED);
@@ -47,7 +48,7 @@ public class ActivityMain extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.home_activity_frag_container, FragmentHome).commitAllowingStateLoss();
                         break;
                     case 1:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.home_activity_frag_container, FragmentOther).commitAllowingStateLoss();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.home_activity_frag_container, FragmentStar).commitAllowingStateLoss();
                         break;
                     case 2:
                         getSupportFragmentManager().beginTransaction().replace(R.id.home_activity_frag_container, FragmentOther).commitAllowingStateLoss();

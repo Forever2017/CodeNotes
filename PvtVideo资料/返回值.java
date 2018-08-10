@@ -57,30 +57,56 @@
         "token":"a82b10412898484191f4c293e1c90c1d"
     }
 }
+列表房间详情
+{
+            "roomId":"582670",
+            "no":"1283424",
+            "title":"",
+            "nicename":"YH蒙蒙",
+            "playUrl":"",
+            "quantity":400,
+            "imageThumb":"http://o.qingsonghr.com/public/attachment/201807/20/04/5b50f8d5d0b2d.png?x-oss-process=image/resize,m_mfit,h_150,w_150",
+            "image":"http://o.qingsonghr.com/public/attachment/201807/20/04/5b50f8d5d0b2d.png?x-oss-process=image/resize,m_mfit,h_260,w_260",
+            "groupId":"",
+            "appId":"",
+            "livePlatformId":"63b3ffc1ec5c4e97b9ae83a6d211105b"
+        },
 
-房间详情
- {
-    "code":"00",
-    "type":true,
-    "message":"操作成功",
-    "result":{
-        "no":"964518",
-        "image":"http://o.qingsonghr.com/public/attachment/201807/27/02/origin/1532602107964518.jpg?x-oss-process=image/resize,m_mfit,h_260,w_260",
-        "quantity":14547,
-        "is_follow":false,
-        "groupId":"@TGS#aPUOGMLFL",
-        "appId":"1400115259",
-        "livePlatformId":"63b3ffc1ec5c4e97b9ae83a6d211105b",
-        "nicename":"小姐姐 ～",
-        "imageThumb":"http://o.qingsonghr.com/public/attachment/201807/27/02/origin/1532602107964518.jpg?x-oss-process=image/resize,m_mfit,h_150,w_150",
-        "title":"",
-        "roomId":"564743",
-        "playUrl":"http://a2.shahao44.top/live/564743_0cf81bef9d90e1826e21.flv?auth_key=1533761732-0-0-6d8355285849b89e42b9b7c8ec73a4e6"
-    }
+
+INFO房间详情
+ {  8-10号数据
+	"code": "00",
+	"type": true,
+	"message": "操作成功",
+	"result": {
+		"no": "1283424",
+		"image": "http://o.qingsonghr.com/public/attachment/201807/20/04/5b50f8d5d0b2d.png?x-oss-process=image/resize,m_mfit,h_260,w_260",
+		"quantity": 409,
+		"is_follow": false,
+		"groupId": "@TGS#aJEMYOLFH",
+		"appId": "1400115259",
+		"livePlatformId": "63b3ffc1ec5c4e97b9ae83a6d211105b",
+		"nicename": "YH蒙蒙",
+		"imageThumb": "http://o.qingsonghr.com/public/attachment/201807/20/04/5b50f8d5d0b2d.png?x-oss-process=image/resize,m_mfit,h_150,w_150",
+		"title": "",
+		"roomId": "582670",
+		"playUrl": "http://a10.shahao44.top/live/582670_1be1a68e1776e9bce095.flv?auth_key=1533909462-0-0-a63f36414ab0c243739defcd5c7bfa99"
+	}
 }
 
-
-
+{  8-2号数据
+            "roomId":"546105",
+            "no":"1283424",
+            "title":"",
+            "nicename":"YH蒙蒙",
+            "playUrl":"",
+            "quantity":582,
+            "imageThumb":"http://o.qingsonghr.com/public/attachment/201807/20/04/5b50f8d5d0b2d.png?x-oss-process=image/resize,m_mfit,h_150,w_150",
+            "image":"http://o.qingsonghr.com/public/attachment/201807/20/04/5b50f8d5d0b2d.png?x-oss-process=image/resize,m_mfit,h_260,w_260",
+            "groupId":"",
+            "appId":"",
+            "livePlatformId":"63b3ffc1ec5c4e97b9ae83a6d211105b"
+        },
 
 
 

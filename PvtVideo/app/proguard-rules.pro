@@ -22,4 +22,6 @@
 # 七牛云 直播 播放器
 -keep class com.pili.pldroid.player.** { *; }
 -keep class com.qiniu.qplayer.mediaEngine.MediaPlayer{*;}
-####
+#### 百度 ocr
+-keep class com.baidu.ocr.sdk.**{*;}
+-dontwarn com.baidu.ocr.**
