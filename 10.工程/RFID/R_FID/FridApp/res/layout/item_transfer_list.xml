@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/length_60"
+    android:background="@drawable/item_style" >
+
+    <TextView
+        android:id="@+id/TransferListTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/length_50"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/TransferListState"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/length_10"
+        android:paddingRight="@dimen/length_10"
+        android:text="@string/test"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/font_size_18" />
+
+    <TextView
+        android:id="@+id/TransferListState"
+        android:layout_width="@dimen/length_70"
+        android:layout_height="@dimen/length_50"
+        android:layout_alignParentRight="true"
+        android:background="@color/MainItemGrey"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/VerifyOFF"
+        android:textColor="@color/White"
+        android:textSize="@dimen/font_size_18" />
+
+</RelativeLayout>

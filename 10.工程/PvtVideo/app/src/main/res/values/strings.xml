@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PvtVideo</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="PvtHome">直播平台</string>
+    <string name="PvtRoom">房间列表</string>
+    <string name="StarRoom">收藏房间</string>
+
+</resources>

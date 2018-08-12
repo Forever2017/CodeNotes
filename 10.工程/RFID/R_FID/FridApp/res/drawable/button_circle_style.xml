@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 点击后 -->
+    <!-- 按下 --><item android:drawable="@drawable/button_circle_gray_style" android:state_pressed="true"/>
+    <!-- 选中 --><item android:drawable="@drawable/button_circle_gray_style" android:state_checked="true"/>
+    <!-- 选择 --><item android:drawable="@drawable/button_circle_gray_style" android:state_selected="true"/>
+    <!-- 点击前 -->
+    <item android:drawable="@drawable/button_circle_blue_style"/>
+
+</selector>

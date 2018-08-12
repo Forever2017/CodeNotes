@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/length_60"
+    android:background="@drawable/item_style" >
+
+    <TextView
+        android:id="@+id/ItemListContent"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/length_60"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/ItemListState"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/length_10"
+        android:text="@string/test"
+        android:textColor="@color/MainItemGrey"
+        android:textSize="@dimen/font_size_18" />
+
+    <TextView
+        android:id="@+id/ItemListState"
+        android:layout_width="@dimen/length_80"
+        android:layout_height="@dimen/length_60"
+        android:layout_alignParentRight="true"
+        android:background="@color/CheckBlue"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/test"
+        android:textColor="@color/White"
+        android:textSize="@dimen/font_size_18"
+        android:visibility="gone" />
+
+</RelativeLayout>

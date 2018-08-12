@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_back"
+    android:orientation="vertical" >
+
+    <com.frid.view.NormalTitleBar
+        android:id="@+id/QueryTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:left_visible="false"
+        app:title="@string/tab_title_04" />
+
+    <!-- 第 1 部分 -->
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/QueryBottom"
+        android:layout_below="@+id/QueryTitle"
+        android:layout_marginTop="@dimen/length_10"
+        android:layout_marginLeft="@dimen/length_10"
+        android:layout_marginRight="@dimen/length_10"
+        android:background="@color/White" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/QueryNumber"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/length_40"
+                android:layout_marginTop="@dimen/length_3"
+                android:background="@drawable/item_style"
+                android:drawablePadding="@dimen/length_10"
+                android:drawableRight="@drawable/tab_04_pressed"
+                android:gravity="center_vertical"
+                android:hint="点击选择核对单号."
+                android:paddingLeft="@dimen/length_10"
+                android:paddingRight="@dimen/length_10"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="@drawable/shape_line" />
+
+            <ListView
+                android:id="@+id/QueryList"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/length_1"
+                android:divider="@color/app_back"
+                android:dividerHeight="@dimen/length_1"
+                android:fadingEdge="none"
+                android:fastScrollEnabled="false"
+                android:footerDividersEnabled="false"
+                android:headerDividersEnabled="false"
+                android:smoothScrollbar="true" >
+            </ListView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/QueryUpload"
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="@dimen/length_10"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/button_style"
+            android:text="@string/SetVerify"
+            android:textColor="@color/White" />
+    </FrameLayout>
+
+    <!-- 第二部分 -->
+
+    <LinearLayout
+        android:id="@+id/QueryBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/length_10"
+        android:background="@color/White"
+        android:orientation="vertical" >
+
+        <!-- 商品 -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/length_5" >
+
+            <ImageView
+                android:id="@+id/QueryGoodImg"
+                android:layout_width="@dimen/length_100"
+                android:layout_height="@dimen/length_100"
+                android:padding="@dimen/length_10"
+                android:src="@drawable/test_box" />
+
+            <TextView
+                android:id="@+id/QueryGoodTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/length_40"
+                android:layout_marginTop="@dimen/length_10"
+                android:layout_toRightOf="@+id/QueryGoodImg"
+                android:hint="空货品"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_size_15" />
+
+            <TextView
+                android:id="@+id/QueryGoodCode"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/length_40"
+                android:layout_below="@+id/QueryGoodTitle"
+                android:layout_toRightOf="@+id/QueryGoodImg"
+                android:textColor="@android:color/darker_gray"
+                android:hint="暂无"
+                android:textSize="@dimen/font_size_15" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@drawable/shape_line" />
+
+        <!-- 操作 -->
+
+        <LinearLayout
+            android:id="@+id/QueryTool"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/length_100"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal" >
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <com.pnikosis.materialishprogress.ProgressWheel
+                    android:id="@+id/QueryProgressWheel"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    app:matProg_barColor="@color/TitleColorMIn"
+                    app:matProg_barWidth="5dp"
+                    app:matProg_circleRadius="100dp" />
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:gravity="center" >
+
+                    <Button
+                        android:id="@+id/QueryCheckScan"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/button_circle_blue_style"
+                        android:text="@string/Scan"
+                        android:textColor="@color/White" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/QueryVerify"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/button_circle_style"
+                android:text="@string/Verify"
+                android:textColor="@color/White" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

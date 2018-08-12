@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.frid.view.NormalTitleBar
+        android:id="@+id/ListTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:left_visible="false"
+        app:title="@string/tab_title_02" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/CheckList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@color/app_back"
+        android:dividerHeight="@dimen/length_1"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true" />
+
+</LinearLayout>
