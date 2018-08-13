@@ -123,7 +123,7 @@ public class ASHttp {
 
 		request(context,AppData.queryproductitemlist,se,Asyn);
 	}		
-	/** ===反库===  confirmstockback========直接反库，不用同步  */
+	/** ===返库===  confirmstockback========直接返库，不用同步  */
 	public static void Confirmstockback(Context context,final AsyncHttp Asyn){
 		/*{
 			　　"Token":"BF2C1E181F65446C940A6A31327E6B84",

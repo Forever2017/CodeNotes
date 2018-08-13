@@ -54,3 +54,261 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-08-13 22:02:26.311 -----------------------------------------------
+eclipse.buildId=v22.6.2-1085508
+java.version=1.8.0_162
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product com.android.ide.eclipse.adt.package.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.android.ide.eclipse.adt.package.product
+
+!ENTRY org.eclipse.ui 4 4 2018-08-13 22:03:00.506
+!MESSAGE Unable to find Action Set: org.eclipse.mylyn.context.ui.actionSet
+
+!ENTRY org.eclipse.ui 4 4 2018-08-13 22:03:00.513
+!MESSAGE Unable to find Action Set: org.eclipse.mylyn.tasks.ui.navigation
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2018-08-13 22:03:04.829
+!MESSAGE projectOpenedWithWorkspace: failed to find manifest package for project FridApp
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2018-08-13 22:03:04.831
+!MESSAGE projectOpenedWithWorkspace: failed to find manifest package for project Pull_list_library
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2018-08-13 22:03:04.832
+!MESSAGE projectOpenedWithWorkspace: failed to find manifest package for project Sweet_Dialog_library
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-08-13 22:03:08.917
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-08-13 22:03:08.919
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2018-08-13 22:03:12.180
+!MESSAGE fileChanged: failed to find manifest package for project FridApp
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2018-08-13 22:03:12.183
+!MESSAGE fileChanged: failed to find manifest package for project FridApp
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2018-08-13 22:03:12.185
+!MESSAGE fileChanged: failed to find manifest package for project FridApp
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2018-08-13 22:03:23.171
+!MESSAGE fileChanged: failed to find manifest package for project FridApp
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2018-08-13 22:03:23.173
+!MESSAGE fileChanged: failed to find manifest package for project FridApp
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2018-08-13 22:03:23.175
+!MESSAGE fileChanged: failed to find manifest package for project FridApp
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2018-08-13 22:03:34.250
+!MESSAGE File is Out of sync
+!STACK 0
+com.android.io.StreamException: org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/FridApp/AndroidManifest.xml'.
+	at com.android.ide.eclipse.adt.io.IFileWrapper.getContents(IFileWrapper.java:55)
+	at com.android.ide.common.xml.AndroidManifestParser.parse(AndroidManifestParser.java:609)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parseUnchecked(AndroidManifestHelper.java:75)
+	at com.android.ide.eclipse.adt.internal.build.builders.PreCompilerBuilder.build(PreCompilerBuilder.java:467)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/FridApp/AndroidManifest.xml'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at com.android.ide.eclipse.adt.io.IFileWrapper.getContents(IFileWrapper.java:49)
+	... 15 more
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2018-08-13 22:03:34.927
+!MESSAGE File is Out of sync
+!STACK 0
+com.android.io.StreamException: org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/Pull_list_library/AndroidManifest.xml'.
+	at com.android.ide.eclipse.adt.io.IFileWrapper.getContents(IFileWrapper.java:55)
+	at com.android.ide.common.xml.AndroidManifestParser.parse(AndroidManifestParser.java:609)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parseUnchecked(AndroidManifestHelper.java:75)
+	at com.android.ide.eclipse.adt.internal.build.builders.PreCompilerBuilder.build(PreCompilerBuilder.java:467)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/Pull_list_library/AndroidManifest.xml'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at com.android.ide.eclipse.adt.io.IFileWrapper.getContents(IFileWrapper.java:49)
+	... 15 more
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2018-08-13 22:03:35.589
+!MESSAGE Failed to write jar file E:\GitHub\CodeNotes\10.project\RFID\R_FID\Pull_list_library\bin\pull_list_library.jar
+!STACK 0
+com.android.sdklib.build.ApkCreationException: Failed to add L/Pull_list_library/bin/classes/com/handmark/pulltorefresh/library/ILoadingLayout.class
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder$JarBuilder.addFile(PostCompilerBuilder.java:787)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.writeClassFilesIntoJar(PostCompilerBuilder.java:905)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.writeClassFilesIntoJar(PostCompilerBuilder.java:902)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.writeClassFilesIntoJar(PostCompilerBuilder.java:902)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.writeClassFilesIntoJar(PostCompilerBuilder.java:902)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.writeClassFilesIntoJar(PostCompilerBuilder.java:902)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.writeLibraryPackage(PostCompilerBuilder.java:878)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.build(PostCompilerBuilder.java:400)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/Pull_list_library/bin/classes/com/handmark/pulltorefresh/library/ILoadingLayout.class'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder$JarBuilder.addFile(PostCompilerBuilder.java:783)
+	... 19 more
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2018-08-13 22:03:35.718
+!MESSAGE File is Out of sync
+!STACK 0
+com.android.io.StreamException: org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/Sweet_Dialog_library/AndroidManifest.xml'.
+	at com.android.ide.eclipse.adt.io.IFileWrapper.getContents(IFileWrapper.java:55)
+	at com.android.ide.common.xml.AndroidManifestParser.parse(AndroidManifestParser.java:609)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parseUnchecked(AndroidManifestHelper.java:75)
+	at com.android.ide.eclipse.adt.internal.build.builders.PreCompilerBuilder.build(PreCompilerBuilder.java:467)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/Sweet_Dialog_library/AndroidManifest.xml'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at com.android.ide.eclipse.adt.io.IFileWrapper.getContents(IFileWrapper.java:49)
+	... 15 more
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2018-08-13 22:03:35.821
+!MESSAGE Failed to write jar file E:\GitHub\CodeNotes\10.project\RFID\R_FID\Sweet_Dialog_library\bin\sweet_dialog_library.jar
+!STACK 0
+com.android.sdklib.build.ApkCreationException: Failed to add L/Sweet_Dialog_library/bin/classes/cn/pedant/SweetAlert/CallDialog.class
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder$JarBuilder.addFile(PostCompilerBuilder.java:787)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.writeClassFilesIntoJar(PostCompilerBuilder.java:905)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.writeClassFilesIntoJar(PostCompilerBuilder.java:902)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.writeClassFilesIntoJar(PostCompilerBuilder.java:902)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.writeClassFilesIntoJar(PostCompilerBuilder.java:902)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.writeLibraryPackage(PostCompilerBuilder.java:878)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.build(PostCompilerBuilder.java:400)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/Sweet_Dialog_library/bin/classes/cn/pedant/SweetAlert/CallDialog.class'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder$JarBuilder.addFile(PostCompilerBuilder.java:783)
+	... 18 more
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2018-08-13 22:03:38.225
+!MESSAGE Failed to write jar file E:\GitHub\CodeNotes\10.project\RFID\R_FID\Pull_list_library\bin\pull_list_library.jar
+!STACK 0
+com.android.sdklib.build.ApkCreationException: Failed to add L/Pull_list_library/bin/classes/com/handmark/pulltorefresh/library/ILoadingLayout.class
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder$JarBuilder.addFile(PostCompilerBuilder.java:787)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.writeClassFilesIntoJar(PostCompilerBuilder.java:905)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.writeClassFilesIntoJar(PostCompilerBuilder.java:902)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.writeClassFilesIntoJar(PostCompilerBuilder.java:902)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.writeClassFilesIntoJar(PostCompilerBuilder.java:902)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.writeClassFilesIntoJar(PostCompilerBuilder.java:902)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.writeLibraryPackage(PostCompilerBuilder.java:878)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.build(PostCompilerBuilder.java:400)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/Pull_list_library/bin/classes/com/handmark/pulltorefresh/library/ILoadingLayout.class'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder$JarBuilder.addFile(PostCompilerBuilder.java:783)
+	... 19 more
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2018-08-13 22:03:38.526
+!MESSAGE Failed to write jar file E:\GitHub\CodeNotes\10.project\RFID\R_FID\Sweet_Dialog_library\bin\sweet_dialog_library.jar
+!STACK 0
+com.android.sdklib.build.ApkCreationException: Failed to add L/Sweet_Dialog_library/bin/classes/cn/pedant/SweetAlert/CallDialog.class
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder$JarBuilder.addFile(PostCompilerBuilder.java:787)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.writeClassFilesIntoJar(PostCompilerBuilder.java:905)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.writeClassFilesIntoJar(PostCompilerBuilder.java:902)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.writeClassFilesIntoJar(PostCompilerBuilder.java:902)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.writeClassFilesIntoJar(PostCompilerBuilder.java:902)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.writeLibraryPackage(PostCompilerBuilder.java:878)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.build(PostCompilerBuilder.java:400)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/Sweet_Dialog_library/bin/classes/cn/pedant/SweetAlert/CallDialog.class'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder$JarBuilder.addFile(PostCompilerBuilder.java:783)
+	... 18 more

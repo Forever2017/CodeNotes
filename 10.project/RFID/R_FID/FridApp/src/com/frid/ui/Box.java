@@ -68,7 +68,7 @@ public class Box extends RFActivity implements OnItemClickListener,OnClickListen
 		CheckScan.setOnClickListener(this);
 		CheckUpload.setOnClickListener(this);
 
-		CheckUpload.setText("反库");
+		CheckUpload.setText("返库");
 	}
 
 	private void data() {
@@ -295,20 +295,20 @@ public class Box extends RFActivity implements OnItemClickListener,OnClickListen
 		}
 	}
 
-	/**反库流程*/
+	/**返库流程*/
 	private void confirmstockback() {
 		if(list!=null&&list.size()>0){
 			for (DBGsonProduct dbp : list) {
 				if(dbp.getState()==DBGsonProduct.SHOWING){
-					Toast("有展示中货品,不可反库.");
+					Toast("有展示中货品,不可返库.");
 					return;
 				}else if(dbp.getState()==DBGsonProduct.ABNORMAL){
-					Toast("有异常货品,请处理后反库.");
+					Toast("有异常货品,请处理后返库.");
 					return;
 				}
 			}	
 		}else {
-			Toast("无反库货品.");
+			Toast("无返库货品.");
 			return;
 		}
 		ASHttp.Confirmstockback(this, new AsyncHttp() {
@@ -322,12 +322,12 @@ public class Box extends RFActivity implements OnItemClickListener,OnClickListen
 					if(gs.getResponseCode().equals("0000")){/**获取数据成功*/
 						PDao.clear();
 						list.clear();
-						Toast("反库成功!");
+						Toast("返库成功!");
 						mAdapter.notifyDataSetChanged();
 					}else
-						Toast("反库失败！Error:"+gs.getResponseMessage());
+						Toast("返库失败！Error:"+gs.getResponseMessage());
 				}else{
-					Toast("网络异常,反库失败！");
+					Toast("网络异常,返库失败！");
 				}
 			}
 		});

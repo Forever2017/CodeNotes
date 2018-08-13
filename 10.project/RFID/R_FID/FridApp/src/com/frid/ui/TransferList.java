@@ -40,7 +40,7 @@ public class TransferList extends RFActivity implements OnRefreshListener,OnItem
 	private void init() {
 		ntb = (NormalTitleBar) findViewById(R.id.ListTitle);
 		ntb.setLeftVisible(true);
-		ntb.setTitle("待移库单");
+		ntb.setTitle("待接收单");
 		list = new ArrayList<GsonItem>();
 		listView = (PullToRefreshListView) findViewById(R.id.CheckList);
 		mAdapter = new TransferListAdapter(this, list);

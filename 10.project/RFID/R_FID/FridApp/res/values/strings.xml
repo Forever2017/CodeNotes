@@ -30,8 +30,8 @@
     <string name="Upload">上传</string>
     
 	<string name="SetVerify">提交核实</string>
-	<string name="Warehouse">移库</string>
-	<string name="UNWarehouse">反库</string>
+	<string name="Warehouse">接收</string>
+	<string name="UNWarehouse">返库</string>
    
 	<string name="Verify">核实</string>
 	

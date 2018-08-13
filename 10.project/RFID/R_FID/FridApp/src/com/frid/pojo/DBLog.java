@@ -7,7 +7,7 @@ import com.j256.ormlite.table.DatabaseTable;
 public class DBLog {
 	/**打开保险箱，用不着*/		
 	public final static int OPENSAFE = 0;
-	/**移库单 确认移库 */		
+	/**待接收 确认移库 */		
 	public final static int INCONFIRMED = 1;
 	/**保险箱 展示产品 */		
 	public final static int SHOWPRODUCT2CUSTOMER = 2;

@@ -48,12 +48,12 @@ public class TransferInfo extends RFActivity implements OnClickListener {
 	private void init() {
 		ntb = (NormalTitleBar) findViewById(R.id.CheckTitle);
 		ntb.setLeftVisible(true);
-		ntb.setTitle("待移库商品");
+		ntb.setTitle("待接收商品");
 		listView = (ListView) findViewById(R.id.CheckAList);
 		CheckUpload = (Button) findViewById(R.id.CheckUpload);
 		CheckLinearButtons = (FrameLayout) findViewById(R.id.CheckLinearButtons);
 
-		CheckUpload.setText("确认移库");
+		CheckUpload.setText("确认接收");
 		CheckUpload.setOnClickListener(this);
 		CheckLinearButtons.setVisibility(View.GONE);
 
@@ -93,7 +93,7 @@ public class TransferInfo extends RFActivity implements OnClickListener {
 					if(gc.getResponseCode().equals("0000")){/**获取数据成功*/
 						/*打LOG*/
 						new SynchTool(TransferInfo.this).saveLog(externalId, DBLog.INCONFIRMED);
-						Toast("移库成功.");
+						Toast("接收成功.");
 						finish();
 					}else Toast("Error:"+gc.getResponseMessage());
 				}

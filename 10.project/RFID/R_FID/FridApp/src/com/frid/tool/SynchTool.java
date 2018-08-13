@@ -31,7 +31,7 @@ public class SynchTool {
 	 * 保存Log
 	 * RFIDCode   EPC的ID
 	 * Operation  操作类型
-	 * INCONFIRMED = 1   移库单 确认移库 
+	 * INCONFIRMED = 1   待接收 确认移库 
 	 * SHOWPRODUCT2CUSTOMER = 2  保险箱 展示产品  
 	 * CUSTOMERBUY = 3  保险箱 顾客购买
 	 * CUSTOMERNOTBUY = 4 保险箱 顾客不买

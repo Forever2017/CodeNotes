@@ -36,7 +36,7 @@ public class AppData {
 	public static final String inconfirm = "/warehouse/stocktransferrequest/inconfirm";
 	/** ==保险箱 列表== QueryProductItemList== ========*/
 	public static final String queryproductitemlist = "/warehouse/queryproductitemlist";
-	/** ===反库===  confirmstockback========直接反库，不用同步  */
+	/** ===返库===  confirmstockback========直接返库，不用同步  */
 	public static final String confirmstockback = "/warehouse/confirmstockback";		
 	//【核对】
 	/** 核对单列表 querylist*/

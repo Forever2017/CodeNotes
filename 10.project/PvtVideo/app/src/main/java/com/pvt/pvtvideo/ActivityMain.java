@@ -43,7 +43,7 @@ public class ActivityMain extends AppCompatActivity {
                 .addItem(new BottomNavigationItem(R.drawable.ic_home_white_24dp, "Home"))
                 .addItem(new BottomNavigationItem(R.drawable.ic_favorite_white_24dp, "Favorite"))
                 .addItem(new BottomNavigationItem(R.drawable.ic_tv_white_24dp, "Local"))
-                .addItem(new BottomNavigationItem(R.drawable.ic_book_white_24dp, "Other"))
+              //  .addItem(new BottomNavigationItem(R.drawable.ic_book_white_24dp, "Other"))
                 .setFirstSelectedPosition(0)
                 .initialise();
 

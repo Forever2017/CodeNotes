@@ -185,7 +185,7 @@ public class QueryFragment extends FRFragment implements OnClickListener{
 						if(b){
 							GsonState gc = new Gson().fromJson(msg, GsonState.class);
 							if(gc.getResponseCode().equals("0000")){/**获取数据成功*/
-								Toast("移库申请成功.");
+								Toast("接收申请成功.");
 								list.clear();
 								QueryNumber.setText("");
 								scrapEpcList.clear();

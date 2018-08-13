@@ -13,6 +13,7 @@ import android.widget.Toast;
 public class FRFragment extends Fragment {
 	public View FRVIEW = null;
 	private int Layout;
+	
 	/**是否当前显示页*/
 	public boolean MAIN_FACE;
 	
