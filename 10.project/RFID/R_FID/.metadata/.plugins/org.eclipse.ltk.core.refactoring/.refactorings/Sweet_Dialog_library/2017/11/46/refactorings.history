@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy package &apos;com.pnikosis.materialishprogress&apos; to &apos;FridApp/src&apos;&#x0D;&#x0A;- Original project: &apos;Sweet_Dialog_library&apos;&#x0D;&#x0A;- Destination element: &apos;FridApp/src&apos;&#x0D;&#x0A;- Original element: &apos;Sweet_Dialog_library/src/com.pnikosis.materialishprogress&apos;" description="Copy package" destination="=FridApp/src" element1="/src&lt;com.pnikosis.materialishprogress" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1510901712245" version="1.0"/>
-</session>
