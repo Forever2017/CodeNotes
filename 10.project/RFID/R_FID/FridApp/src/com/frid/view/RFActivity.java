@@ -1,8 +1,11 @@
 package com.frid.view;
 
+import com.frid.data.FridApplication;
+
 import cn.pedant.SweetAlert.CallDialog;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import android.app.Activity;
+import android.os.Bundle;
 import android.widget.Toast;
 /**
  * 老爹Activity 大多数继承
@@ -10,6 +13,12 @@ import android.widget.Toast;
 public class RFActivity extends Activity{
 	private SweetAlertDialog Loadingdialog;//加载动画.
 
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		FridApplication.SUM_LIST.add(this);
+	}
+	
 	public void Loading(String title) {
 
 		Loadingdialog = new SweetAlertDialog(this, SweetAlertDialog.PROGRESS_TYPE)
@@ -35,5 +44,4 @@ public class RFActivity extends Activity{
 	public void Toast(String string) {
 		Toast.makeText(getApplicationContext(), string==null?"未知提示":string, Toast.LENGTH_SHORT).show();
 	}
-
 }

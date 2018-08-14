@@ -8,7 +8,7 @@
     
     <string name="tab_title_02">盘点</string>
     <string name="tab_title_03">保险箱</string>
-    <string name="tab_title_04">核对</string>
+    <string name="tab_title_04">核对拣货单</string>
     <string name="tab_title_05">设置</string>
     
     <string name="Synchronization">手动同步</string>
@@ -23,19 +23,24 @@
     
     <string name="Stop">停止</string>
     
+    <string name="ScanGood">扫描商品</string>
     <string name="Scan">扫描</string>
     <string name="Storage">入库</string>
         
     <string name="Check">盘点</string>
     <string name="Upload">上传</string>
     
+	<string name="Submit">提交</string>
 	<string name="SetVerify">提交核实</string>
 	<string name="Warehouse">接收</string>
 	<string name="UNWarehouse">返库</string>
    
 	<string name="Verify">核实</string>
+	<string name="Ok">确认</string>
 	
 	<string name="VerifyON">已核实</string>
 	<string name="VerifyOFF">未核实</string>
+	
+	<string name="Remove">清除</string>
     
 </resources>

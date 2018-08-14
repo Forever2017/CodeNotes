@@ -3,8 +3,8 @@
 	<section name="org.eclipse.jdt.internal.debug.ui.ExpressionInformationControlCreator$ExpressionInformationControl">
 		<item value="694" key="SashWeightTree"/>
 		<item value="305" key="SashWeightDetails"/>
-		<item value="850" key="WIDTH"/>
-		<item value="486" key="HEIGHT"/>
+		<item value="614" key="WIDTH"/>
+		<item value="218" key="HEIGHT"/>
 	</section>
 	<section name="AddExceptionDialog">
 		<item value="true" key="caughtChecked"/>

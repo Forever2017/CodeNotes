@@ -2,13 +2,12 @@ package com.frid.ui.fragment;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import joker.kit.base.FragmentJoker;
 import android.content.Intent;
 import android.text.format.DateUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-
 import com.frid.adapter.PListAdapter;
 import com.frid.data.TestMsg;
 import com.frid.fridapp.R;
@@ -17,14 +16,12 @@ import com.frid.pojo.GsonStock;
 import com.frid.tool.ASHttp;
 import com.frid.tool.ASHttp.AsyncHttp;
 import com.frid.ui.Check;
-import com.frid.view.FRFragment;
-import com.frid.view.NormalTitleBar;
 import com.google.gson.Gson;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
 
-public class ListFragment extends FRFragment implements OnRefreshListener,OnItemClickListener {
+public class ListFragment extends FragmentJoker implements OnRefreshListener,OnItemClickListener {
 	public List<GsonItem> mFRListItem;
 	public PullToRefreshListView mPullRefreshListView;
 	public PListAdapter mAdapter;

@@ -54,9 +54,9 @@ public final class R {
 		public static final int warning_stroke_color = 0x7f09000c;
 	}
 	public static final class dimen {
-		public static final int alert_width = 0x7f070005;
-		public static final int common_circle_width = 0x7f070006;
-		public static final int progress_circle_radius = 0x7f070007;
+		public static final int alert_width = 0x7f080005;
+		public static final int common_circle_width = 0x7f080006;
+		public static final int progress_circle_radius = 0x7f080007;
 	}
 	public static final class drawable {
 		public static final int blue_button_background = 0x7f020000;
@@ -71,36 +71,36 @@ public final class R {
 		public static final int warning_sigh = 0x7f020026;
 	}
 	public static final class id {
-		public static final int cancel_button = 0x7f06002b;
-		public static final int confirm_button = 0x7f06002c;
-		public static final int content_text = 0x7f06002a;
-		public static final int custom_image = 0x7f06001e;
-		public static final int error_frame = 0x7f06001f;
-		public static final int error_x = 0x7f060020;
-		public static final int loading = 0x7f06001d;
-		public static final int mask_left = 0x7f060023;
-		public static final int mask_right = 0x7f060022;
-		public static final int progressWheel = 0x7f060028;
-		public static final int progress_dialog = 0x7f060027;
-		public static final int success_frame = 0x7f060021;
-		public static final int success_tick = 0x7f060024;
-		public static final int title_text = 0x7f060029;
-		public static final int warning_frame = 0x7f060025;
-		public static final int warning_img = 0x7f060026;
-		public static final int x = 0x7f06000c;
-		public static final int y = 0x7f06000d;
-		public static final int z = 0x7f06000e;
+		public static final int cancel_button = 0x7f07002b;
+		public static final int confirm_button = 0x7f07002c;
+		public static final int content_text = 0x7f07002a;
+		public static final int custom_image = 0x7f07001e;
+		public static final int error_frame = 0x7f07001f;
+		public static final int error_x = 0x7f070020;
+		public static final int loading = 0x7f07001d;
+		public static final int mask_left = 0x7f070023;
+		public static final int mask_right = 0x7f070022;
+		public static final int progressWheel = 0x7f070028;
+		public static final int progress_dialog = 0x7f070027;
+		public static final int success_frame = 0x7f070021;
+		public static final int success_tick = 0x7f070024;
+		public static final int title_text = 0x7f070029;
+		public static final int warning_frame = 0x7f070025;
+		public static final int warning_img = 0x7f070026;
+		public static final int x = 0x7f07000c;
+		public static final int y = 0x7f07000d;
+		public static final int z = 0x7f07000e;
 	}
 	public static final class layout {
 		public static final int alert_dialog = 0x7f030004;
 	}
 	public static final class string {
-		public static final int LOADING = 0x7f08000a;
-		public static final int app_name = 0x7f080006;
-		public static final int default_progressbar = 0x7f08000b;
-		public static final int dialog_cancel = 0x7f080009;
-		public static final int dialog_default_title = 0x7f080007;
-		public static final int dialog_ok = 0x7f080008;
+		public static final int LOADING = 0x7f06000c;
+		public static final int app_name = 0x7f060000;
+		public static final int default_progressbar = 0x7f06000d;
+		public static final int dialog_cancel = 0x7f06000b;
+		public static final int dialog_default_title = 0x7f060009;
+		public static final int dialog_ok = 0x7f06000a;
 	}
 	public static final class style {
 		public static final int alert_dialog = 0x7f0a0000;

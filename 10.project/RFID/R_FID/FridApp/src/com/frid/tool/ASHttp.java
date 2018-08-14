@@ -6,13 +6,16 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import android.content.Context;
+import android.content.Intent;
 import android.widget.Toast;
 
 import com.frid.data.AppData;
 import com.frid.data.FridApplication;
 import com.frid.data.TestMsg;
+import com.frid.ui.LoginActivity;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
+
 
 public class ASHttp {
 	private static AsyncHttpClient client = new AsyncHttpClient();  
@@ -20,8 +23,8 @@ public class ASHttp {
 		/**设置链接超时，如果不设置，默认为10s*/  
 		client.setTimeout(5000); 
 	}  
-	
-//【登录】
+
+	//【登录】
 	/** 登录 Login */
 	public static void Login(Context context,String UserName,String Password,final AsyncHttp Asyn){
 		/*{
@@ -50,8 +53,8 @@ public class ASHttp {
 		StringEntity se = JsonTool.createJson(new String[]{"RefreshToken",RefreshToken});
 		request(context,AppData.GetNewToken,se,Asyn);
 	}
-	
-//【入库\盘点 单】
+
+	//【入库\盘点 单】
 	/** 获取盘点任务   list
 	 *  列表方法名：String MethodName
 	 * */
@@ -60,10 +63,11 @@ public class ASHttp {
 		    "Token":"D71DBD9608E94C4C8FFC5C99E4146DA1",
 		    "DeviceCode":"T001"
 		}*/
+		//	StringEntity se = JsonTool.createJson(new String[]{"Token",TestMsg.TestToken},new String[]{"DeviceCode","T001"});
 		StringEntity se = JsonTool.createJson(new String[]{"Token",FridApplication.token},new String[]{"DeviceCode",AppData.deviceCode});
 		request(context,AppData.GetStockCountTasks,se,Asyn);
 	}
-	
+
 	/** 获取盘点RFID    info
 	 * 详情列表  GetStockCountRfidList */
 	public static void GetStockCountRfidList(Context context,String StockCountCode,final AsyncHttp Asyn){
@@ -75,7 +79,7 @@ public class ASHttp {
 		StringEntity se = JsonTool.createJson(new String[]{"StockCountCode",StockCountCode},new String[]{"Token",FridApplication.token},new String[]{"DeviceCode",AppData.deviceCode});
 		request(context,AppData.GetStockCountRfidList,se,Asyn);
 	}
-	
+
 	/** 上传【盘点】结果    info
 	 * 详情列表  UploadStockCountResult */
 	public static void UploadStockCountResult(Context context,String uploadMsg,final AsyncHttp Asyn){
@@ -87,7 +91,7 @@ public class ASHttp {
 		}
 		request(context,AppData.UploadStockCountResult,se,Asyn);
 	}
-//【保险箱】
+	//【保险箱】
 	/** 核对单列表 querylist
 	 *  */
 	public static void QueryMyList(Context context,final AsyncHttp Asyn){
@@ -133,7 +137,7 @@ public class ASHttp {
 
 		request(context,AppData.confirmstockback,se,Asyn);
 	}
-//【核对】
+	//【核对】
 	/** 核对单列表 querylist
 	 *  */
 	public static void QueryList(Context context,final AsyncHttp Asyn){
@@ -148,7 +152,7 @@ public class ASHttp {
 
 		request(context,AppData.QueryList,se,Asyn);
 	}
-	
+
 	/** 核对单详情（商品列表） querydetail*/
 	public static void QueryDetail(Context context,String id,final AsyncHttp Asyn){
 		/*{
@@ -157,11 +161,12 @@ public class ASHttp {
 			"DeviceCode":"A001"
 		}*/
 
+		//StringEntity se = JsonTool.createJson(new String[]{"StockTransferExternalId",id},new String[]{"Token",TestMsg.TestToken},new String[]{"DeviceCode",AppData.deviceCode});
 		StringEntity se = JsonTool.createJson(new String[]{"StockTransferExternalId",id},new String[]{"Token",FridApplication.token},new String[]{"DeviceCode",AppData.deviceCode});
 
 		request(context,AppData.QueryDetail,se,Asyn);
 	}
-	
+
 	/** 上传核实订单 （提交核实，传一堆EPC上去） UploadEpcOfStockTransfer*/
 	public static void UploadEpc(Context context,String uploadMsg,final AsyncHttp Asyn){
 		uploadMsg = TestMsg.updateMSG("UploadEpc", uploadMsg);
@@ -173,7 +178,7 @@ public class ASHttp {
 		}
 		request(context,AppData.UploadEpc,se,Asyn);
 	}
-//【其他】
+	//【其他】
 	/** 检查RFID    CheckRfid========*/
 	public static void CheckRfid(Context context,String EPC,final AsyncHttp Asyn){
 		/*{
@@ -186,7 +191,7 @@ public class ASHttp {
 
 		request(context,AppData.CheckRfid,se,Asyn);
 	}
-	
+
 	/** 获取运单号list（用来核对手输的运单号）*/
 	public static void GetWaybillList(Context context,final AsyncHttp Asyn){
 		/*{
@@ -197,7 +202,7 @@ public class ASHttp {
 
 		request(context,AppData.GetWaybillList,se,Asyn);
 	}
-	
+
 	/** =仓库同步====WarehouseSync====*/
 	public static void WarehouseSync(Context context,String getProduct,final AsyncHttp Asyn){
 		getProduct = TestMsg.updateMSG("getProduct", getProduct);
@@ -209,7 +214,7 @@ public class ASHttp {
 		}
 		request(context,AppData.WarehouseSync,se,Asyn);
 	}
-	
+
 	/** =上载操作日志===UploadOperationLog===*/
 	public static void UploadOperationLog(Context context,String getLog,final AsyncHttp Asyn){
 		getLog = TestMsg.updateMSG("getLog", getLog);
@@ -221,9 +226,9 @@ public class ASHttp {
 		}
 		request(context,AppData.UploadOperationLog,se,Asyn);
 	}
-	
-	
-//【方法】
+
+
+	//【方法】
 	public static void request (final Context context,String method,StringEntity se,final AsyncHttp Asyn){
 		client.post(context, AppData.Server+method,se,"application/json", 
 				new JsonHttpResponseHandler(){
@@ -247,11 +252,29 @@ public class ASHttp {
 
 			@Override
 			@SuppressWarnings("deprecation")
-			public void onFailure(Throwable arg0) {
-				super.onFailure(arg0);
-				Toast.makeText(context, "Server Error："+arg0.toString(), 0).show();
-				Asyn.onResult(false,arg0.toString());
+			public void onFailure(Throwable th) {
+				super.onFailure(th);
+
+				if(th.getMessage().equals("Unauthorized")){
+					//401 未经授权的
+					Toast.makeText(context, "未经授权的操作！", 0).show();
+					context.startActivity(new Intent(context,LoginActivity.class));
+					FridApplication.killActivity();
+				}
+
+				Toast.makeText(context, "Server Error："+th.toString(), 0).show();
+				Asyn.onResult(false,th.toString());
+
+
 			}
+
+
+
+
+
+
+
+
 		});
 	}
 

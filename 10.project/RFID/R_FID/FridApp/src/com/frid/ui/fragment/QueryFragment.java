@@ -2,13 +2,15 @@ package com.frid.ui.fragment;
 
 import java.util.ArrayList;
 import java.util.List;
-import android.util.Log;
+
+import joker.kit.base.FragmentJoker;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.frid.adapter.MItemAdapter;
+
+import com.frid.adapter.QueryMItemAdapter;
 import com.frid.data.TestMsg;
 import com.frid.fridapp.R;
 import com.frid.pojo.GsonItem;
@@ -19,25 +21,27 @@ import com.frid.tool.JsonTool;
 import com.frid.tool.VTool;
 import com.frid.tool.ASHttp.AsyncHttp;
 import com.frid.tool.VTool.CallbackVT;
-import com.frid.view.FRFragment;
 import com.google.gson.Gson;
 import com.pnikosis.materialishprogress.ProgressWheel;
 
 import device.frid.Device;
 import device.frid.Device.LoopEpc;
 /**核对\查询*/
-public class QueryFragment extends FRFragment implements OnClickListener{
+public class QueryFragment extends FragmentJoker implements OnClickListener,QueryMItemAdapter.Remove{
 	private ProgressWheel pw;//旋转条
 	private Button QueryScan,QueryVerify,QueryUpload,QueryNumber;
 
 	private List<GsonItem> list;
 	private ListView QueryList;
-	private MItemAdapter mAdapter;
+	private QueryMItemAdapter mAdapter;
 
 	private TextView QueryGoodTitle,QueryGoodCode;
 	private GsonItem currentEPC;//当前扫描显示的epc
 
 	private Device device;
+
+	private boolean isSubmit = false;
+
 
 	public QueryFragment() { super(R.layout.fragment_query); }
 
@@ -65,7 +69,7 @@ public class QueryFragment extends FRFragment implements OnClickListener{
 
 	private void data() {
 		list = new ArrayList<GsonItem>();
-		mAdapter = new MItemAdapter(getActivity(), list,1);
+		mAdapter = new QueryMItemAdapter(getActivity(), list,this);
 		QueryList.setAdapter(mAdapter);
 		mAdapter.notifyDataSetChanged();
 
@@ -83,11 +87,10 @@ public class QueryFragment extends FRFragment implements OnClickListener{
 					if(gc.getResponseCode().equals("0000")){/**获取数据成功*/
 
 						list.clear();
-
 						list.addAll(correctList(gc.getList()));
-
+						
 						mAdapter.notifyDataSetChanged();
-
+						checkSubmit();
 					}
 				}
 			};
@@ -100,13 +103,13 @@ public class QueryFragment extends FRFragment implements OnClickListener{
 		switch (v.getId()) {
 
 		case R.id.QueryCheckScan://扫描
-			if(QueryScan.getText().toString().equals(getResources().getString(R.string.Scan))){
-				
+			if(QueryScan.getText().toString().equals(getResources().getString(R.string.ScanGood))){
+
 				if(checkList(false)) {
 					Toast("所有商品已核实.");
 					return;
 				}
-				
+
 				//扫描epc设置为空
 				updateEPC(false);
 				//核对单商品为空时不做扫描
@@ -120,32 +123,32 @@ public class QueryFragment extends FRFragment implements OnClickListener{
 				//真实扫描
 				device.biBi(true);
 				scanFrid();
-				
-				
-				
-				
+
+
+
+
 				/** 测试输出扫描到的所有RFID */
 				//真实停止扫描
 				//device.stopSearch();
-				
+
 				/*final List<String> tempList = new ArrayList<>();
 				device.biBi(true);
 				device.startSearch(new LoopEpc() {
 					@Override
 					public void ReturnEpc(final String epc) {
 						super.ReturnEpc(epc);
-						
+
 						if(!tempList.contains(epc)){
 							tempList.add(epc);
-							Log.e("测试读取EPC", "读取到EPC："+epc);
+							//Log.e("测试读取EPC", "读取到EPC："+epc);
 						}
 					}
 				});*/
 
-				
+
 			}else{//点击停止
 				//1.改变文字  2.锁定上传 3.显示旋转动画 4.执行真实操作
-				QueryScan.setText(getResources().getString(R.string.Scan));
+				QueryScan.setText(getResources().getString(R.string.ScanGood));
 				pw.setVisibility(View.GONE);
 				QueryVerify.setEnabled(true);
 				QueryVerify.setBackground(getResources().getDrawable(R.drawable.button_circle_style));
@@ -159,6 +162,15 @@ public class QueryFragment extends FRFragment implements OnClickListener{
 			break;
 
 		case R.id.QueryVerify://单商品核实
+			
+			//测试提交按钮
+			/*for (GsonItem gsonItem : list) {
+				gsonItem.setState(1);
+			}
+			mAdapter.notifyDataSetChanged(); 
+			Toast("提交成功.");
+			checkSubmit();*/
+			
 			if(currentEPC!=null){
 				device.biBi(true);
 				for (GsonItem gsonItem : list) {
@@ -170,26 +182,28 @@ public class QueryFragment extends FRFragment implements OnClickListener{
 						mAdapter.notifyDataSetChanged(); 
 						//扫描epc设置为空
 						updateEPC(false);
-						Toast("货品核实成功.");
+						Toast("提交成功.");
+						checkSubmit();
 						break;
 					}
 				}
 			}else Toast("无可核实商品.");
+			
 			break;
 		case R.id.QueryUpload://提交核实
-
-			if(checkList(true)){
+			if(isSubmit){
 				ASHttp.UploadEpc(getActivity(),new JsonTool().getEPC(StockTransferExternalId, list), new AsyncHttp() {
 					public void onResult(boolean b, String msg) {
 						msg = TestMsg.updateMSG("Success", msg);
 						if(b){
 							GsonState gc = new Gson().fromJson(msg, GsonState.class);
 							if(gc.getResponseCode().equals("0000")){/**获取数据成功*/
-								Toast("接收申请成功.");
+								Toast("提交成功.");
 								list.clear();
 								QueryNumber.setText("");
 								scrapEpcList.clear();
 								mAdapter.notifyDataSetChanged();
+								checkSubmit();
 							}else Toast("Error:"+gc.getResponseMessage());
 						}
 					};
@@ -270,7 +284,7 @@ public class QueryFragment extends FRFragment implements OnClickListener{
 			if(gi.getState() == 1)
 				scrapEpcList.add(gi.getNumber());
 		}
-		
+
 		device.startSearch(new LoopEpc() {
 			@Override
 			public void ReturnEpc(final String epc) {
@@ -317,7 +331,7 @@ public class QueryFragment extends FRFragment implements OnClickListener{
 										public void run() {
 											updateEPC(true);
 											//停止扫描UI
-											QueryScan.setText(getResources().getString(R.string.Scan));
+											QueryScan.setText(getResources().getString(R.string.ScanGood));
 											pw.setVisibility(View.GONE);
 											QueryVerify.setEnabled(true);
 											QueryVerify.setBackground(getResources().getDrawable(R.drawable.button_circle_style));
@@ -351,6 +365,42 @@ public class QueryFragment extends FRFragment implements OnClickListener{
 
 	}
 
+	@Override
+	public void RemoveResult(int i) {
+		//清除已扫描到item
+		//从丢弃池中去除
+		scrapEpcList.remove(list.get(i).getNumber());
+		//状态和UI改变
+		list.get(i).setNumber("1");
+		list.get(i).setState(0);
+		mAdapter.notifyDataSetChanged();
+		//
+		checkSubmit();
+	}
+
+
+	/**判断是否可以“提交”，按钮 蓝色\灰色（全部核实即可提交）*/
+	private void checkSubmit() {
+		isSubmit = true;
+
+		for (GsonItem gi : list)  if(gi.getState() == 0) isSubmit = false;
+		
+		if(list.size()==0) isSubmit = false;
+
+		if(isSubmit) 
+			QueryUpload.setBackgroundColor(getResources().getColor(R.color.CheckBlue));
+		else  
+			QueryUpload.setBackgroundColor(getResources().getColor(R.color.gray_btn_bg_color));
+
+	}
 }
+
+
+
+
+
+
+
+
 
 

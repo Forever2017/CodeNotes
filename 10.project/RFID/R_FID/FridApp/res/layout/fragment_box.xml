@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/BoxTransferButton"
         android:gravity="center"
-        android:text="待 移 库"
+        android:text="待 接 收"
         android:textColor="@android:color/black"
         android:textSize="@dimen/font_size_18" />
 

@@ -1,5 +1,9 @@
 package com.frid.data;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -18,11 +22,13 @@ public class FridApplication extends Application{
 	public static String token;
 
 	public static int Identity; /**  0仓管(盘点 核对 设置)    1送货(保险箱+设置) */
-	
+
 	public static int FRID_POWER;//扫描频率（最高不可超过 30 dBm）
-	
+
 	public static int POLLING_TIME;//轮询周期 （秒）
-	
+
+	public static List<Activity> SUM_LIST = null;//Activity关闭用的集合
+
 	@Override
 	public void onCreate() {
 		super.onCreate();
@@ -31,6 +37,14 @@ public class FridApplication extends Application{
 		sp = getSharedPreferences(AppData.SP, Context.MODE_PRIVATE);
 		DEVICE_ID = ((TelephonyManager) getBaseContext().getSystemService(Context.TELEPHONY_SERVICE)).getDeviceId();
 		refreshData();
+
+		SUM_LIST = new ArrayList<Activity>();
+	}
+	
+	public static void killActivity() {
+		for (Activity activity : SUM_LIST) {
+			activity.finish();
+		}
 	}
 
 	/**

@@ -1,5 +1,6 @@
 package com.frid.ui.fragment;
 
+import joker.kit.base.FragmentJoker;
 import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -7,17 +8,17 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.frid.fridapp.R;
-import com.frid.tool.ASHttp;
-import com.frid.tool.ASHttp.AsyncHttp;
 import com.frid.tool.SynchTool;
 import com.frid.ui.Box;
+import com.frid.ui.LoginActivity;
 import com.frid.ui.TransferList;
-import com.frid.view.FRFragment;
+
 /**保险箱*/
-public class BoxFragment extends FRFragment implements OnClickListener{
+public class BoxFragment extends FragmentJoker implements OnClickListener{
 	private SynchTool st;
 	private Button BoxSynchronization;
 	private ImageView BoxBoxButton,BoxTransferButton;
+	
 	public BoxFragment() { super(R.layout.fragment_box); }
 
 	@Override
@@ -42,6 +43,8 @@ public class BoxFragment extends FRFragment implements OnClickListener{
 			break;
 		case R.id.BoxSynchronization:
 			st.upload();
+			startActivity(new Intent(getActivity(),LoginActivity.class));
+			getActivity().finish();
 			break;
 		default:
 			break;

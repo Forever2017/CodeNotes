@@ -40,7 +40,7 @@
         android:layout_alignParentRight="true"
         android:background="@color/CheckBlue"
         android:gravity="center_vertical|center_horizontal"
-        android:text="@string/test"
+        android:text="@string/Remove"
         android:textColor="@color/White"
         android:textSize="@dimen/font_size_18"
         android:visibility="gone" />

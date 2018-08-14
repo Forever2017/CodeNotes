@@ -1,11 +1,21 @@
 package com.frid.view;
 
+import com.frid.data.FridApplication;
 import com.frid.tool.VTool;
 import com.frid.tool.VTool.CallbackVT;
+
+import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.KeyEvent;
 
 public class RSFragmentActivity extends FragmentActivity {
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		FridApplication.SUM_LIST.add(this);
+	}
+	
 	// 按键捕获
 	public boolean onKeyDown(int keyCode, KeyEvent event) 
 	{

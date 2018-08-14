@@ -43,8 +43,6 @@ public class SynchTool {
 	/** 上传 保险箱货品信息 and 操作日志
 	 * @return */
 	public void upload() {
-		Log.e("自动同步 保险箱+操作日志", "自动同步 保险箱+操作日志");
-		
 		/*从数据库中取出数据*/
 		List<DBGsonProduct> dlist = PDao.getProductList();
 		List<DBLog> llist = LDao.getProductList();
@@ -57,7 +55,7 @@ public class SynchTool {
 					if(b){
 						GsonState gs = new Gson().fromJson(msg, GsonState.class);
 						if(gs.getResponseCode().equals("0000")){
-							Toast.makeText(context, "完成同步.", Toast.LENGTH_SHORT).show();
+							Toast.makeText(context, "同步成功.", Toast.LENGTH_SHORT).show();
 						}else{
 							Toast.makeText(context, "同步失败,Error:"+gs.getResponseMessage(), Toast.LENGTH_SHORT).show();
 						}
@@ -67,7 +65,8 @@ public class SynchTool {
 				}
 			});
 		}else{
-			Toast.makeText(context, "无可同步数据.", Toast.LENGTH_SHORT).show();
+			Toast.makeText(context, "同步成功.", Toast.LENGTH_SHORT).show();
+			//			Toast.makeText(context, "无可同步数据.", Toast.LENGTH_SHORT).show();
 		}
 
 		if(llist!=null&&llist.size()>0){//有LOG数据

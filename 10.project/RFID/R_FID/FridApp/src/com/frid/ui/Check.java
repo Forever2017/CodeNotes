@@ -119,6 +119,11 @@ public class Check extends RFActivity implements OnClickListener{
 				Toast("无盘点货物.");
 				return;
 			}
+			if(EPC_NUMBER>=list.size()) //全部找到
+			{
+				Toast("已全部找到.");
+				return;
+			}
 			if(CheckScan.getText().toString().equals(getResources().getString(R.string.Scan))){//点击扫描
 				//1.改变文字 2.锁定上传 3.显示旋转动画 4.执行真实操作
 				CheckScan.setText(getResources().getString(R.string.Stop));
@@ -129,22 +134,28 @@ public class Check extends RFActivity implements OnClickListener{
 				device.biBi(true);
 				scanFrid();
 			}else{//点击停止
-				//1.改变文字  2.锁定上传 3.显示旋转动画 4.执行真实操作
-				CheckScan.setText(getResources().getString(R.string.Scan));
-				CheckUpload.setEnabled(true);
-				CheckUpload.setBackground(getResources().getDrawable(R.drawable.button_circle_blue_style));
-				pw.setVisibility(View.GONE);
-				//真实停止扫描
-				device.biBi(false);
-				device.stopSearch();
-				scrapEpcList.clear();
+				stopScan();
 			}
 			break;
 		default:
 			break;
 		}
 	}
+	/*停止掃描*/
+	private void stopScan() {
+		//1.改变文字  2.锁定上传 3.显示旋转动画 4.执行真实操作
+		CheckScan.setText(getResources().getString(R.string.Scan));
+		CheckUpload.setEnabled(true);
+		CheckUpload.setBackground(getResources().getDrawable(R.drawable.button_circle_blue_style));
+		pw.setVisibility(View.GONE);
+		//真实停止扫描
+		device.biBi(false);
+		device.stopSearch();
+		//scrapEpcList.clear();
+	}
 
+
+	private int EPC_NUMBER = 0;
 	private void scanFrid() {
 		device.startSearch(new LoopEpc() {
 			@Override
@@ -159,20 +170,28 @@ public class Check extends RFActivity implements OnClickListener{
 					if(gi.getId().equals(epc)){
 						/**改变状态为1，找到*/
 						gi.setState(1);
+						EPC_NUMBER++;
 
 						runOnUiThread(new Runnable() {
 							@Override
 							public void run() {
 								device.biBi(true);
 								mAdapter.notifyDataSetChanged();
+								if(EPC_NUMBER>=list.size()) //全部找到
+								{
+									stopScan();
+								}
 							}
 						});
+
+
 
 					}
 				}
 
 				/**属于废弃epc*/
 				scrapEpcList.add(epc);
+
 			}
 		});
 	}

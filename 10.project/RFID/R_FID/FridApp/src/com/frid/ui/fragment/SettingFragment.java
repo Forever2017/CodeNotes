@@ -1,5 +1,6 @@
 package com.frid.ui.fragment;
 
+import joker.kit.base.FragmentJoker;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -10,11 +11,10 @@ import com.frid.fridapp.R;
 import com.frid.tool.VTool;
 import com.frid.tool.VTool.CallbackVT;
 import com.frid.ui.LoginActivity;
-import com.frid.view.FRFragment;
 import com.polling.PollingService;
 import com.polling.PollingUtils;
 /**设置*/
-public class SettingFragment extends FRFragment implements OnClickListener{
+public class SettingFragment extends FragmentJoker implements OnClickListener{
 	private Button SettingExit,SynchSwitch,SettingPower,PollingTime;
 
 	public SettingFragment() { super(R.layout.fragment_setting); }

@@ -6,74 +6,78 @@
     android:background="@color/app_back"
     android:orientation="vertical" >
 
-    <com.frid.view.NormalTitleBar
+    <RelativeLayout
         android:id="@+id/QueryTitle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:left_visible="false"
-        app:title="@string/tab_title_04" />
+        android:layout_height="@dimen/length_45"
+        android:background="@color/TitleColor" >
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/tab_title_04"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/font_size_18" />
+
+        <Button
+            android:id="@+id/QueryUpload"
+            android:layout_width="80dp"
+            android:layout_height="@dimen/length_45"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@color/gray_btn_bg_color"
+            android:text="@string/Submit"
+            android:textColor="@color/White" />
+    </RelativeLayout>
 
     <!-- 第 1 部分 -->
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_above="@+id/QueryBottom"
         android:layout_below="@+id/QueryTitle"
-        android:layout_marginTop="@dimen/length_10"
         android:layout_marginLeft="@dimen/length_10"
         android:layout_marginRight="@dimen/length_10"
-        android:background="@color/White" >
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="vertical" >
-
-            <Button
-                android:id="@+id/QueryNumber"
-                android:layout_width="fill_parent"
-                android:layout_height="@dimen/length_40"
-                android:layout_marginTop="@dimen/length_3"
-                android:background="@drawable/item_style"
-                android:drawablePadding="@dimen/length_10"
-                android:drawableRight="@drawable/tab_04_pressed"
-                android:gravity="center_vertical"
-                android:hint="点击选择核对单号."
-                android:paddingLeft="@dimen/length_10"
-                android:paddingRight="@dimen/length_10"/>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1.0px"
-                android:background="@drawable/shape_line" />
-
-            <ListView
-                android:id="@+id/QueryList"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/length_1"
-                android:divider="@color/app_back"
-                android:dividerHeight="@dimen/length_1"
-                android:fadingEdge="none"
-                android:fastScrollEnabled="false"
-                android:footerDividersEnabled="false"
-                android:headerDividersEnabled="false"
-                android:smoothScrollbar="true" >
-            </ListView>
-        </LinearLayout>
+        android:layout_marginTop="@dimen/length_10"
+        android:background="@color/White"
+        android:orientation="vertical" >
 
         <Button
-            android:id="@+id/QueryUpload"
-            android:layout_width="90dp"
-            android:layout_height="50dp"
-            android:layout_gravity="bottom|right"
-            android:layout_margin="@dimen/length_10"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/button_style"
-            android:text="@string/SetVerify"
-            android:textColor="@color/White" />
-    </FrameLayout>
+            android:id="@+id/QueryNumber"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/length_40"
+            android:layout_marginTop="@dimen/length_3"
+            android:background="@drawable/item_style"
+            android:drawablePadding="@dimen/length_10"
+            android:drawableRight="@drawable/tab_04_pressed"
+            android:gravity="center_vertical"
+            android:hint="点击选择核对单号."
+            android:paddingLeft="@dimen/length_10"
+            android:paddingRight="@dimen/length_10" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@drawable/shape_line" />
+
+        <ListView
+            android:id="@+id/QueryList"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/length_1"
+            android:divider="@color/app_back"
+            android:dividerHeight="@dimen/length_1"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:smoothScrollbar="true" >
+        </ListView>
+    </LinearLayout>
 
     <!-- 第二部分 -->
 
@@ -116,8 +120,8 @@
                 android:layout_height="@dimen/length_40"
                 android:layout_below="@+id/QueryGoodTitle"
                 android:layout_toRightOf="@+id/QueryGoodImg"
-                android:textColor="@android:color/darker_gray"
                 android:hint="暂无"
+                android:textColor="@android:color/darker_gray"
                 android:textSize="@dimen/font_size_15" />
         </RelativeLayout>
 
@@ -159,7 +163,7 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:background="@drawable/button_circle_blue_style"
-                        android:text="@string/Scan"
+                        android:text="@string/ScanGood"
                         android:textColor="@color/White" />
                 </LinearLayout>
             </FrameLayout>
@@ -170,7 +174,7 @@
                 android:layout_height="80dp"
                 android:layout_marginLeft="20dp"
                 android:background="@drawable/button_circle_style"
-                android:text="@string/Verify"
+                android:text="@string/Ok"
                 android:textColor="@color/White" />
         </LinearLayout>
     </LinearLayout>
