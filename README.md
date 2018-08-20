@@ -1,10 +1,5 @@
-# CodeNotes
+# JokerNotes
 代码笔记
 
-http://github.com/Forever2017/JokerNotes/Image/1001.jpg
-
-![image](http://github.com/Forever2017/JokerNotes/Image/1001.jpg)
-
-![Alt text](https://github.com/Forever2017/JokerNotes/raw/master/Screenshots/1001.jpg)
-
-
+//GitHub显示图片的方法
+![Alt text](https://github.com/Forever2017/JokerNotes/raw/master/Image/显示图片.png)
