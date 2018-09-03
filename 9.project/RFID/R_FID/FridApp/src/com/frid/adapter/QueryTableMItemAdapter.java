@@ -2,7 +2,7 @@ package com.frid.adapter;
 import java.util.List;
 
 import com.frid.fridapp.R;
-import com.frid.pojo.GsonItem;
+import com.frid.pojo.GsonItemCheck;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -13,11 +13,11 @@ import android.widget.TextView;
 
 /**单据adapter,info , 单据详情上的Item*/
 public class QueryTableMItemAdapter extends BaseAdapter{
-	private List<GsonItem> list;
+	private List<GsonItemCheck> list;
 	private ViewHolder holder;
 	private Context context;
 
-	public QueryTableMItemAdapter(Context context, List<GsonItem> list){
+	public QueryTableMItemAdapter(Context context, List<GsonItemCheck> list){
 		this.list = list;
 		this.context = context;
 	}

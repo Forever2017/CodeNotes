@@ -3,12 +3,12 @@ package com.frid.pojo;
 import com.google.gson.annotations.SerializedName;
 
 
-public class GsonItem implements Cloneable {
+public class GsonItemCheck implements Cloneable {
 	/*{
          "stockCountCode": "DE04E9B8581E412E98FCD58A3B995A68",
          "comment": "入库盘点7E075BDD22044A38A60E472D5CDE1BCF"
      }*/
-	@SerializedName(value = "stockCountCode",alternate = {"epc", "externalId", "productExternalId","id4"})  
+	@SerializedName(value = "stockCountCode",alternate = {"externalId", "productExternalId","id4"})  
 	private String id;
 
 	@SerializedName(value = "comment",alternate = {"productName", "deliveryMan","name4"})  
@@ -23,21 +23,25 @@ public class GsonItem implements Cloneable {
 	@SerializedName(value = "status",alternate = {"stockCounttype","XXXXXXX"})  
 	private int state = 0;
 	
+	private int current = 0;
+	
+	private String epc;
+	
 
-	public GsonItem(String id, String name) {
+	public GsonItemCheck(String id, String name) {
 		super();
 		this.id = id;
 		this.name = name;
 	}
 	//基本上只有测试用到~
-	public GsonItem(String id, String name,int state) {
+	public GsonItemCheck(String id, String name,int state) {
 		super();
 		this.state = state;
 		this.id = id;
 		this.name = name;
 	}
 	//基本上只有测试用到~
-	public GsonItem(String id, String name,int state,String number) {
+	public GsonItemCheck(String id, String name,int state,String number) {
 		super();
 		this.state = state;
 		this.id = id;
@@ -47,14 +51,28 @@ public class GsonItem implements Cloneable {
 	//实现对象克隆
 	@Override  
 	public Object clone() {  
-		GsonItem stu = null;  
+		GsonItemCheck stu = null;  
 		try{  
-			stu = (GsonItem)super.clone();  
+			stu = (GsonItemCheck)super.clone();  
 		}catch(CloneNotSupportedException e) {  
 			e.printStackTrace();  
 		}  
 		return stu;  
 	}  
+	
+	
+	public String getEpc() {
+		return epc;
+	}
+	public void setEpc(String epc) {
+		this.epc = epc;
+	}
+	public int getCurrent() {
+		return current;
+	}
+	public void setCurrent(int current) {
+		this.current = current;
+	}
 	public String getId() {
 		return id;
 	}

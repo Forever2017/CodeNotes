@@ -12,6 +12,7 @@ import com.frid.data.FridApplication;
 import com.frid.pojo.DBGsonProduct;
 import com.frid.pojo.DBLog;
 import com.frid.pojo.GsonItem;
+import com.frid.pojo.GsonItemCheck;
 import com.google.gson.Gson;
 
 public class JsonTool {
@@ -44,7 +45,7 @@ public class JsonTool {
 		return new Gson().toJson(new SCR(StockCountCode,list));
 	}
 	/**获取 上传的【核对】结果 */
-	public String getEPC(String StockTransferExternalId,List<GsonItem> qlist) {
+	public String getEpcCheck(String StockTransferExternalId,List<GsonItemCheck> qlist) {
 		return new Gson().toJson(new EPC(StockTransferExternalId,qlist));
 	}
 	/**获取 上传的【仓库同步】数据*/
@@ -78,12 +79,12 @@ public class JsonTool {
 		private String DeviceCode;
 		private List<String> Epcs = new ArrayList<String>();
 		
-		public EPC(String StockTransferExternalId, List<GsonItem> qlist) {
+		public EPC(String StockTransferExternalId, List<GsonItemCheck> qlist) {
 			this.StockTransferExternalId = StockTransferExternalId;
 			this.Token = FridApplication.token;
 			this.DeviceCode = AppData.deviceCode;
-			for (GsonItem gsonItem : qlist) 
-				Epcs.add(gsonItem.getNumber());
+			for (GsonItemCheck gsonItem : qlist) 
+				Epcs.add(gsonItem.getEpc());
 		}
 
 	}

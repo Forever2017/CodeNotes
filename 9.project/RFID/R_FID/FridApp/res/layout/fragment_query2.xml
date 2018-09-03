@@ -36,11 +36,11 @@
     </RelativeLayout>
 
     <!-- 第 1 部分 -->
-
+ <!-- android:layout_height="@dimen/length_380" -->
     <RelativeLayout
         android:id="@+id/QueryTable"
         android:layout_width="fill_parent"
-        android:layout_height="@dimen/length_380"
+        android:layout_height="200dip"
         android:layout_below="@+id/QueryTitle"
         android:layout_marginLeft="@dimen/length_10"
         android:layout_marginRight="@dimen/length_10"

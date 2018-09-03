@@ -1,8 +1,11 @@
 package com.frid.adapter;
 import java.util.List;
+
 import com.frid.fridapp.R;
 import com.frid.pojo.GsonItem;
+
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,7 +45,7 @@ public class MItemAdapter extends BaseAdapter{
 		if (convertView == null) {
 			holder = new ViewHolder();
 			convertView = LayoutInflater.from(context).inflate(
-					R.layout.item_table, null);
+					R.layout.item_item, null);
 
 			holder.ItemContent = (TextView) convertView.findViewById(R.id.ItemItemContent);
 			holder.ItemState   = (TextView) convertView.findViewById(R.id.ItemItemState);
@@ -52,7 +55,12 @@ public class MItemAdapter extends BaseAdapter{
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		} 
-		holder.ItemContent.setText(list.get(position).getName());
+		try {
+			holder.ItemContent.setText(list.get(position).getName());
+		} catch (Exception e) {
+			Log.e("", "");
+		}
+		
 		
 		if(type==0) holder.ItemItemID.setText(list.get(position).getId());
 		else holder.ItemItemID.setText(list.get(position).getNumber().equals("1")?"暂未匹配":list.get(position).getNumber());

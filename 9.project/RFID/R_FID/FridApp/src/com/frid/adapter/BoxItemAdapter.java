@@ -40,7 +40,7 @@ public class BoxItemAdapter extends BaseAdapter{
 		if (convertView == null) {
 			holder = new ViewHolder();
 			convertView = LayoutInflater.from(context).inflate(
-					R.layout.item_table, null);
+					R.layout.item_item, null);
 
 			holder.ItemContent = (TextView) convertView.findViewById(R.id.ItemItemContent);
 			holder.ItemState   = (TextView) convertView.findViewById(R.id.ItemItemState);
