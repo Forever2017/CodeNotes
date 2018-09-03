@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="80dp"
+        fresco:actualImageScaleType="fitXY"
+        fresco:placeholderImage="@drawable/ic_launcher_background"
+        fresco:placeholderImageScaleType="fitXY"
+        fresco:roundingBorderColor="@color/grey_transparent"
+        fresco:roundingBorderWidth="1dp" />
+
+    <TextView
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:background="@color/grey_transparent"
+        android:gravity="center"
+        android:minHeight="20dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/StateNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:gravity="center"
+        android:minHeight="20dp"
+        android:text="50"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

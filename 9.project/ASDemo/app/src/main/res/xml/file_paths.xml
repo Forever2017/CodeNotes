@@ -1,0 +1,9 @@
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <external-path
+        name="pdfs"
+        path="sinyi" />
+
+    <external-files-path name="hahahahah" path="sinyi" />
+
+</paths>

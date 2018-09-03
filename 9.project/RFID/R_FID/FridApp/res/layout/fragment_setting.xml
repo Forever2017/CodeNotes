@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_back"
+    android:orientation="vertical" >
+
+    <com.frid.view.NormalTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:left_visible="false"
+        app:title="@string/tab_title_05" />
+
+    <Button
+        android:id="@+id/SettingPower"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/length_50"
+        android:layout_marginTop="@dimen/length_10"
+        android:background="@drawable/item_style"
+        android:drawableLeft="@drawable/tab_04_pressed"
+        android:drawablePadding="@dimen/length_10"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/length_10"
+        android:text="扫描频率" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@drawable/shape_line" />
+
+    <Button
+        android:id="@+id/PollingTime"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/length_50"
+        android:background="@drawable/item_style"
+        android:drawableLeft="@drawable/tab_04_pressed"
+        android:drawablePadding="@dimen/length_10"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/length_10"
+        android:text="同步周期" />
+
+    <Button
+        android:id="@+id/SynchSwitch"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/length_50"
+        android:layout_marginTop="@dimen/length_10"
+        android:background="@drawable/item_style"
+        android:drawableLeft="@drawable/tab_04_pressed"
+        android:drawablePadding="@dimen/length_10"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/length_10"
+        android:text="[测试] 关闭 自动同步" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@drawable/shape_line" />
+
+    <Button android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/length_50"
+        android:background="@drawable/item_style"
+        android:drawableLeft="@drawable/tab_04_pressed"
+        android:drawablePadding="@dimen/length_10"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/length_10"
+        android:text="[测试] 暂无" />
+
+    <Button
+        android:id="@+id/SettingExit"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/length_50"
+        android:layout_marginTop="@dimen/length_10"
+        android:background="@drawable/item_style"
+        android:text="@string/exit"
+        android:textColor="@color/Red" />
+
+</LinearLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:layout_alignParentBottom="true"
+    android:background="@color/BottomBar" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true" >
+
+        <LinearLayout
+            android:id="@+id/id_tab_bottom_02"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:descendantFocusability="beforeDescendants"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/btn_tab_bottom_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#0000"
+                android:clickable="false"
+                android:src="@drawable/tab_02_pressed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_title_02"
+                android:textColor="@color/White" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_tab_bottom_03"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:descendantFocusability="beforeDescendants"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/btn_tab_bottom_03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#0000"
+                android:clickable="false"
+                android:src="@drawable/tab_03_normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_title_03"
+                android:textColor="@color/White" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_tab_bottom_04"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:descendantFocusability="beforeDescendants"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/btn_tab_bottom_04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#0000"
+                android:clickable="false"
+                android:src="@drawable/tab_04_normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_title_04"
+                android:textColor="@color/White" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_tab_bottom_05"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:descendantFocusability="beforeDescendants"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/btn_tab_bottom_05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#0000"
+                android:clickable="false"
+                android:src="@drawable/tab_05_normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_title_05"
+                android:textColor="@color/White" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

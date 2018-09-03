@@ -1,0 +1,35 @@
+<resources>
+
+    <dimen name="font_size_11">11dp</dimen>
+    <dimen name="font_size_13">13dp</dimen>
+    <dimen name="font_size_14">14dp</dimen>
+    <dimen name="font_size_15">15dp</dimen>
+    <dimen name="font_size_16">16dp</dimen>
+    <dimen name="font_size_18">18dp</dimen>
+    
+    <dimen name="length_1">1dip</dimen>
+    <dimen name="length_3">3dip</dimen>
+    <dimen name="length_5">5dip</dimen>
+    <dimen name="length_10">10dip</dimen>
+    <dimen name="length_40">40dip</dimen>
+    <dimen name="length_45">45dip</dimen>
+    <dimen name="length_20">20dip</dimen>
+    <dimen name="length_30">30dip</dimen>
+    <dimen name="length_50">50dip</dimen>
+    <dimen name="length_60">60dip</dimen>
+    <dimen name="length_70">70dip</dimen>
+    <dimen name="length_80">80dip</dimen>
+    <dimen name="length_90">90dip</dimen>
+    <dimen name="length_100">100dip</dimen>
+    <dimen name="length_110">110dip</dimen>
+    <dimen name="length_120">120dip</dimen>
+    <dimen name="length_150">150dip</dimen>
+    <dimen name="length_160">160dip</dimen>
+    <dimen name="length_180">180dip</dimen>
+    <dimen name="length_200">200dip</dimen>
+    <dimen name="length_300">300dip</dimen>
+    <dimen name="length_380">380dip</dimen>
+    <dimen name="list_padding">0dp</dimen>
+    <dimen name="list_item_padding">16dp</dimen>
+
+</resources>

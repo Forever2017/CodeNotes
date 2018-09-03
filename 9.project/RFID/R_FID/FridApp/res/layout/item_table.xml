@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_style"
+    android:paddingBottom="10dip"
+    android:paddingTop="10dip"
+    android:weightSum="4" >
+
+    <TextView
+        android:id="@+id/TableItemName"
+        android:layout_width="100dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="2"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="10dip"
+        android:text="商品名"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/font_size_18" />
+
+    <TextView
+        android:id="@+id/TableItemSum"
+        android:layout_width="@dimen/length_40"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/font_size_18" />
+
+    <TextView
+        android:id="@+id/TableItemNow"
+        android:layout_width="@dimen/length_40"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/font_size_18" />
+
+</LinearLayout>

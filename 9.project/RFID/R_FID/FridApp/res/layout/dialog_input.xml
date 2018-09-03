@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_back"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/length_45"
+        android:background="@color/entryBlue" >
+
+        <TextView android:id="@+id/InputTitile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="运单号"
+            android:textColor="@color/TitleColorMax"
+            android:textSize="20.0sp" />
+
+        <Button
+            android:id="@+id/dialog_input_close"
+            android:layout_width="@dimen/length_45"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:text="关闭"
+            android:textColor="@color/TitleColorMax" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:background="@drawable/shape_line" />
+
+    <EditText
+        android:id="@+id/dialog_input_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/length_45"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="@dimen/length_20"
+        android:background="@android:color/white"
+        android:drawablePadding="10dip"
+        android:hint="请输入运单号"
+        android:maxLength="15"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:textSize="@dimen/font_size_16" />
+
+    <Button
+        android:id="@+id/dialog_input_but"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/length_45"
+        android:layout_marginBottom="@dimen/length_20"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="@dimen/length_20"
+        android:background="@drawable/button_style"
+        android:text="确认"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/dialog_input_prompt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="@dimen/length_20"
+        android:background="@android:color/white"
+        android:drawablePadding="10dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:text="未匹配到的运单号,是否继续录入?"
+        android:textColor="@color/Red"
+        android:textSize="@dimen/font_size_16"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/dialog_input_Linear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="2" >
+
+        <Button
+            android:id="@+id/dialog_input_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/length_45"
+            android:layout_marginBottom="@dimen/length_20"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:layout_marginTop="@dimen/length_20"
+            android:layout_weight="1"
+            android:background="@drawable/button_style"
+            android:text="继续录入"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/dialog_input_no"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/length_45"
+            android:layout_marginBottom="@dimen/length_20"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:layout_marginTop="@dimen/length_20"
+            android:layout_weight="1"
+            android:background="@drawable/button_style"
+            android:text="重新录入"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</LinearLayout>

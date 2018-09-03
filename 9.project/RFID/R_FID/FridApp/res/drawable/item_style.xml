@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 点击后 -->
+    <item android:drawable="@color/TitleColorMIn" android:state_pressed="true"/>
+    <item android:drawable="@color/TitleColorMIn" android:state_checked="true"/>
+    <item android:drawable="@color/TitleColorMIn" android:state_selected="true"/>
+    <!-- 点击前 -->
+    <item android:drawable="@color/White"/>
+
+</selector>
