@@ -175,6 +175,7 @@ public class Device implements MultiLableCallBack {
 			tempPool.add(str_tmp);
 			le.ReturnEpc(str_tmp);
 		}
+
 	}
 
 

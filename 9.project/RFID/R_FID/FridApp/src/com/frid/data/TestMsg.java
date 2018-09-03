@@ -17,7 +17,7 @@ public class TestMsg {
 			break;
 
 		case "querydetail"://核对单 商品列表 详情
-			msg = "{\"fromWarehouseCode\":\"W001\",\"toWarehouseCode\":\"W002\",\"deliveryMan\":\"Bat Man\",\"stockTransferDetail\":[{\"productExternalId\":\"7894561234ASDFGHJKLKL7898456X153\",\"productCode\":\"P0008\",\"subProductCode\":\"SP003\",\"productName\":\"测试：老干妈豆腐乳\",\"requestNumber\":5},{\"productExternalId\":\"7894561234ASDFGHJKLKL7898456X154\",\"productCode\":\"P0008\",\"subProductCode\":\"SP003\",\"productName\":\"测试：用不坏电水壶\",\"requestNumber\":1},{\"productExternalId\":\"7894561234ASDFGHJKLKL7898456X155\",\"productCode\":\"P0008\",\"subProductCode\":\"SP003\",\"productName\":\"测试：飞利浦剃须刀\",\"requestNumber\":3},{\"productExternalId\":\"7894561234ASDFGHJKLKL7898456X156\",\"productCode\":\"P0008\",\"subProductCode\":\"SP003\",\"productName\":\"测试：北京面便面\",\"requestNumber\":9}],\"responseCode\":\"0000\",\"responseMessage\":\"Success\"}";
+			msg = "{\"fromWarehouseCode\":\"W001\",\"toWarehouseCode\":\"W002\",\"deliveryMan\":\"Bat Man\",\"stockTransferDetail\":[{\"productExternalId\":\"7894561234ASDFGHJKLKL7898456X153\",\"productCode\":\"P0008\",\"subProductCode\":\"SP003\",\"productName\":\"测试：老干妈豆腐乳\",\"requestNumber\":3},{\"productExternalId\":\"7894561234ASDFGHJKLKL7898456X154\",\"productCode\":\"P0008\",\"subProductCode\":\"SP003\",\"productName\":\"测试：用不坏电水壶\",\"requestNumber\":1},{\"productExternalId\":\"7894561234ASDFGHJKLKL7898456X155\",\"productCode\":\"P0008\",\"subProductCode\":\"SP003\",\"productName\":\"测试：飞利浦剃须刀\",\"requestNumber\":2},{\"productExternalId\":\"7894561234ASDFGHJKLKL7898456X156\",\"productCode\":\"P0008\",\"subProductCode\":\"SP003\",\"productName\":\"测试：北京面便面\",\"requestNumber\":4}],\"responseCode\":\"0000\",\"responseMessage\":\"Success\"}";
 			break;
 
 		case "GetStockCountTasks"://获取盘点任务
@@ -85,6 +85,54 @@ public class TestMsg {
 			msg = "{\"productCode\":123456,\"subProductCode\":123456,\"productName\":\"测试：飞利浦剃须刀\",\"price\":2,\"reservationCode\":123456,\"supplierCode\":123456,\"supplierName\":123456,\"rfid\":123456,\"warehouse\":123456,\"status\":0,\"productExternalId\":\"7894561234ASDFGHJKLKL7898456X155\",\"responseCode\":\"0000\",\"responseMessage\":\"Success\"}";
 			break;
 		case "E28068100000003C344F5BBE":
+			msg = "{\"productCode\":123456,\"subProductCode\":123456,\"productName\":\"测试：北京面便面\",\"price\":2,\"reservationCode\":123456,\"supplierCode\":123456,\"supplierName\":123456,\"rfid\":123456,\"warehouse\":123456,\"status\":0,\"productExternalId\":\"7894561234ASDFGHJKLKL7898456X156\",\"responseCode\":\"0000\",\"responseMessage\":\"Success\"}";
+			break;
+		default:
+			break;
+		}
+
+		return msg;
+	}
+	/**模拟checkFrid**/
+	public static String testCheckFrid(String msg,int i) {
+		if(Switch == false) return msg;
+		// 3 1 2 4
+		switch (i) {
+		case 1:
+			msg = "{\"productCode\":123456,\"subProductCode\":123456,\"productName\":\"测试：老干妈豆腐乳\",\"price\":2,\"reservationCode\":123456,\"supplierCode\":123456,\"supplierName\":123456,\"rfid\":123456,\"warehouse\":123456,\"status\":0,\"productExternalId\":\"7894561234ASDFGHJKLKL7898456X153\",\"responseCode\":\"0000\",\"responseMessage\":\"Success\"}";
+			break;
+		case 2:
+			msg = "{\"productCode\":123456,\"subProductCode\":123456,\"productName\":\"测试：老干妈豆腐乳\",\"price\":2,\"reservationCode\":123456,\"supplierCode\":123456,\"supplierName\":123456,\"rfid\":123456,\"warehouse\":123456,\"status\":0,\"productExternalId\":\"7894561234ASDFGHJKLKL7898456X153\",\"responseCode\":\"0000\",\"responseMessage\":\"Success\"}";
+			break;
+		case 3:
+			msg = "{\"productCode\":123456,\"subProductCode\":123456,\"productName\":\"测试：老干妈豆腐乳\",\"price\":2,\"reservationCode\":123456,\"supplierCode\":123456,\"supplierName\":123456,\"rfid\":123456,\"warehouse\":123456,\"status\":0,\"productExternalId\":\"7894561234ASDFGHJKLKL7898456X153\",\"responseCode\":\"0000\",\"responseMessage\":\"Success\"}";
+			break;
+			
+			
+			
+		case 4:
+			msg = "{\"productCode\":123456,\"subProductCode\":123456,\"productName\":\"测试：用不坏电水壶\",\"price\":2,\"reservationCode\":123456,\"supplierCode\":123456,\"supplierName\":123456,\"rfid\":123456,\"warehouse\":123456,\"status\":0,\"productExternalId\":\"7894561234ASDFGHJKLKL7898456X154\",\"responseCode\":\"0000\",\"responseMessage\":\"Success\"}";
+			break;
+			
+			
+		case 5:
+			msg = "{\"productCode\":123456,\"subProductCode\":123456,\"productName\":\"测试：飞利浦剃须刀\",\"price\":2,\"reservationCode\":123456,\"supplierCode\":123456,\"supplierName\":123456,\"rfid\":123456,\"warehouse\":123456,\"status\":0,\"productExternalId\":\"7894561234ASDFGHJKLKL7898456X155\",\"responseCode\":\"0000\",\"responseMessage\":\"Success\"}";
+			break;
+		case 6:
+			msg = "{\"productCode\":123456,\"subProductCode\":123456,\"productName\":\"测试：飞利浦剃须刀\",\"price\":2,\"reservationCode\":123456,\"supplierCode\":123456,\"supplierName\":123456,\"rfid\":123456,\"warehouse\":123456,\"status\":0,\"productExternalId\":\"7894561234ASDFGHJKLKL7898456X155\",\"responseCode\":\"0000\",\"responseMessage\":\"Success\"}";
+			break;
+			
+			
+		case 7:
+			msg = "{\"productCode\":123456,\"subProductCode\":123456,\"productName\":\"测试：北京面便面\",\"price\":2,\"reservationCode\":123456,\"supplierCode\":123456,\"supplierName\":123456,\"rfid\":123456,\"warehouse\":123456,\"status\":0,\"productExternalId\":\"7894561234ASDFGHJKLKL7898456X156\",\"responseCode\":\"0000\",\"responseMessage\":\"Success\"}";
+			break;
+		case 8:
+			msg = "{\"productCode\":123456,\"subProductCode\":123456,\"productName\":\"测试：北京面便面\",\"price\":2,\"reservationCode\":123456,\"supplierCode\":123456,\"supplierName\":123456,\"rfid\":123456,\"warehouse\":123456,\"status\":0,\"productExternalId\":\"7894561234ASDFGHJKLKL7898456X156\",\"responseCode\":\"0000\",\"responseMessage\":\"Success\"}";
+			break;
+		case 9:
+			msg = "{\"productCode\":123456,\"subProductCode\":123456,\"productName\":\"测试：北京面便面\",\"price\":2,\"reservationCode\":123456,\"supplierCode\":123456,\"supplierName\":123456,\"rfid\":123456,\"warehouse\":123456,\"status\":0,\"productExternalId\":\"7894561234ASDFGHJKLKL7898456X156\",\"responseCode\":\"0000\",\"responseMessage\":\"Success\"}";
+			break;
+		case 10:
 			msg = "{\"productCode\":123456,\"subProductCode\":123456,\"productName\":\"测试：北京面便面\",\"price\":2,\"reservationCode\":123456,\"supplierCode\":123456,\"supplierName\":123456,\"rfid\":123456,\"warehouse\":123456,\"status\":0,\"productExternalId\":\"7894561234ASDFGHJKLKL7898456X156\",\"responseCode\":\"0000\",\"responseMessage\":\"Success\"}";
 			break;
 		default:

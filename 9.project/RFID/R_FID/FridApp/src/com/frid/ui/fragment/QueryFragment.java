@@ -79,6 +79,8 @@ public class QueryFragment extends FragmentJoker implements OnClickListener,OnIt
 	}
 	//明细
 	private void detail() {
+		sum = 0;
+		current = 0;  
 		for (GsonItemCheck GsonItemCheck : list) {
 			sum = sum + Integer.parseInt(GsonItemCheck.getNumber());
 			current = current + GsonItemCheck.getCurrent();
@@ -100,8 +102,6 @@ public class QueryFragment extends FragmentJoker implements OnClickListener,OnIt
 		mItemAdapter = new QueryMItemAdapter(getActivity(), somList);
 		QueryList.setAdapter(mItemAdapter);
 		mItemAdapter.notifyDataSetChanged();
-
-		iniQueryList("6666666");
 	}
 	/**更新核对单数据*/
 	private String StockTransferExternalId;//当前核对单号
@@ -136,13 +136,10 @@ public class QueryFragment extends FragmentJoker implements OnClickListener,OnIt
 		case R.id.QueryCheckScan://扫描
 			if(QueryScan.getText().toString().equals(getResources().getString(R.string.ScanGood))){
 
-				if(boxList.size() >= sum) {
-					Toast("所有商品已核实.");
-					return;
-				}
 				//核对单商品为空时不做扫描
 				if(list.size()==0){Toast("没有核对货品."); return;}
-
+				
+				if(boxList.size() >= sum) { Toast("所有商品已核实."); return; }
 
 				//1.改变文字 2.锁定上传 3.显示旋转动画 4.执行真实操作
 				QueryScan.setText(getResources().getString(R.string.Stop));
@@ -189,17 +186,16 @@ public class QueryFragment extends FragmentJoker implements OnClickListener,OnIt
 				public void ReturnData(String msg) {
 					super.ReturnData(msg);
 					QueryNumber.setText("单号:"+msg);
-					
+
 					scrapEpcList.clear();
 					boxList.clear();
 					sum = 0; //明细的Sum
 					current = 0;//明细的current
-					
+
 					iniQueryList(msg);
-				
-					
-					
-					
+
+					num = 1;//测试用
+
 				}
 			});
 			break;
@@ -223,7 +219,7 @@ public class QueryFragment extends FragmentJoker implements OnClickListener,OnIt
 			@Override
 			public void ReturnEpc(final String epc) {
 				super.ReturnEpc(epc);
-				//E28068100000003C344F60E2
+				//DF2018072100000000000019  
 				if(scrapEpcList.contains(epc)) return;
 
 				UnreadEpcList.add(epc);
@@ -243,14 +239,17 @@ public class QueryFragment extends FragmentJoker implements OnClickListener,OnIt
 	/**check的开关*/
 	private boolean isCheck = true;
 	/**检查epc货品*/
+	int num = 1;
 	private void epcCheck() {
+
 		isCheck = false;
 		if(UnreadEpcList.size()>0){//有未读的epc
 			ASHttp.CheckRfid(getActivity(), UnreadEpcList.get(0), new AsyncHttp() {
 				@Override
 				public void onResult(boolean b, String msg) {
 					super.onResult(b, msg);
-					msg = TestMsg.testCheckFrid(UnreadEpcList.get(0), msg);
+					msg = TestMsg.testCheckFrid(msg,num);
+					num = num + 1;
 
 					if(b){
 						GsonItemCheck gi = new Gson().fromJson(msg, GsonItemCheck.class);
@@ -263,7 +262,7 @@ public class QueryFragment extends FragmentJoker implements OnClickListener,OnIt
 									boxList.add(temp);
 
 									gitem.setCurrent(gitem.getCurrent()+1);
-
+									device.biBi(true);
 									getActivity().runOnUiThread(new Runnable() {
 										@Override
 										public void run() {
@@ -279,8 +278,24 @@ public class QueryFragment extends FragmentJoker implements OnClickListener,OnIt
 						UnreadEpcList.remove(0);
 						epcCheck();
 						// 这里可能需要做“全部找到后，自动停止扫描”
+						if(sum == current){//全部找到
+							getActivity().runOnUiThread(new Runnable() {
+								@Override
+								public void run() {
+									//1.改变文字  2.锁定上传 3.显示旋转动画 4.执行真实操作
+									QueryScan.setText(getResources().getString(R.string.ScanGood));
+									pw.setVisibility(View.GONE);
+									//真实停止扫描
+									device.stopSearch();
+									device.biBi(false);
 
-
+									scrapEpcList.clear();
+									UnreadEpcList.clear();
+									
+									checkSubmit();
+								}
+							});
+						}
 					}else{
 						epcCheck();
 					}
@@ -294,7 +309,7 @@ public class QueryFragment extends FragmentJoker implements OnClickListener,OnIt
 
 	/**判断是否可以“提交”，按钮 蓝色\灰色（全部核实即可提交）*/
 	private void checkSubmit() {
-		if(boxList.size() >= sum){//全部找到了..
+		if(boxList.size() >= sum ){//全部找到了..
 			isSubmit = true;
 		}else{//还有没找到的
 			isSubmit = false;
@@ -302,9 +317,9 @@ public class QueryFragment extends FragmentJoker implements OnClickListener,OnIt
 		if(boxList.size()==0) isSubmit = false;	
 
 		if(isSubmit) 
-			QueryUpload.setBackgroundColor(getResources().getColor(R.color.CheckBlue));
+			QueryUpload.setBackground(getResources().getDrawable(R.drawable.button_circle_blue_style));
 		else  
-			QueryUpload.setBackgroundColor(getResources().getColor(R.color.gray_btn_bg_color));
+			QueryUpload.setBackground(getResources().getDrawable(R.drawable.button_circle_gray_style));
 	}
 
 	@Override
@@ -313,7 +328,7 @@ public class QueryFragment extends FragmentJoker implements OnClickListener,OnIt
 		for (GsonItemCheck gi : boxList) 
 			if(gi.getId().equals(list.get(position).getId()))
 				somList.add(gi);
-		
+
 		mItemAdapter.notifyDataSetChanged();
 	}
 

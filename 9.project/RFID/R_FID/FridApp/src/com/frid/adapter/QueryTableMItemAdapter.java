@@ -57,7 +57,7 @@ public class QueryTableMItemAdapter extends BaseAdapter{
 		
 		holder.Sum.setText(list.get(position).getNumber());
 		
-		holder.Now.setText("0");
+		holder.Now.setText(list.get(position).getCurrent()+"");
 		
 		return convertView;
 	}

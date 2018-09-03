@@ -95,7 +95,7 @@ public class LoginActivity extends RSActivity implements OnClickListener,OnCheck
 					Gson g = new Gson();
 					final GsonUser gu = g.fromJson(msg, GsonUser.class);
 					
-					int i = gu.getPermissions().length;
+//					int i = gu.getPermissions().length;
 
 					if(gu.getResponseCode().equals("0000"))
 						LoadingClose("登录成功!",true, new CallDialog() {

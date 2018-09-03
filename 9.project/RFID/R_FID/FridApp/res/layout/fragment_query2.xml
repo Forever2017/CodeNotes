@@ -24,8 +24,8 @@
         <Button
             android:id="@+id/QueryNumber"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/length_40"
-            android:layout_marginTop="@dimen/length_3"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
             android:background="@drawable/item_style"
             android:drawablePadding="@dimen/length_10"
             android:drawableRight="@drawable/tab_04_pressed"
@@ -36,11 +36,12 @@
     </RelativeLayout>
 
     <!-- 第 1 部分 -->
- <!-- android:layout_height="@dimen/length_380" -->
+    <!-- android:layout_height="@dimen/length_380" -->
+
     <RelativeLayout
         android:id="@+id/QueryTable"
         android:layout_width="fill_parent"
-        android:layout_height="200dip"
+        android:layout_height="@dimen/length_380"
         android:layout_below="@+id/QueryTitle"
         android:layout_marginLeft="@dimen/length_10"
         android:layout_marginRight="@dimen/length_10"
@@ -55,7 +56,7 @@
             android:weightSum="4" >
 
             <TextView
-                 android:layout_width="100dip"
+                android:layout_width="100dip"
                 android:layout_height="fill_parent"
                 android:layout_weight="2"
                 android:gravity="center"
@@ -121,7 +122,8 @@
                 android:textColor="@color/White"
                 android:textSize="@dimen/font_size_16" />
 
-            <TextView android:id="@+id/TableDetailSum"
+            <TextView
+                android:id="@+id/TableDetailSum"
                 android:layout_width="@dimen/length_40"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
@@ -130,7 +132,8 @@
                 android:textColor="@color/TitleColorMax"
                 android:textSize="@dimen/font_size_16" />
 
-            <TextView android:id="@+id/TableDetailCurrent"
+            <TextView
+                android:id="@+id/TableDetailCurrent"
                 android:layout_width="@dimen/length_40"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
@@ -223,9 +226,9 @@
         <Button
             android:id="@+id/QueryUpload"
             android:layout_width="80dp"
-            android:layout_height="@dimen/length_45"
+            android:layout_height="80dp"
             android:layout_marginLeft="20dp"
-            android:background="@color/gray_btn_bg_color"
+            android:background="@drawable/button_circle_gray_style"
             android:text="@string/Submit"
             android:textColor="@color/White" />
     </LinearLayout>

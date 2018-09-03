@@ -51,7 +51,7 @@ public class BoxItemAdapter extends BaseAdapter{
 			holder = (ViewHolder) convertView.getTag();
 		} 
 		holder.ItemContent.setText(list.get(position).getName());
-		holder.ItemItemID.setText(list.get(position).getId());
+		holder.ItemItemID.setText(list.get(position).getEpc());
 		holder.ItemState.setVisibility(View.VISIBLE);
 
 		/**=====商品状态====
