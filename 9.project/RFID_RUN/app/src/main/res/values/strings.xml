@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">FridRunning</string>
+
+    <string name="Time">计时</string>
+    <string name="Result">结果</string>
+    <string name="Setting">设置</string>
+
+    <string name="TimeType">计时模式</string>
+    <string name="StartTime">开始计时</string>
+    <string name="SameTime">同时出发</string>
+    <string name="Respectively">分别出发</string>
+    <string name="Distance">单圈距离</string>
+    <string name="M">米</string>
+
+    <string name="SumCircle">总圈数</string>
+    <string name="SumDistance">总距离</string>
+    <string name="TotalTime">用时</string>
+    <string name="Pace">用时配速</string>
+
 </resources>
