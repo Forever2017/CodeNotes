@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/BottomBar" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:weightSum="3" >
+
+        <TextView
+            android:id="@+id/id_tab_bottom_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="测试1"
+            android:textColor="@color/White" />
+
+        <TextView
+            android:id="@+id/id_tab_bottom_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="测试2"
+            android:textColor="@color/White" />
+
+        <TextView
+            android:id="@+id/id_tab_bottom_03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="测试3"
+            android:textColor="@color/White" />
+    </LinearLayout>
+
+</RelativeLayout>

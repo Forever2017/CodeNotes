@@ -1,0 +1,20 @@
+adapt
+各种适配版本
+
+arithmetic
+算法收藏
+
+base
+基类控件，extends用
+
+file
+操作文件相关
+
+function
+功能（一般都是系统功能）如 键盘、安装啊、蓝牙啊、之类的
+
+permissions
+权限相关
+
+view
+UI控件相关，一些自定义控件、构造器之类的

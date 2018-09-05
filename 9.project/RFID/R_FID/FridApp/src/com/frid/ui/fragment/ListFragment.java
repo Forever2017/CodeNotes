@@ -2,7 +2,6 @@ package com.frid.ui.fragment;
 
 import java.util.ArrayList;
 import java.util.List;
-import joker.kit.base.FragmentJoker;
 import android.content.Intent;
 import android.text.format.DateUtils;
 import android.view.View;

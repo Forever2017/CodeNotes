@@ -3,7 +3,6 @@ package com.frid.ui.fragment;
 import java.util.ArrayList;
 import java.util.List;
 
-import joker.kit.base.FragmentJoker;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;

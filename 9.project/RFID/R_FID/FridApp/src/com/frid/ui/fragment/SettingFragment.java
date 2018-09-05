@@ -1,6 +1,5 @@
 package com.frid.ui.fragment;
 
-import joker.kit.base.FragmentJoker;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
