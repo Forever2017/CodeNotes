@@ -12,9 +12,25 @@
     <string name="Distance">单圈距离</string>
     <string name="M">米</string>
 
+    <string name="Name">姓名</string>
     <string name="SumCircle">总圈数</string>
     <string name="SumDistance">总距离</string>
     <string name="TotalTime">用时</string>
-    <string name="Pace">用时配速</string>
+    <string name="Pace">配速</string>
+
+    <string name="language">语言</string>
+    <string name="china">中文</string>
+    <string name="english">英语</string>
+
+    <string name="allow">允许外部跑者</string>
+
+    <string name="download">下载标签数据</string>
+    <string name="upload">上传并清空本地记录</string>
+
+    <string name="StopTime">停止计时</string>
+    <string name="checkResult">查看结果</string>
+
+    <string name="current">当前圈用时</string>
+    <string name="last">上一圈用时</string>
 
 </resources>

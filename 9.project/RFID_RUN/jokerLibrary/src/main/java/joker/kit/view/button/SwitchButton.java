@@ -23,6 +23,14 @@ import joker.kit.base.R;
 /**
  * SwitchButton.
  * 类似IOS风格的开关按钮
+ *
+ <joker.kit.view.button.SwitchButton
+     android:id="@+id/switch_button"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"/>
+ *
+ *
+ *
  */
 public class SwitchButton extends View implements Checkable {
     private static final int DEFAULT_WIDTH = dp2pxInt(58);

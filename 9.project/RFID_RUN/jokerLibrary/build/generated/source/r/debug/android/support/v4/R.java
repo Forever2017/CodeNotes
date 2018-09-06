@@ -36,21 +36,21 @@ public final class R {
         public static int compat_button_padding_horizontal_material = 0x7f080056;
         public static int compat_button_padding_vertical_material = 0x7f080057;
         public static int compat_control_corner_material = 0x7f080058;
-        public static int notification_action_icon_size = 0x7f0800be;
-        public static int notification_action_text_size = 0x7f0800bf;
-        public static int notification_big_circle_margin = 0x7f0800c0;
-        public static int notification_content_margin_start = 0x7f0800c1;
-        public static int notification_large_icon_height = 0x7f0800c2;
-        public static int notification_large_icon_width = 0x7f0800c3;
-        public static int notification_main_column_padding_top = 0x7f0800c4;
-        public static int notification_media_narrow_margin = 0x7f0800c5;
-        public static int notification_right_icon_size = 0x7f0800c6;
-        public static int notification_right_side_padding_top = 0x7f0800c7;
-        public static int notification_small_icon_background_padding = 0x7f0800c8;
-        public static int notification_small_icon_size_as_large = 0x7f0800c9;
-        public static int notification_subtext_size = 0x7f0800ca;
-        public static int notification_top_pad = 0x7f0800cb;
-        public static int notification_top_pad_large_text = 0x7f0800cc;
+        public static int notification_action_icon_size = 0x7f0800bf;
+        public static int notification_action_text_size = 0x7f0800c0;
+        public static int notification_big_circle_margin = 0x7f0800c1;
+        public static int notification_content_margin_start = 0x7f0800c2;
+        public static int notification_large_icon_height = 0x7f0800c3;
+        public static int notification_large_icon_width = 0x7f0800c4;
+        public static int notification_main_column_padding_top = 0x7f0800c5;
+        public static int notification_media_narrow_margin = 0x7f0800c6;
+        public static int notification_right_icon_size = 0x7f0800c7;
+        public static int notification_right_side_padding_top = 0x7f0800c8;
+        public static int notification_small_icon_background_padding = 0x7f0800c9;
+        public static int notification_small_icon_size_as_large = 0x7f0800ca;
+        public static int notification_subtext_size = 0x7f0800cb;
+        public static int notification_top_pad = 0x7f0800cc;
+        public static int notification_top_pad_large_text = 0x7f0800cd;
     }
     public static final class drawable {
         public static int notification_action_background = 0x7f09005d;

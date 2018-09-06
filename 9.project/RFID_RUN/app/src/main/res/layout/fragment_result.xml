@@ -24,19 +24,10 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
-                android:layout_weight="2"
+                android:layout_weight="1"
                 android:gravity="center"
-                android:text="商品名"
-                android:textColor="@color/blue"
-                android:textSize="@dimen/font_size_16" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="fill_parent"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:text="商品名"
-                android:textColor="@color/blue"
+                android:text="@string/Name"
+                android:textColor="@color/cornflowerblue"
                 android:textSize="@dimen/font_size_16" />
 
             <TextView
@@ -44,8 +35,8 @@
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="待检数"
-                android:textColor="@color/blue"
+                android:text="@string/SumCircle"
+                android:textColor="@color/cornflowerblue"
                 android:textSize="@dimen/font_size_16" />
 
             <TextView
@@ -53,8 +44,8 @@
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="实检数"
-                android:textColor="@color/blue"
+                android:text="@string/SumDistance"
+                android:textColor="@color/cornflowerblue"
                 android:textSize="@dimen/font_size_16" />
 
             <TextView
@@ -62,8 +53,17 @@
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="实检数"
-                android:textColor="@color/blue"
+                android:text="@string/TotalTime"
+                android:textColor="@color/cornflowerblue"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/Pace"
+                android:textColor="@color/cornflowerblue"
                 android:textSize="@dimen/font_size_16" />
         </LinearLayout>
 
@@ -71,6 +71,8 @@
             android:layout_width="fill_parent"
             android:layout_height="1.0px"
             android:background="@drawable/shape_line" />
+
+
     </LinearLayout>
 
 

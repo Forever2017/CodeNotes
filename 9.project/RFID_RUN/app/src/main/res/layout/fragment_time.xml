@@ -27,6 +27,13 @@
                 android:paddingLeft="@dimen/length_10"
                 android:text="@string/TimeType" />
 
+            <Spinner
+                android:id="@+id/SpinnerRunJoker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/length_10"
+                android:entries="@array/runs" />
+
         </LinearLayout>
 
         <View
@@ -36,7 +43,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/length_45">
+            android:layout_height="@dimen/length_45"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -44,6 +53,22 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="@dimen/length_10"
                 android:text="@string/Distance" />
+
+            <EditText
+                android:layout_width="@dimen/length_80"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/length_10"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="5"
+                android:text="500" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/M" />
+
 
         </LinearLayout>
 
