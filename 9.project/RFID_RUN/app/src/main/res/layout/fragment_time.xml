@@ -55,6 +55,7 @@
                 android:text="@string/Distance" />
 
             <EditText
+                android:id="@+id/TimeEditText"
                 android:layout_width="@dimen/length_80"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/length_10"
@@ -77,7 +78,7 @@
             android:layout_height="1.0px"
             android:background="@drawable/shape_line" />
 
-        <Button
+        <Button android:id="@+id/TimeStartBut"
             android:layout_width="@dimen/length_120"
             android:layout_height="@dimen/length_45"
             android:layout_alignParentBottom="true"
