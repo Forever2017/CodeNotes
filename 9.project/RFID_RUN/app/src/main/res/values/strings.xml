@@ -30,6 +30,9 @@
     <string name="StopTime">停止计时</string>
     <string name="checkResult">查看结果</string>
 
+    <string name="suspended">暂停计时</string>
+    <string name="Continue">继续计时</string>
+
     <string name="current">当前圈用时</string>
     <string name="last">上一圈用时</string>
 

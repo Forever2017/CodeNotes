@@ -1,6 +1,6 @@
 package joker.kit.notes;
 
-public class EditText {/**
+public class EditText_ {/**
 
  不自动获取焦点!
      在EditText的父级控件中增加属性

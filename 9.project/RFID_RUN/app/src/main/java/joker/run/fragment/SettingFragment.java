@@ -35,7 +35,7 @@ public class SettingFragment extends FragmentJoker implements AdapterView.OnItem
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-        try {
+       /* try {
 
             Field field =       AdapterView.class.getDeclaredField("mOldSelectedPosition");
             field.setAccessible(true);  //设置mOldSelectedPosition可访问
@@ -46,7 +46,7 @@ public class SettingFragment extends FragmentJoker implements AdapterView.OnItem
         }
         //中文 or 英语
         String[] languages = getResources().getStringArray(R.array.languages);
-        Toast("你点击的是:"+languages[i]);
+        Toast("你点击的是:"+languages[i]);*/
 
     }
 
@@ -58,7 +58,7 @@ public class SettingFragment extends FragmentJoker implements AdapterView.OnItem
     @Override
     public void onCheckedChanged(SwitchButton view, boolean isChecked) {
 
-        if(isChecked) Toast("打开");
+        if (isChecked) Toast("打开");
         else Toast("关闭");
     }
 }

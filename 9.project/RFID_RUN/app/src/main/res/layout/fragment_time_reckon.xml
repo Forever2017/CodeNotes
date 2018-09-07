@@ -25,6 +25,15 @@
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
                 android:paddingLeft="@dimen/length_10"
+                android:text="@string/TimeType"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/ReckonTimeType"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/length_10"
                 android:text="@string/TimeType" />
 
         </LinearLayout>
@@ -43,6 +52,15 @@
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
                 android:paddingLeft="@dimen/length_10"
+                android:text="@string/Distance"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/ReckonDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/length_10"
                 android:text="@string/Distance" />
 
         </LinearLayout>
@@ -52,18 +70,23 @@
             android:layout_height="1.0px"
             android:background="@drawable/shape_line" />
 
-       <!-- <TextView android:id="@+id/ReckonTime"
-            android:layout_width="match_parent"
+        <!-- <TextView android:id="@+id/ReckonTime"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/length_50"
+             android:gravity="center"
+             android:letterSpacing="0.5"
+             android:text="00:45:35"
+             android:textColor="@color/black"
+             android:textSize="@dimen/font_size_20" />-->
+
+        <Chronometer
+            android:id="@+id/ReckonTime"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/length_50"
             android:gravity="center"
             android:letterSpacing="0.5"
-            android:text="00:45:35"
             android:textColor="@color/black"
-            android:textSize="@dimen/font_size_20" />-->
-
-        <Chronometer android:id="@+id/ReckonTime"   android:textColor="@color/black"
-            android:layout_width="wrap_content" android:textSize="@dimen/font_size_20"
-            android:layout_height="@dimen/length_50"/>
+            android:textSize="@dimen/font_size_20" />
 
         <View
             android:layout_width="fill_parent"
@@ -76,21 +99,22 @@
             android:layout_height="@dimen/length_60"
             android:gravity="center">
 
-            <Button android:id="@+id/ReckonStop"
+            <Button
+                android:id="@+id/ReckonStop"
                 android:layout_width="@dimen/length_120"
                 android:layout_height="@dimen/length_45"
                 android:background="@drawable/button_style"
                 android:text="@string/StopTime"
                 android:textColor="@android:color/white" />
 
-            <Button android:id="@+id/ReckonResult"
+            <Button
+                android:id="@+id/ReckonOperation"
                 android:layout_width="@dimen/length_120"
                 android:layout_height="@dimen/length_45"
                 android:layout_marginLeft="@dimen/length_20"
                 android:background="@drawable/button_style"
-                android:text="@string/checkResult"
+                android:text="@string/suspended"
                 android:textColor="@android:color/white" />
-
 
         </LinearLayout>
 

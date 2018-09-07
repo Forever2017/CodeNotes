@@ -1,6 +1,6 @@
 package joker.kit.notes;
 
-public class TextView {/**
+public class TextView_ {/**
 
 
  <TextView
@@ -16,4 +16,5 @@ public class TextView {/**
 
 
  */
+
 }

@@ -194,4 +194,13 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+    <style name="BaseTheme" parent="@android:style/Theme">
+        <!--隐藏标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否有遮盖 启动闪屏-->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 强制竖屏 -->
+        <item name="android:screenOrientation">portrait</item>
+
+    </style>
 </resources>
