@@ -1,12 +1,11 @@
 package device.frid.source;
 
 
+import joker.run.ui.R;
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Vibrator;
-
-import joker.run.ui.R;
 
 
 public class Sound 

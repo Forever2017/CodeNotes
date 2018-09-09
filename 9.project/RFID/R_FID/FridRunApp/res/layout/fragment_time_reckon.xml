@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="@dimen/length_20"
+        android:layout_marginLeft="@dimen/length_20"
+        android:layout_marginRight="@dimen/length_20"
+        android:layout_marginTop="@dimen/length_20"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/length_45" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/length_10"
+                android:text="@string/TimeType"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/ReckonTimeType"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/length_10"
+                android:text="@string/TimeType" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@drawable/shape_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/length_45" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/length_10"
+                android:text="@string/Distance"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/ReckonDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/length_10"
+                android:text="@string/Distance" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@drawable/shape_line" />
+
+        <Chronometer
+            android:id="@+id/ReckonTime"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/length_50"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_20" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@drawable/shape_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/length_60"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/ReckonStop"
+                android:layout_width="@dimen/length_120"
+                android:layout_height="@dimen/length_45"
+                android:background="@drawable/button_style"
+                android:text="@string/StopTime"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/ReckonOperation"
+                android:layout_width="@dimen/length_120"
+                android:layout_height="@dimen/length_45"
+                android:layout_marginLeft="@dimen/length_20"
+                android:background="@drawable/button_style"
+                android:text="@string/suspended"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@drawable/shape_line" />
+
+        <LinearLayout
+            android:id="@+id/QueryTableHead"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/length_40"
+            android:weightSum="3" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/Name"
+                android:textColor="@color/cornflowerblue"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/current"
+                android:textColor="@color/cornflowerblue"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/last"
+                android:textColor="@color/cornflowerblue"
+                android:textSize="@dimen/font_size_16" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@drawable/shape_line" />
+        <ListView
+            android:id="@+id/TimeList"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@color/gray"
+            android:dividerHeight="@dimen/length_1"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:smoothScrollbar="true" />
+    </LinearLayout>
+
+</LinearLayout>

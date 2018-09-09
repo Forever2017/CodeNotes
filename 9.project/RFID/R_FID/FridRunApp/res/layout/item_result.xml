@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/length_40"
+    android:orientation="horizontal"
+    android:weightSum="5" >
+
+    <TextView
+        android:id="@+id/ResultText1"
+        android:layout_width="55dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="外部跑者"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_16" />
+
+    <TextView
+        android:id="@+id/ResultText2"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/SumCircle"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_16" />
+
+    <TextView
+        android:id="@+id/ResultText3"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/SumDistance"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_16" />
+
+    <TextView
+        android:id="@+id/ResultText4"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/TotalTime"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_16" />
+
+    <TextView
+        android:id="@+id/ResultText5"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/Pace"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_16" />
+
+</LinearLayout>

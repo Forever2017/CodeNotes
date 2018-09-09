@@ -5,11 +5,13 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.flyco.tablayout.SlidingTabLayout;
 
 import java.util.ArrayList;
 
+import device.frid.Device;
 import joker.run.fragment.ResultFragment;
 import joker.run.fragment.SettingFragment;
 import joker.run.fragment.TimeFragment;
@@ -19,15 +21,28 @@ public class MainActivity extends AppCompatActivity {
     private Fragment Fragment1, Fragment2, Fragment3;
     private SlidingTabLayout mTabLayout_1;
 
+    private Device device;
+    private TextView MainState;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        System.loadLibrary（“gnustl_shared”）
+
+//        System.loadLibrary("libuart");
+
         initView();
+
+
     }
 
 
     private void initView() {
+        device = new Device(this);
+        MainState = findViewById(R.id.MainState);
+
         Fragment1 = new TimeFragment(R.layout.fragment_time);
         Fragment2 = new ResultFragment(R.layout.fragment_result);
         Fragment3 = new SettingFragment(R.layout.fragment_setting);
@@ -42,6 +57,10 @@ public class MainActivity extends AppCompatActivity {
         String[] titles = {"计时", "结果", "设置"};
         mTabLayout_1.setViewPager(id_viewpager, titles, this, fragments);
 
+        //正常改成绿色，异常显示红色
+        MainState.setText(device.connection() ?
+                getResources().getString(R.string.deviceCorrect)
+                : getResources().getString(R.string.deviceError));
     }
 
     //接收

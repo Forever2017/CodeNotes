@@ -255,7 +255,7 @@ public class ASHttp {
 			public void onFailure(Throwable th) {
 				super.onFailure(th);
 
-				if(th.getMessage().equals("Unauthorized")){
+				if(th!=null&&th.getMessage().equals("Unauthorized")){
 					//401 未经授权的
 					Toast.makeText(context, "未经授权的操作！", 0).show();
 					context.startActivity(new Intent(context,LoginActivity.class));

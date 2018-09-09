@@ -1,4 +1,4 @@
-package joker.kit.base;
+﻿package joker.kit.base;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;

@@ -23,6 +23,14 @@
         tl:tl_underline_color="#1A000000"
         tl:tl_underline_height="1dp" />
 
+    <TextView
+        android:id="@+id/MainState"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="left"
+        android:textColor="@color/red" />
+
     <android.support.v4.view.ViewPager
         android:id="@+id/id_viewpager"
         android:layout_width="fill_parent"

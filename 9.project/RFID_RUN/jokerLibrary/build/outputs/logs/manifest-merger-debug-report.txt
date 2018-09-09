@@ -1,25 +1,25 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml:1:1-39
-INJECTED from D:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml:1:1-39
-INJECTED from D:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml:1:1-39
+ADDED from E:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml:1:1-39
+INJECTED from E:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml:1:1-39
+INJECTED from E:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml:1:1-39
 	package
-		ADDED from D:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml:1:12-36
-		INJECTED from D:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml
-		INJECTED from D:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml
+		ADDED from E:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml:1:12-36
+		INJECTED from E:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml
+		INJECTED from E:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml:1:1-39
+		ADDED from E:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml:1:1-39
 uses-sdk
-INJECTED from D:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml
-INJECTED from D:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml
-INJECTED from D:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml
-INJECTED from D:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml
+INJECTED from E:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml
+INJECTED from E:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml
+INJECTED from E:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml
+INJECTED from E:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from D:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml
-		ADDED from D:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml
-		INJECTED from D:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml
+		INJECTED from E:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml
+		ADDED from E:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml
+		INJECTED from E:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml
-		ADDED from D:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml
-		INJECTED from D:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml
+		INJECTED from E:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml
+		ADDED from E:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml
+		INJECTED from E:\GitHub\JokerNotes\9.project\RFID_RUN\jokerLibrary\src\main\AndroidManifest.xml
