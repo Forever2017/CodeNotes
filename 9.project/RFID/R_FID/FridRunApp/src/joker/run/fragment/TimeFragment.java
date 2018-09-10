@@ -7,9 +7,9 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import joker.run.base.FragmentJoker;
 import joker.run.data.ApplicationRunning;
 import joker.run.data.HOST;
-import joker.run.ui.FragmentJoker;
 import joker.run.ui.R;
 import joker.run.ui.TimeReckonActivity;
 

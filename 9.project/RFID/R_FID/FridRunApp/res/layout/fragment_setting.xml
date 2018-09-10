@@ -32,6 +32,7 @@
                 android:id="@+id/SpinnerJoker"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@null"
                 android:entries="@array/languages" />
         </LinearLayout>
 
@@ -51,6 +52,15 @@
                 android:text="@string/allow"
                 android:textColor="@color/black"
                 android:textSize="@dimen/font_size_16" />
+
+            <Switch
+                android:id="@+id/s_v"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:textOff="关"
+                android:textOn="开"
+                android:thumb="@drawable/thumb"
+                android:track="@drawable/track" />
         </LinearLayout>
 
         <View
@@ -68,6 +78,7 @@
             android:textColor="@android:color/white" />
 
         <Button
+            android:id="@+id/UploadEpc"
             android:layout_width="@dimen/length_160"
             android:layout_height="@dimen/length_45"
             android:layout_marginTop="@dimen/length_30"

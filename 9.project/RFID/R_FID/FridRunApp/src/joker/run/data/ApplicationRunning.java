@@ -1,6 +1,6 @@
 package joker.run.data;
 
-import joker.run.ui.ApplicationJoker;
+import joker.run.base.ApplicationJoker;
 
 
 public class ApplicationRunning extends ApplicationJoker {

@@ -8,10 +8,10 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_marginBottom="@dimen/length_20"
-        android:layout_marginLeft="@dimen/length_20"
-        android:layout_marginRight="@dimen/length_20"
-        android:layout_marginTop="@dimen/length_20"
+        android:layout_marginBottom="@dimen/length_5"
+        android:layout_marginLeft="@dimen/length_5"
+        android:layout_marginRight="@dimen/length_5"
+        android:layout_marginTop="@dimen/length_5"
         android:background="@color/white"
         android:orientation="vertical" >
 
@@ -19,52 +19,61 @@
             android:id="@+id/QueryTableHead"
             android:layout_width="fill_parent"
             android:layout_height="@dimen/length_40"
-            android:weightSum="5" >
-
+            android:weightSum="6" >
+ 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="55dip"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/Name"
                 android:textColor="@color/cornflowerblue"
-                android:textSize="@dimen/font_size_16" />
+                android:textSize="@dimen/font_size_13" />
 
             <TextView
-                android:layout_width="0dp"
+                 android:layout_width="20dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/Lap"
+                android:textColor="@color/cornflowerblue"
+                android:textSize="@dimen/font_size_13" />
+
+            <TextView
+                android:layout_width="20dip"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/SumCircle"
                 android:textColor="@color/cornflowerblue"
-                android:textSize="@dimen/font_size_16" />
+                android:textSize="@dimen/font_size_13" />
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="35dip"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/SumDistance"
                 android:textColor="@color/cornflowerblue"
-                android:textSize="@dimen/font_size_16" />
+                android:textSize="@dimen/font_size_13" />
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="20dip"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/TotalTime"
                 android:textColor="@color/cornflowerblue"
-                android:textSize="@dimen/font_size_16" />
+                android:textSize="@dimen/font_size_13" />
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="40dip"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/Pace"
                 android:textColor="@color/cornflowerblue"
-                android:textSize="@dimen/font_size_16" />
+                android:textSize="@dimen/font_size_13" />
         </LinearLayout>
 
         <View
@@ -76,7 +85,7 @@
             android:id="@+id/ResultList"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:divider="@color/gray"
+            android:divider="@color/gainsboro"
             android:dividerHeight="@dimen/length_1"
             android:fadingEdge="none"
             android:fastScrollEnabled="false"

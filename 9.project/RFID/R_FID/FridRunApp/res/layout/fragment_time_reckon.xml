@@ -151,7 +151,7 @@
             android:id="@+id/TimeList"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:divider="@color/gray"
+            android:divider="@color/gainsboro"
             android:dividerHeight="@dimen/length_1"
             android:fadingEdge="none"
             android:fastScrollEnabled="false"

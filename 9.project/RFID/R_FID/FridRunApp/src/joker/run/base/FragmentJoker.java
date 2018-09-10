@@ -1,4 +1,4 @@
-﻿package joker.run.ui;
+﻿package joker.run.base;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;

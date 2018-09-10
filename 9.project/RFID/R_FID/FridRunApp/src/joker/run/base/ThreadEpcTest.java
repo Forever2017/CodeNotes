@@ -1,9 +1,9 @@
-package joker.run.ui;
+package joker.run.base;
 
 import android.os.Handler;
 
 public class ThreadEpcTest {
-	String[] epcs = {"1001","1002","9999","1003","1004","1005"};
+	String[] epcs = {"111111111111111111111111","222222222222222222222222","9999","333333333333333333333333","444444444444444444444444","9527"};
 	int id = 0;
 	boolean is = true;
 	EpcResult er;
@@ -19,7 +19,7 @@ public class ThreadEpcTest {
 			@Override
 			public void run() {
 
-				if(id>5) id = 0;
+				if(id>5)  id = 0;
 				er.onResult(epcs[id]);
 				id++;
 				if(is) RunOK();

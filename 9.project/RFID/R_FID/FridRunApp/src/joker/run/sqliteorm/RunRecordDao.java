@@ -24,7 +24,7 @@ public class RunRecordDao {
 	}
 
 	/**
-	 * 增加一个用户
+	 * 增加一条数据
 	 *
 	 * @param RunRecord
 	 */
@@ -37,11 +37,25 @@ public class RunRecordDao {
 
 	}
 	/**
+	 * 增加一个list数据
+	 *
+	 * @param RunRecord
+	 */
+	public void addList(List<RunRecord> list) {
+		try {
+			/*RunRecordDao.create(RunRecord);*/
+			RunRecordDao.create(list);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+	/**
 	 * 增加一个用户
 	 *
 	 * @param RunRecord
 	 */
-	public void addOrUpdate(RunRecord RunRecord) {
+	/*public void addOrUpdate(RunRecord RunRecord) {
 		try {
 			
 			if(queryEpc(RunRecord.getEpc()) == null){
@@ -55,12 +69,20 @@ public class RunRecordDao {
 			e.printStackTrace();
 		}
 
-	}
+	}*/
 
 	//删除一条记录
 	public void del(RunRecord RunRecord) {
 		try {
 			RunRecordDao.delete(RunRecord);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+	public void delAll() {
+		try {
+			RunRecordDao.queryRaw("delete from RunRecord");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import joker.run.adapter.ResultAdapter;
+import joker.run.base.FragmentJoker;
 import joker.run.sqliteorm.RunRecord;
 import joker.run.sqliteorm.RunRecordDao;
-import joker.run.ui.FragmentJoker;
 import joker.run.ui.R;
 import android.annotation.SuppressLint;
 import android.widget.ListView;

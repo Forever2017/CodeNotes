@@ -17,24 +17,25 @@ public class RunRecord {
     
     @DatabaseField(columnName = "sumTurn")
     private String sumTurn;//总圈数
+    
     @DatabaseField(columnName = "sumDistance")
     private String sumDistance;//总距离
+    
     @DatabaseField(columnName = "time")
     private String time;//用时
+    
     @DatabaseField(columnName = "pace")
     private String pace;//配速   总距离/用时
+    
+    @DatabaseField(columnName = "lap")
+    private String lap;//单圈距离
     
     //当前圈用时、上一圈用时
     private int current;
     private int last;
     private int tempTime;//记录秒针
     
-    public RunRecord() {
-    	
-    	
-	}
-    
-    
+    public RunRecord() { }
     
 	public RunRecord(String epc, String name) {
 		super();
@@ -47,6 +48,18 @@ public class RunRecord {
 		this.current = 0;
 		this.last = 0;
 		this.tempTime = 0;
+		this.lap = "0";
+		
+	}
+
+	public String getLap() {
+		return lap;
+	}
+
+
+
+	public void setLap(String lap) {
+		this.lap = lap;
 	}
 
 

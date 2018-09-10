@@ -24,7 +24,6 @@ public class MainActivity extends FragmentActivity implements OnClickListener,On
 	private List<Fragment> mFragments = new ArrayList<Fragment>();
 	private Fragment Fragment1, Fragment2, Fragment3;
 
-	/*底部四个按钮*/
 	private TextView btn_tab_bottom_01,btn_tab_bottom_02,btn_tab_bottom_03;
 
 	private TextView MainState;
@@ -43,8 +42,8 @@ public class MainActivity extends FragmentActivity implements OnClickListener,On
 		//设置缓存页面
 		mViewPager.setOffscreenPageLimit(mFragments.size()-1);
 		
-		
 	}
+	
 	private void initView()
 	{
 		btn_tab_bottom_01 = (TextView) findViewById(R.id.btn_tab_bottom_01);
@@ -123,34 +122,19 @@ public class MainActivity extends FragmentActivity implements OnClickListener,On
 	}
 
 
-
-
-
-
-
-
-
-
 	@Override
 	public void onPageScrollStateChanged(int arg0) {
-		// TODO Auto-generated method stub
-
 	}
 
 	@Override
 	public void onPageScrolled(int arg0, float arg1, int arg2) {
-		// TODO Auto-generated method stub
-
 	}
-
-
 	//接收
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (TimeReckonActivity.TIME_RECKON == resultCode) {
 
-        	//onClick(btn_tab_bottom_02);
         	onPageSelected(1);
         	ResultFragment.update();
         }

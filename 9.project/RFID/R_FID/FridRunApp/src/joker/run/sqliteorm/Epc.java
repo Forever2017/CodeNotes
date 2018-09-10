@@ -17,9 +17,12 @@ public class Epc {
     //普通列名
     @DatabaseField(columnName = "name")
     private String name;
+    
+    @DatabaseField(columnName = "status")
+    private String status;
 
     public Epc() {
-    }
+    }   
     
     
 
@@ -27,6 +30,18 @@ public class Epc {
 		super();
 		this.epc = epc;
 		this.name = name;
+	}
+
+
+
+	public String getStatus() {
+		return status;
+	}
+
+
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 

@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="@dimen/length_40"
     android:orientation="horizontal"
-    android:weightSum="5" >
+    android:weightSum="6" >
 
     <TextView
         android:id="@+id/ResultText1"
@@ -13,46 +13,56 @@
         android:gravity="center"
         android:text="外部跑者"
         android:textColor="@color/black"
-        android:textSize="@dimen/font_size_16" />
+        android:textSize="@dimen/font_size_13" />
+    
+    <TextView
+        android:id="@+id/ResultText6"
+        android:layout_width="20dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="500"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_13" />
 
     <TextView
         android:id="@+id/ResultText2"
-        android:layout_width="wrap_content"
+        android:layout_width="20dip"
         android:layout_height="fill_parent"
         android:layout_weight="1"
         android:gravity="center"
         android:text="@string/SumCircle"
         android:textColor="@color/black"
-        android:textSize="@dimen/font_size_16" />
+        android:textSize="@dimen/font_size_13" />
 
     <TextView
         android:id="@+id/ResultText3"
-        android:layout_width="wrap_content"
+        android:layout_width="35dip"
         android:layout_height="fill_parent"
         android:layout_weight="1"
         android:gravity="center"
         android:text="@string/SumDistance"
         android:textColor="@color/black"
-        android:textSize="@dimen/font_size_16" />
+        android:textSize="@dimen/font_size_13" />
 
     <TextView
         android:id="@+id/ResultText4"
-        android:layout_width="wrap_content"
+        android:layout_width="20dip"
         android:layout_height="fill_parent"
         android:layout_weight="1"
         android:gravity="center"
         android:text="@string/TotalTime"
         android:textColor="@color/black"
-        android:textSize="@dimen/font_size_16" />
+        android:textSize="@dimen/font_size_13" />
 
     <TextView
         android:id="@+id/ResultText5"
-        android:layout_width="wrap_content"
+        android:layout_width="40dip"
         android:layout_height="fill_parent"
         android:layout_weight="1"
         android:gravity="center"
         android:text="@string/Pace"
         android:textColor="@color/black"
-        android:textSize="@dimen/font_size_16" />
+        android:textSize="@dimen/font_size_13" />
 
 </LinearLayout>

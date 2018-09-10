@@ -12,7 +12,8 @@
     <string name="Distance">单圈距离</string>
     <string name="M">米</string>
 
-    <string name="Name">姓名</string>
+    <string name="Lap">单圈</string>
+    <string name="Name">姓	名</string>
     <string name="SumCircle">总圈数</string>
     <string name="SumDistance">总距离</string>
     <string name="TotalTime">用时</string>
