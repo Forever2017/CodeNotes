@@ -13,12 +13,11 @@ public class ThreadEpcTest {
 	}
 
 
-	private void RunOK() {
+	public void RunOK() {
 		// TODO Auto-generated method stub
 		new Handler().postDelayed(new Runnable() {
 			@Override
 			public void run() {
-
 				if(id>5)  id = 0;
 				er.onResult(epcs[id]);
 				id++;
@@ -27,9 +26,12 @@ public class ThreadEpcTest {
 		}, 5000);
 	}
 
-
 	public void stop(){
 		is = false;
+	}
+	
+	public void cont(){
+		is = true;
 	}
 
 	public static abstract class EpcResult{

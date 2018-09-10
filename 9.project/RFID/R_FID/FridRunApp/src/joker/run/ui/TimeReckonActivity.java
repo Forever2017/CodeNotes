@@ -94,6 +94,8 @@ public class TimeReckonActivity extends ActivityJoker implements Chronometer.OnC
 				/* 停止所有*/
 				ReckonStop.setText(R.string.checkResult);
 				stopScan();//停止设备
+				
+				tet.stop();
 			} else {//查看
 				//1.存入数据库
 				recDao.addList(recList);
@@ -109,11 +111,16 @@ public class TimeReckonActivity extends ActivityJoker implements Chronometer.OnC
 				/*rfid 暂停*/
 				stopScan();//停止设备
 				ReckonOperation.setText(R.string.Continue);
+				
+				tet.stop();
 			} else {//继续
 				ReckonTime.start();
 				/*rfid 继续*/
 				scanFrid();//设备扫描
 				ReckonOperation.setText(R.string.suspended);
+				
+				tet.cont();
+				tet.RunOK();
 			}
 			break;
 		}
@@ -152,7 +159,7 @@ public class TimeReckonActivity extends ActivityJoker implements Chronometer.OnC
 		}, false);//是否去除重复*/
 
 		//测试方法
-		new ThreadEpcTest(new EpcResult() {
+		tet = new ThreadEpcTest(new EpcResult() {
 			@Override
 			public void onResult(String epc) {
 				super.onResult(epc);
@@ -161,6 +168,7 @@ public class TimeReckonActivity extends ActivityJoker implements Chronometer.OnC
 			}
 		});
 	}
+	ThreadEpcTest tet;
 
 	/**
 	 * 真实停止
