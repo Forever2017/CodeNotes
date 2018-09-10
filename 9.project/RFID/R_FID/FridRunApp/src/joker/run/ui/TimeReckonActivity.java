@@ -2,8 +2,11 @@ package joker.run.ui;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
@@ -43,7 +46,19 @@ public class TimeReckonActivity extends ActivityJoker implements Chronometer.OnC
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.fragment_time_reckon);
 		init();
-		scanFrid();//设备扫描
+
+		//分辨同时出发，还是单个出发
+		if(HOST.RUN_TYPE == 1)
+			scanFrid();//单个出发，直接扫码
+		else  //同时出发，需要延迟后再开始扫码
+			new Handler().postDelayed(new Runnable() {
+				@Override
+				public void run() {
+					scanFrid();
+				} 
+			}, HOST.MEA_DELAY);
+
+
 	}
 
 	public void init() {
@@ -78,7 +93,12 @@ public class TimeReckonActivity extends ActivityJoker implements Chronometer.OnC
 	public void onChronometerTick(Chronometer chronometer) {
 		current++;
 		System.out.println(current + "");
-		//chronometer.setText(FormatMiss(current));
+		//秒表，每过一秒(通过此参数判断是否能够读取)
+		for (RunRecord rec : recList) {
+			if(rec.getDelay() == 0) return;
+			else if(rec.getDelay() == HOST.DELAY) rec.setDelay(0);
+			else rec.setDelay(rec.getDelay()+1);
+		}
 	}
 
 	@SuppressLint("ResourceAsColor")
@@ -94,8 +114,8 @@ public class TimeReckonActivity extends ActivityJoker implements Chronometer.OnC
 				/* 停止所有*/
 				ReckonStop.setText(R.string.checkResult);
 				stopScan();//停止设备
-				
-				tet.stop();
+
+			//	tet.stop();
 			} else {//查看
 				//1.存入数据库
 				recDao.addList(recList);
@@ -111,16 +131,16 @@ public class TimeReckonActivity extends ActivityJoker implements Chronometer.OnC
 				/*rfid 暂停*/
 				stopScan();//停止设备
 				ReckonOperation.setText(R.string.Continue);
-				
-				tet.stop();
+
+//				tet.stop();
 			} else {//继续
 				ReckonTime.start();
 				/*rfid 继续*/
 				scanFrid();//设备扫描
 				ReckonOperation.setText(R.string.suspended);
-				
-				tet.cont();
-				tet.RunOK();
+
+//				tet.cont();
+//				tet.RunOK();
 			}
 			break;
 		}
@@ -131,23 +151,7 @@ public class TimeReckonActivity extends ActivityJoker implements Chronometer.OnC
 	 * 真实扫描
 	 */
 	private void scanFrid() {
-		/*new Handler().postDelayed(new Runnable() {
-			@Override
-			public void run() {
-				device.startSearch(new Device.LoopEpc() {
-					@Override
-					public void ReturnEpc(String epc) {
-						super.ReturnEpc(epc);
-						Log.e("EPC扫描结果", epc);
-						device.biBi(true);
-
-						timeOperation(epc);
-					}
-				}, false);//是否去除重复
-			} 
-		}, 20000);*/
-
-		/*device.startSearch(new Device.LoopEpc() {
+		device.startSearch(new Device.LoopEpc() {
 			@Override
 			public void ReturnEpc(String epc) {
 				super.ReturnEpc(epc);
@@ -156,19 +160,19 @@ public class TimeReckonActivity extends ActivityJoker implements Chronometer.OnC
 
 				timeOperation(epc);
 			}
-		}, false);//是否去除重复*/
-
+		}, false);
 		//测试方法
-		tet = new ThreadEpcTest(new EpcResult() {
+		/*tet = new ThreadEpcTest(new EpcResult() {
 			@Override
 			public void onResult(String epc) {
 				super.onResult(epc);
 				System.out.println("模拟EPC = "+epc);
 				timeOperation(epc);
 			}
-		});
+		});*/
 	}
-	ThreadEpcTest tet;
+	//测试用
+	//	ThreadEpcTest tet;
 
 	/**
 	 * 真实停止
@@ -182,6 +186,13 @@ public class TimeReckonActivity extends ActivityJoker implements Chronometer.OnC
 
 	//计时操作
 	private void timeOperation(String epc) {
+		RunRecord  record = getListRunRecord(epc);
+
+		//判断是否在延迟范围内,如果不等于0，就在延迟范围内，直接跳过
+		if(record!=null)  
+			if(record.getDelay() == 0) record.setDelay(1);
+			else return;
+
 		//1.检查是否外部跑者
 		Epc epcBean = epcDao.queryEpc(epc);
 
@@ -189,12 +200,17 @@ public class TimeReckonActivity extends ActivityJoker implements Chronometer.OnC
 			if(epcBean==null) return;
 		}
 
-		RunRecord  record = getListRunRecord(epc);
 		if(record ==null){//不在list
 			record = new RunRecord(epc, epcBean==null?"外部"+epc.substring(0, 3):epcBean.getName());
 			record.setLap(HOST.RUN_DIS);//设置单圈距离
 			recList.add(record);
 		}
+		//分辨同时出发，还是单个出发
+		if(HOST.RUN_TYPE == 0) together(record); else single(record);
+
+	}
+	//同时出发
+	private void together(RunRecord  record) {
 		//上一圈用时
 		record.setLast(record.getCurrent());//当前圈变为上一圈
 		//当前圈用时
@@ -213,55 +229,32 @@ public class TimeReckonActivity extends ActivityJoker implements Chronometer.OnC
 		record.setTempTime(current);
 		//刷新本页数据
 		mAdapter.notifyDataSetChanged();
-		/*
-		//1.检查是否已经有记录
-		RunRecord recBean = recDao.queryEpc(epc);
-		if(recBean == null) recBean = new RunRecord(epcBean.getEpc(),epcBean.getName());
-		isCurrent(recBean);
-		recBean.setLast(recBean.getCurrent());//当前圈变为上一圈
-		recBean.setCurrent(current-recBean.getTempTime());//现在秒数减去上圈秒表值，得出此圈秒数
+	}
+	//单个出发
+	private void single(RunRecord  record) {
+		//上一圈用时
+		record.setLast(record.getCurrent());//当前圈变为上一圈
+		//当前圈用时
+		record.setCurrent(
+				record.isOrigin()? 0: current-record.getTempTime() 
+				);//现在秒数减去上圈秒表值，得出此圈秒数
+		//总圈数
+		record.setSumTurn(record.isOrigin()?"0":Integer.parseInt(record.getSumTurn())+1+"");//总圈+1
 
-		recBean.setSumTurn(Integer.parseInt(recBean.getSumTurn())+1+"");//总圈+1
-		recBean.setSumDistance(Integer.parseInt(recBean.getSumDistance())+
-				Integer.parseInt(HOST.RUN_DIS)+"");//总距离+单圈距离
-		recBean.setTime(Integer.parseInt(recBean.getTime())+recBean.getCurrent()+"");//总用时+当圈用时
-
-		recBean.setPace(Integer.parseInt(recBean.getSumDistance())
-				/ Integer.parseInt(recBean.getTime())+"");// 总距离/用时      米/秒
-
-		recBean.setTempTime(current);//最后记录秒表
-		//本页面数据
-		isContainsList(recBean);//是否包含，包含直接替换,不包含添加
+		//总距离
+		record.setSumDistance(record.isOrigin()?"0":
+			Integer.parseInt(record.getSumDistance())+Integer.parseInt(HOST.RUN_DIS)+"");//总距离+单圈距离
+		//用时
+		record.setTime(Integer.parseInt(record.getTime())+record.getCurrent()+"");//总用时+当圈用时
+		//配速
+		record.setPace(record.getSumDistance().equals("0")?"0":
+			Integer.parseInt(record.getSumDistance())/ Integer.parseInt(record.getTime())+"");// 总距离/用时      米/秒
+		//最后记录秒表
+		record.setTempTime(current);
 		//刷新本页数据
 		mAdapter.notifyDataSetChanged();
-		recDao.addOrUpdate(recBean);//存入/更新 数据库
-		 */
-	}
 
-	//是否包含，包含直接替换
-	private void isContainsList(RunRecord recBean) {
-		boolean b = false;
-		for (RunRecord runRecord : recList) {
-			if(runRecord.getEpc().equals(recBean.getEpc()))//同一个人
-			{
-				runRecord.setCurrent(recBean.getCurrent());
-				runRecord.setLast(recBean.getLast());
-				runRecord.setTempTime(recBean.getTempTime());
-				b = true;
-			}
-		}
-		if(!b) recList.add(recBean);
-	}
-	//是否包含，替换圈数
-	private void isCurrent(RunRecord recBean) {
-		for (RunRecord runRecord : recList) {
-			if(runRecord.getEpc().equals(recBean.getEpc()))//同一个人
-			{
-				recBean.setCurrent(runRecord.getCurrent());
-				recBean.setLast(runRecord.getLast());
-				recBean.setTempTime(runRecord.getTempTime());
-			}
-		}
+		record.setOrigin(false);//已经不是当前圈
 	}
 
 	private RunRecord getListRunRecord(String epc) {

@@ -23,7 +23,7 @@ public class ThreadEpcTest {
 				id++;
 				if(is) RunOK();
 			} 
-		}, 5000);
+		}, 500);
 	}
 
 	public void stop(){

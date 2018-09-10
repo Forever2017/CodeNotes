@@ -1,9 +1,11 @@
 package joker.run.fragment;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.google.gson.Gson;
 
+import device.frid.Device;
 import android.annotation.SuppressLint;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -11,9 +13,13 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Switch;
+import joker.run.adapter.SettAdapter;
 import joker.run.base.FragmentJoker;
+import joker.run.base.ThreadEpcTest;
+import joker.run.base.ThreadEpcTest.EpcResult;
 import joker.run.data.ASHttp;
 import joker.run.data.ASHttp.AsyncHttp;
 import joker.run.data.ApplicationRunning;
@@ -32,8 +38,15 @@ public class SettingFragment extends FragmentJoker implements AdapterView.OnItem
 	public SettingFragment(int Layout) {  super(Layout);  }
 
 	private Spinner SpinnerJoker;
-	private Button DownloadEpc,UploadEpc;
+	private Button DownloadEpc,UploadEpc,ScanEpc;
 	private Switch aSwitch;
+	
+	private ListView SettingList;
+	private List<Epc> list;
+	private SettAdapter sAdapter;
+	
+	private Device device;
+	private EpcDao eDao;
 	@Override
 	public void init() {
 		super.init();
@@ -41,15 +54,24 @@ public class SettingFragment extends FragmentJoker implements AdapterView.OnItem
 		SpinnerJoker = (Spinner) findViewById(R.id.SpinnerJoker);
 		DownloadEpc = (Button) findViewById(R.id.DownloadEpc);
 		UploadEpc = (Button) findViewById(R.id.UploadEpc);
+		ScanEpc = (Button) findViewById(R.id.ScanEpc);
 		aSwitch = (Switch) findViewById(R.id.s_v);
+		SettingList = (ListView) findViewById(R.id.SettingList);
 
 		SpinnerJoker.setOnItemSelectedListener(this);
 		DownloadEpc.setOnClickListener(this);
 		UploadEpc.setOnClickListener(this);
+		ScanEpc.setOnClickListener(this);
 		aSwitch.setOnCheckedChangeListener(this);
 
 		HOST.PEO_IS = ApplicationRunning.getSharedInt("PEO_IS");
 		aSwitch.setChecked(HOST.PEO_IS == 0?false:true);
+		
+		list = new ArrayList<Epc>();
+		sAdapter = new SettAdapter(getActivity(), list);
+		SettingList.setAdapter(sAdapter);
+		device = new Device(getActivity());
+		eDao = new EpcDao(getActivity());
 	}
 
 	@Override
@@ -79,16 +101,6 @@ public class SettingFragment extends FragmentJoker implements AdapterView.OnItem
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.DownloadEpc:
-			//模拟
-			/*EpcDao ed = new EpcDao(getActivity());
-			ed.add(new Epc("1001", "小明"));
-			ed.add(new Epc("1002", "小红"));
-			ed.add(new Epc("1003", "韩梅梅"));
-			ed.add(new Epc("1004", "小白"));
-			ed.add(new Epc("1005", "隔壁老王"));
-
-			Toast("下载成功.");*/
-
 			ASHttp.downloadrfidinfo(getActivity(),new AsyncHttp() {
 				public void onResult(boolean b, String msg) {
 
@@ -132,12 +144,57 @@ public class SettingFragment extends FragmentJoker implements AdapterView.OnItem
 				} );
 			}else Toast("没有可上传数据.");
 			break;
-
+		case R.id.ScanEpc:
+			if(ScanEpc.getText().toString().equals("检索EPC")){
+				ScanEpc.setText("停止检索");
+				list.clear();
+				sAdapter.notifyDataSetChanged();
+				
+				device.startSearch(new Device.LoopEpc() {
+					@Override
+					public void ReturnEpc(String epc) {
+						super.ReturnEpc(epc);
+						
+						device.biBi(true);
+						updateList(epc);
+					}
+				}, true);
+				/*tet = new ThreadEpcTest(new EpcResult() {
+					@Override
+					public void onResult(String epc) {
+						// TODO Auto-generated method stub
+						super.onResult(epc);
+						device.biBi(true);
+						updateList(epc);
+					}
+				});*/
+				
+			}else{
+				ScanEpc.setText("检索EPC");
+				//真实停止扫描
+				device.biBi(false);
+				device.stopSearch();
+				
+			//	tet.stop();
+			}
+			break;
 		default:
 			break;
 		}
 	}
-
+//	ThreadEpcTest tet;//测试
+	private void updateList(String epc) {
+		Epc eTemp = eDao.queryEpc(epc);
+		Epc epcBean;
+		if(eTemp!=null){
+			epcBean = new Epc(epc, eTemp.getName());
+		}else{
+			epcBean = new Epc(epc, "外部跑者");
+		}
+		list.add(epcBean);
+		sAdapter.notifyDataSetChanged();
+	}
+	
 
 	@Override
 	public void onCheckedChanged(CompoundButton compoundButton, boolean b) {

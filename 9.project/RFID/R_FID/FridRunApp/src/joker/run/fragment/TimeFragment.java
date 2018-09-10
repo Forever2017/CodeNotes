@@ -16,64 +16,71 @@ import joker.run.ui.TimeReckonActivity;
 @SuppressLint("ValidFragment")
 public class TimeFragment extends FragmentJoker implements AdapterView.OnItemSelectedListener,View.OnClickListener {
 
-    public TimeFragment(int Layout) {
-        super(Layout);
-    }
+	public TimeFragment(int Layout) {
+		super(Layout);
+	}
 
-    private Spinner SpinnerRunJoker;
-    private EditText TimeEditText;
-    private Button TimeStartBut;
+	private Spinner SpinnerRunJoker;
+	private EditText TimeEditText;
+	private Button TimeStartBut;
 
-    @Override
-    public void init() {
-        super.init();
+	@Override
+	public void init() {
+		super.init();
 
-        SpinnerRunJoker = (Spinner) findViewById(R.id.SpinnerRunJoker);
-        TimeEditText = (EditText) findViewById(R.id.TimeEditText);
-        TimeStartBut = (Button) findViewById(R.id.TimeStartBut);
+		SpinnerRunJoker = (Spinner) findViewById(R.id.SpinnerRunJoker);
+		TimeEditText = (EditText) findViewById(R.id.TimeEditText);
+		TimeStartBut = (Button) findViewById(R.id.TimeStartBut);
 
-        SpinnerRunJoker.setOnItemSelectedListener(this);
-        TimeStartBut.setOnClickListener(this);
+		SpinnerRunJoker.setOnItemSelectedListener(this);
+		TimeStartBut.setOnClickListener(this);
 
-        //
-        HOST.RUN_TYPE = ApplicationRunning.getSharedInt("RUN_TYPE");
-        HOST.RUN_DIS = ApplicationRunning.getSharedString("RUN_DIS");
-        //
-        SpinnerRunJoker.setSelection(HOST.RUN_TYPE);
-        TimeEditText.setText(HOST.RUN_DIS);
+		//
+		HOST.RUN_TYPE = ApplicationRunning.getSharedInt("RUN_TYPE");
+		HOST.RUN_DIS = ApplicationRunning.getSharedString("RUN_DIS");
+		//
+		SpinnerRunJoker.setSelection(HOST.RUN_TYPE);
+		TimeEditText.setText(HOST.RUN_DIS);
 
-    }
+	}
 
 
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        //同时出发 or 分别出发
-     /*   String[] languages = getResources().getStringArray(R.array.runs);
+	@Override
+	public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+		//同时出发 or 分别出发
+		/*   String[] languages = getResources().getStringArray(R.array.runs);
         Toast("你点击的是:" + languages[i]);*/
-    }
+	}
 
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
+	@Override
+	public void onNothingSelected(AdapterView<?> adapterView) {
 
-    }
+	}
 
 
-    @Override
-    public void onClick(View v) {
-        switch(v.getId()){
+	@Override
+	public void onClick(View v) {
+		switch(v.getId()){
 
-            case R.id.TimeStartBut:
-                HOST.RUN_TYPE = SpinnerRunJoker.getSelectedItemPosition();
-                HOST.RUN_DIS = TimeEditText.getText().toString();
+		case R.id.TimeStartBut:
+			HOST.RUN_TYPE = SpinnerRunJoker.getSelectedItemPosition();
+			HOST.RUN_DIS = TimeEditText.getText().toString();
 
-                ApplicationRunning.setSharedInt("RUN_TYPE",HOST.RUN_TYPE);
-                ApplicationRunning.setSharedString("RUN_DIS",HOST.RUN_DIS);
+			ApplicationRunning.setSharedInt("RUN_TYPE",HOST.RUN_TYPE);
+			ApplicationRunning.setSharedString("RUN_DIS",HOST.RUN_DIS);
 
-                startActivityForResult(new Intent(getActivity(), TimeReckonActivity.class),TimeReckonActivity.TIME_RECKON);
-                break;
+			if(HOST.RUN_DIS!=null&&isNumber(HOST.RUN_DIS)&&Integer.parseInt(HOST.RUN_DIS)>10)
+				startActivityForResult(new Intent(getActivity(), TimeReckonActivity.class),TimeReckonActivity.TIME_RECKON);
+			else Toast("单圈距离格式不正确！");
+			break;
 
-        }
+		}
 
-    }
-
+	}
+	/**
+	 * 判断字符串是否是纯数字
+	 * */
+	public boolean isNumber(String str) {
+		return str.matches("[0-9]+");
+	}
 }
