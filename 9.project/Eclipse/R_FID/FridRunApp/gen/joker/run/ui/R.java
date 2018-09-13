@@ -547,8 +547,7 @@ public final class R {
         public static final int fragment_time=0x7f030004;
         public static final int fragment_time_reckon=0x7f030005;
         public static final int item_result=0x7f030006;
-        public static final int item_set=0x7f030007;
-        public static final int item_time=0x7f030008;
+        public static final int item_time=0x7f030007;
     }
     public static final class raw {
         public static final int beep=0x7f040000;

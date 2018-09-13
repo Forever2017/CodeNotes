@@ -19,9 +19,3 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
-# 七牛云 直播 播放器
--keep class com.pili.pldroid.player.** { *; }
--keep class com.qiniu.qplayer.mediaEngine.MediaPlayer{*;}
-#### 百度 ocr
--keep class com.baidu.ocr.sdk.**{*;}
--dontwarn com.baidu.ocr.**

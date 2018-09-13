@@ -9,7 +9,8 @@ import cz.msebera.android.httpclient.Header;
 
 public class HttpUtils {
     //http://api.yy2025.com/api/zhibo/flatbed/getList
-    private static final String HOST = "http://api.yy2025.com/api/zhibo";
+    /*private static final String HOST = "http://api.yy2025.com/api/zhibo";*/
+    private static final String HOST = "http://api.anna89.com/api/zhibo";
 
     public static final String HOME_LIST = HOST + "/flatbed/getList";
     public static final String ROOM_LIST = HOST + "/flatbedAnchor/list";
