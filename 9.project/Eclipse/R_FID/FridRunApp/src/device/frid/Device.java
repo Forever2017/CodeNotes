@@ -25,7 +25,7 @@ public class Device implements MultiLableCallBack {
     private Power mPower;
     private Sound mSound;
     private List<String> tempPool;
-    private boolean isRepetition;//是否去除重复标签
+    private boolean isRepetition = true;//是否去除重复标签
 
     public Device(Context context) {
         mWare = new Ware(CommandType.GET_FIRMWARE_VERSION, 0, 0, 0);

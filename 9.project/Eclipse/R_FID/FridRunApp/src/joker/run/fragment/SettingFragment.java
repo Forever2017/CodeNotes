@@ -40,11 +40,11 @@ public class SettingFragment extends FragmentJoker implements AdapterView.OnItem
 	private Spinner SpinnerJoker;
 	private Button DownloadEpc,UploadEpc,ScanEpc;
 	private Switch aSwitch;
-	
+
 	private ListView SettingList;
 	private List<Epc> list;
 	private SettAdapter sAdapter;
-	
+
 	private Device device;
 	private EpcDao eDao;
 	@Override
@@ -66,7 +66,7 @@ public class SettingFragment extends FragmentJoker implements AdapterView.OnItem
 
 		HOST.PEO_IS = ApplicationRunning.getSharedInt("PEO_IS");
 		aSwitch.setChecked(HOST.PEO_IS == 0?false:true);
-		
+
 		list = new ArrayList<Epc>();
 		sAdapter = new SettAdapter(getActivity(), list);
 		SettingList.setAdapter(sAdapter);
@@ -133,7 +133,7 @@ public class SettingFragment extends FragmentJoker implements AdapterView.OnItem
 							{
 								Toast("上传成功.");
 								new RunRecordDao(getActivity()).delAll();
-							//	finish();
+								//	finish();
 								ResultFragment.update();
 							}	
 							else
@@ -149,12 +149,12 @@ public class SettingFragment extends FragmentJoker implements AdapterView.OnItem
 				ScanEpc.setText("停止检索");
 				list.clear();
 				sAdapter.notifyDataSetChanged();
-				
+
 				device.startSearch(new Device.LoopEpc() {
 					@Override
 					public void ReturnEpc(String epc) {
 						super.ReturnEpc(epc);
-						
+
 						device.biBi(true);
 						updateList(epc);
 					}
@@ -168,21 +168,21 @@ public class SettingFragment extends FragmentJoker implements AdapterView.OnItem
 						updateList(epc);
 					}
 				});*/
-				
+
 			}else{
 				ScanEpc.setText("检索EPC");
 				//真实停止扫描
 				device.biBi(false);
 				device.stopSearch();
-				
-			//	tet.stop();
+
+				//	tet.stop();
 			}
 			break;
 		default:
 			break;
 		}
 	}
-//	ThreadEpcTest tet;//测试
+	//	ThreadEpcTest tet;//测试
 	private void updateList(String epc) {
 		Epc eTemp = eDao.queryEpc(epc);
 		Epc epcBean;
@@ -192,9 +192,17 @@ public class SettingFragment extends FragmentJoker implements AdapterView.OnItem
 			epcBean = new Epc(epc, "外部跑者");
 		}
 		list.add(epcBean);
-		sAdapter.notifyDataSetChanged();
+		
+		getActivity().runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				sAdapter.notifyDataSetChanged();
+			}
+		});
+		
+		
 	}
-	
+
 
 	@Override
 	public void onCheckedChanged(CompoundButton compoundButton, boolean b) {

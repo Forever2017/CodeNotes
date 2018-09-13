@@ -228,8 +228,14 @@ public class TimeReckonActivity extends ActivityJoker implements Chronometer.OnC
 				/ Integer.parseInt(record.getTime())+"");// 总距离/用时      米/秒
 		//最后记录秒表
 		record.setTempTime(current);
-		//刷新本页数据
-		mAdapter.notifyDataSetChanged();
+		
+		runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				//刷新本页数据
+				mAdapter.notifyDataSetChanged();
+			}
+		});
 	}
 	//单个出发
 	private void single(RunRecord  record) {
@@ -252,10 +258,18 @@ public class TimeReckonActivity extends ActivityJoker implements Chronometer.OnC
 			Integer.parseInt(record.getSumDistance())/ Integer.parseInt(record.getTime())+"");// 总距离/用时      米/秒
 		//最后记录秒表
 		record.setTempTime(current);
-		//刷新本页数据
-		mAdapter.notifyDataSetChanged();
-
+		
 		record.setOrigin(false);//已经不是当前圈
+		
+		runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				//刷新本页数据
+				mAdapter.notifyDataSetChanged();
+			}
+		});
+		
+		
 	}
 
 	private RunRecord getListRunRecord(String epc) {
