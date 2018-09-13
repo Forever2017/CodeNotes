@@ -151,6 +151,7 @@ public class TimeReckonActivity extends ActivityJoker implements Chronometer.OnC
 	 * 真实扫描
 	 */
 	private void scanFrid() {
+		System.out.print("####### 开始扫描  ############"); 
 		device.startSearch(new Device.LoopEpc() {
 			@Override
 			public void ReturnEpc(String epc) {
