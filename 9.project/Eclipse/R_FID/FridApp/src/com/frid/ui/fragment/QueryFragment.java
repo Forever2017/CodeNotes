@@ -36,7 +36,7 @@ public class QueryFragment extends FragmentJoker implements OnClickListener,OnIt
 	private List<GsonItemCheck> list;
 	private ListView QueryTableList;
 	private QueryTableMItemAdapter mAdapter;
-//	private Device device;
+	private Device device;
 	private boolean isSubmit = false;
 
 	//

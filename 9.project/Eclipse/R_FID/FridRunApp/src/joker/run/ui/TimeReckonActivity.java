@@ -20,6 +20,7 @@ import joker.run.sqliteorm.Epc;
 import joker.run.sqliteorm.EpcDao;
 import joker.run.sqliteorm.RunRecord;
 import joker.run.sqliteorm.RunRecordDao;
+import joker.run.util.TimeUitl;
 
 public class TimeReckonActivity extends ActivityJoker implements Chronometer.OnChronometerTickListener, View.OnClickListener {
 
@@ -223,8 +224,11 @@ public class TimeReckonActivity extends ActivityJoker implements Chronometer.OnC
 		//用时
 		record.setTime(Integer.parseInt(record.getTime())+record.getCurrent()+"");//总用时+当圈用时
 		//配速
-		record.setPace(Integer.parseInt(record.getSumDistance())
-				/ Integer.parseInt(record.getTime())+"");// 总距离/用时      米/秒
+		record.setPace(
+				
+				TimeUitl.FormatMs((int) (Double.parseDouble(record.getTime())/(Double.parseDouble(record.getSumDistance())/1000)))
+				
+				);// 总距离/用时      米/秒
 		//最后记录秒表
 		record.setTempTime(current);
 		
@@ -254,7 +258,13 @@ public class TimeReckonActivity extends ActivityJoker implements Chronometer.OnC
 		record.setTime(Integer.parseInt(record.getTime())+record.getCurrent()+"");//总用时+当圈用时
 		//配速
 		record.setPace(record.getSumDistance().equals("0")?"0":
-			Integer.parseInt(record.getSumDistance())/ Integer.parseInt(record.getTime())+"");// 总距离/用时      米/秒
+			
+			TimeUitl.FormatMs((int) (Double.parseDouble(record.getTime())/(Double.parseDouble(record.getSumDistance())/1000)))
+			
+//			Integer.parseInt(record.getSumDistance())/ Integer.parseInt(record.getTime())+""
+			
+			);// 总距离/用时      米/秒
+		
 		//最后记录秒表
 		record.setTempTime(current);
 		

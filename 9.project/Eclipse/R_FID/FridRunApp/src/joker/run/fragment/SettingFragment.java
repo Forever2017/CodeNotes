@@ -159,7 +159,7 @@ public class SettingFragment extends FragmentJoker implements AdapterView.OnItem
 						updateList(epc);
 					}
 				}, true);
-				/*tet = new ThreadEpcTest(new EpcResult() {
+				/*new ThreadEpcTest(new EpcResult() {
 					@Override
 					public void onResult(String epc) {
 						// TODO Auto-generated method stub
@@ -192,15 +192,15 @@ public class SettingFragment extends FragmentJoker implements AdapterView.OnItem
 			epcBean = new Epc(epc, "外部跑者");
 		}
 		list.add(epcBean);
-		
+
 		getActivity().runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
 				sAdapter.notifyDataSetChanged();
 			}
 		});
-		
-		
+
+
 	}
 
 

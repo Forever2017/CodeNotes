@@ -60,7 +60,7 @@ public class ResultAdapter extends BaseAdapter{
 		holder.ResultText2.setText(list.get(position).getSumTurn());
 		holder.ResultText3.setText(list.get(position).getSumDistance());
 		holder.ResultText4.setText(list.get(position).getTime());
-		holder.ResultText5.setText(list.get(position).getPace()+"m/s");
+		holder.ResultText5.setText(list.get(position).getPace());
 		
 		if(list.get(position).getName().contains("外部")){
 			holder.ResultText1.setTextColor(context.getResources().getColor(R.color.red));

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FridRunning</string>
+    <string name="app_name">RFIDRunning</string>
 
     <string name="Time">计时</string>
     <string name="Result">结果</string>

@@ -5,6 +5,7 @@ import java.util.List;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
@@ -19,6 +20,7 @@ import joker.run.fragment.SettingFragment;
 import joker.run.fragment.TimeFragment;
 import joker.run.sqliteorm.Epc;
 import joker.run.sqliteorm.TDao;
+import joker.run.util.TimeUitl;
 import android.support.v4.app.FragmentActivity;
 
 public class MainActivity extends FragmentActivity implements OnClickListener,OnPageChangeListener {
@@ -45,10 +47,23 @@ public class MainActivity extends FragmentActivity implements OnClickListener,On
 		//设置缓存页面
 		mViewPager.setOffscreenPageLimit(mFragments.size()-1);
 
+		//设置不休眠
+		Settings.System.putInt(getContentResolver(),
+				android.provider.Settings.System.SCREEN_OFF_TIMEOUT,Integer.MAX_VALUE);
 
-		TDao<Epc> t = new TDao<Epc>(this, Epc.class);
-		int aa = t.insertOrUpdate(new Epc("1234", "name"));
-		Log.e("", ""); 
+		test();
+	}
+	private void test() {
+		String m = "600";
+		String d = "800";
+//		int xxxxx = (int) (Double.parseDouble(m)/(Double.parseDouble(d)/1000));
+		String result = TimeUitl.FormatMs((int) (Double.parseDouble(m)/(Double.parseDouble(d)/1000)));
+		String result2 = TimeUitl.FormatMs(3500);
+
+		System.out.print("");
+//		System.out.print(result);
+
+		
 	}
 
 	private void initView()
