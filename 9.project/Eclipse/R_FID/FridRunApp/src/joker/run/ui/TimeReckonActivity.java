@@ -15,8 +15,6 @@ import android.widget.TextView;
 import device.frid.Device;
 import joker.run.adapter.TimeAdapter;
 import joker.run.base.ActivityJoker;
-import joker.run.base.ThreadEpcTest;
-import joker.run.base.ThreadEpcTest.EpcResult;
 import joker.run.data.HOST;
 import joker.run.sqliteorm.Epc;
 import joker.run.sqliteorm.EpcDao;
@@ -50,6 +48,7 @@ public class TimeReckonActivity extends ActivityJoker implements Chronometer.OnC
 		//分辨同时出发，还是单个出发
 		if(HOST.RUN_TYPE == 1)
 			scanFrid();//单个出发，直接扫码
+		
 		else  //同时出发，需要延迟后再开始扫码
 			new Handler().postDelayed(new Runnable() {
 				@Override
