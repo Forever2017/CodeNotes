@@ -1,10 +1,15 @@
 package com.frid.ui;
+import java.util.List;
+
 import cn.pedant.SweetAlert.CallDialog;
 
 import com.frid.data.AppData;
 import com.frid.data.FridApplication;
 import com.frid.data.TestMsg;
+import com.frid.db.DBHelper;
+import com.frid.db.TDao;
 import com.frid.fridapp.R;
+import com.frid.pojo.DBLog;
 import com.frid.pojo.GsonUser;
 import com.frid.tool.ASHttp;
 import com.frid.tool.ASHttp.AsyncHttp;

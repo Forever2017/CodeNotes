@@ -30,6 +30,10 @@ public class DBGsonProduct {
 
 	// 用注解标示字段和表中的字段来对应，id=true表示该字段为主键。
 	@DatabaseField(id = true)
+	@SerializedName(value = "epc", alternate = { "eeeeee" })
+	private String epc;
+	
+	@DatabaseField
 	@SerializedName(value = "productExternalId", alternate = { "pppppp" })
 	private String id;
 
@@ -39,14 +43,11 @@ public class DBGsonProduct {
 	private String name;
 
 	@DatabaseField
-	@SerializedName(value = "epc", alternate = { "eeeeee" })
-	private String epc;
-
-	@DatabaseField
 	@SerializedName(value = "status", alternate = { "ssssss" })
 	private int state = 0;
 
 	@DatabaseField
+	@SerializedName(value = "InputWaybillNumber")
 	private String InputWaybillNumber;// 运单号 有必要存储到数据库
 
 	private int isExist = 0;// 扫描时，是否存在 0 不存在 1存在

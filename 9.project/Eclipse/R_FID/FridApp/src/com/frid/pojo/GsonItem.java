@@ -16,6 +16,12 @@ public class GsonItem implements Cloneable {
 
 	@SerializedName(value = "requestNumber",alternate = {"number222"})  
 	private String number;
+	
+	@SerializedName(value = "productCode",alternate = {"productCode222"})  
+	private String productCode;
+	
+	@SerializedName(value = "subProductCode",alternate = {"subProductCode222"})  
+	private String subProductCode;
 
 	/*盘点：1=盘点找到，0=盘点未找到   用来做当前扫描状态   
 	 *核实列表：1=已核实，0=未核实   用来做当前扫描状态
@@ -78,6 +84,18 @@ public class GsonItem implements Cloneable {
 	}
 	public void setNumber(String number) {
 		this.number = number;
+	}
+	public String getProductCode() {
+		return productCode;
+	}
+	public void setProductCode(String productCode) {
+		this.productCode = productCode;
+	}
+	public String getSubProductCode() {
+		return subProductCode;
+	}
+	public void setSubProductCode(String subProductCode) {
+		this.subProductCode = subProductCode;
 	}
 
 }

@@ -60,7 +60,7 @@ public class TransferInfo extends RFActivity implements OnClickListener {
 		if(Type!=2) CheckUpload.setVisibility(View.GONE);
 
 		list = new ArrayList<GsonItem>();
-		mAdapter = new MItemAdapter(this, list,0);
+		mAdapter = new MItemAdapter(this, list,5);
 		listView.setAdapter(mAdapter);
 		mAdapter.notifyDataSetChanged();
 
@@ -75,7 +75,8 @@ public class TransferInfo extends RFActivity implements OnClickListener {
 					GsonStock gc = g.fromJson(msg, GsonStock.class);
 					if(gc.getResponseCode().equals("0000")){/**获取数据成功*/
 						list.clear();
-						list.addAll(correctList(gc.getList()));
+						list.addAll(gc.getList());
+//						list.addAll(correctList(gc.getList()));
 						mAdapter.notifyDataSetChanged();
 					}
 				}

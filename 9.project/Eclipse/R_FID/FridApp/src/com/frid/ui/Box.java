@@ -14,7 +14,7 @@ import android.widget.AdapterView.OnItemClickListener;
 
 import com.frid.adapter.BoxItemAdapter;
 import com.frid.data.TestMsg;
-import com.frid.db.DaoProduct;
+import com.frid.db.TDao;
 import com.frid.fridapp.R;
 import com.frid.pojo.BillList;
 import com.frid.pojo.DBGsonProduct;
@@ -38,7 +38,7 @@ public class Box extends RFActivity implements OnItemClickListener,OnClickListen
 	private ListView listView;
 	private BoxItemAdapter mAdapter;
 
-	private DaoProduct PDao;
+	private TDao<DBGsonProduct> PDao;
 	private List<DBGsonProduct> list;
 
 	private ProgressWheel pw;//旋转条
@@ -57,7 +57,10 @@ public class Box extends RFActivity implements OnItemClickListener,OnClickListen
 		device = new Device(this);
 		scrapEpcList = new ArrayList<String>();
 		st = new SynchTool(this);
-		PDao = new DaoProduct(this);
+
+		//		PDao = new DaoProduct(this);
+		PDao = new TDao<DBGsonProduct>(this, DBGsonProduct.class);
+
 		CheckScan = (Button) findViewById(R.id.CheckScan);
 		CheckUpload = (Button) findViewById(R.id.CheckUpload);
 		listView = (ListView) findViewById(R.id.CheckAList);
@@ -72,10 +75,13 @@ public class Box extends RFActivity implements OnItemClickListener,OnClickListen
 	}
 
 	private void data() {
-		list = PDao.getProductList();
+		list = PDao.queryAll();
 		mAdapter = new BoxItemAdapter(getApplicationContext(),list);
 		listView.setAdapter(mAdapter);
-		if(list.size()==0) network();
+//		Toast("本地商品数："+list.size());
+
+		if(list==null||list.size()==0) 
+			network();
 	} 
 
 	private void network() {
@@ -87,7 +93,8 @@ public class Box extends RFActivity implements OnItemClickListener,OnClickListen
 					GsonProductList gc = new Gson().fromJson(msg, GsonProductList.class);
 					if(gc.getResponseCode().equals("0000")){/**获取数据成功*/
 						list.addAll(gc.getList());
-						PDao.setProductList(list);
+						//						PDao.setProductList(list);
+						PDao.insertList(list);
 						mAdapter.notifyDataSetChanged();
 					}
 				}
@@ -189,6 +196,18 @@ public class Box extends RFActivity implements OnItemClickListener,OnClickListen
 			//ID损坏的点击无反应
 			break;
 		default:
+			//没有的话就当正常处理吧。。。
+			VTool.Interaction(this,R.drawable.test_box,temp.getName(),temp.getId(),"取消操作", "销售展示", new CallbackVT() {
+				@Override
+				public void InteractionYes() {
+					super.InteractionYes();
+					/*打LOG*/
+					st.saveLog(temp.getEpc(), DBLog.SHOWPRODUCT2CUSTOMER);
+					temp.setState(DBGsonProduct.SHOWING);
+					PDao.update(temp);
+					mAdapter.notifyDataSetChanged();
+				}
+			});
 			break;
 		}
 	}
@@ -351,7 +370,8 @@ public class Box extends RFActivity implements OnItemClickListener,OnClickListen
 					/**这里需要做逻辑操作*/
 					GsonState gs = new Gson().fromJson(msg, GsonState.class);
 					if(gs.getResponseCode().equals("0000")){/**获取数据成功*/
-						PDao.clear();
+						//						PDao.clear();
+						PDao.deleteAll();
 						list.clear();
 						Toast("返库成功!");
 						mAdapter.notifyDataSetChanged();

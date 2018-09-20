@@ -55,14 +55,17 @@ public class MItemAdapter extends BaseAdapter{
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		} 
-		try {
-			holder.ItemContent.setText(list.get(position).getName());
+		try { 
+			if(type==5)  holder.ItemContent.setText(list.get(position).getName()+" x "+list.get(position).getNumber());
+			else   holder.ItemContent.setText(list.get(position).getName());
 		} catch (Exception e) {
-			Log.e("", "");
+			Log.e("","");
 		}
-		
-		
-		if(type==0) holder.ItemItemID.setText(list.get(position).getId());
+		//商品码：NP00916，单件号：SP1
+		if(type==5) holder.ItemItemID.setText("商品码："+list.get(position).getProductCode()+"，单件号："+list.get(position).getSubProductCode());
+
+		else if(type==0) holder.ItemItemID.setText(list.get(position).getId());
+
 		else holder.ItemItemID.setText(list.get(position).getNumber().equals("1")?"暂未匹配":list.get(position).getNumber());
 
 		if(list.get(position).getState() == 0){

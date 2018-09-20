@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.frid.data.FridApplication;
+import com.frid.db.DBHelper;
 import com.frid.fridapp.R;
 import com.frid.adapter.ProjectPagerAdapter;
 import com.frid.ui.fragment.BoxFragment;
@@ -44,6 +45,9 @@ public class Main extends RSFragmentActivity implements OnClickListener,OnPageCh
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		
+		
 		device = new Device(this);
 		mViewPager = (ViewPager) findViewById(R.id.id_viewpager);
 		initView();
