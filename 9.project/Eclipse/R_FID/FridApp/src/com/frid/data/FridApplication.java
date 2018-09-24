@@ -12,6 +12,9 @@ import android.telephony.TelephonyManager;
 
 public class FridApplication extends Application{
 	public static SharedPreferences sp;
+	/**服务器地址*/
+	public static String Server;//"http://47.97.223.76:80";
+
 	//基本数据
 	public static String UserID;
 	public static String userName;
@@ -40,7 +43,7 @@ public class FridApplication extends Application{
 
 		SUM_LIST = new ArrayList<Activity>();
 	}
-	
+
 	public static void killActivity() {
 		for (Activity activity : SUM_LIST) {
 			activity.finish();
@@ -51,6 +54,8 @@ public class FridApplication extends Application{
 	 * 刷新存储数据
 	 * */
 	public static void refreshData() {
+		Server = sp.getString("Server", "http://47.97.223.76:80");
+
 		userName = sp.getString("userName", "");
 		passWord = sp.getString("passWord", "");
 		UserID = sp.getString("UserID", "");
@@ -81,6 +86,17 @@ public class FridApplication extends Application{
 		//editor.putString(strings[0], strings[1]);
 		Editor editor = sp.edit();
 		editor.putInt(name, vaule);
+		editor.commit();
+		refreshData();
+	}
+	/**
+	 * 插入数据 String
+	 * */
+	public static void insertIdentity(String name,String vaule) {
+		//insertData(new String[]{"aaa","bbb"},s,s2);
+		//editor.putString(strings[0], strings[1]);
+		Editor editor = sp.edit();
+		editor.putString(name, vaule);
 		editor.commit();
 		refreshData();
 	}

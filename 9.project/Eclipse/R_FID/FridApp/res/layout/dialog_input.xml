@@ -45,10 +45,10 @@
         android:background="@android:color/white"
         android:drawablePadding="10dip"
         android:hint="请输入运单号"
-        android:maxLength="15"
         android:paddingLeft="10dip"
         android:paddingRight="10dip"
         android:textSize="@dimen/font_size_16" />
+    <!--  android:maxLength="15" -->
 
     <Button
         android:id="@+id/dialog_input_but"

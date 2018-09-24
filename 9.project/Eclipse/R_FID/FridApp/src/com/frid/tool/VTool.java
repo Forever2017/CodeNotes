@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.frid.adapter.MListAdapter;
+import com.frid.data.AppData;
 import com.frid.data.FridApplication;
 import com.frid.data.TestMsg;
 import com.frid.fridapp.R;
@@ -256,7 +257,7 @@ public class VTool {
 		dialog_input_but.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
-				if(dialog_input_edit.getText().toString().equals("20180902")){
+				if(dialog_input_edit.getText().toString().equals(AppData.SET_PASSWORD)){
 					sm.ReturnData(dialog_input_edit.getText().toString());
 					ADDdialog.dismiss();
 				}else
@@ -373,6 +374,46 @@ public class VTool {
 
 
 
+	//IP设置
+	public static void inputIPDialog(final Context context,final CallbackVT sm) {
+		//新建自己风格的dialog
+		final Dialog ADDdialog = new Dialog(context,R.style.MyDialog);
+		ADDdialog.setContentView(R.layout.dialog_input);
+		ADDdialog.show();
+
+		Button dialog_input_close = (Button) ADDdialog.findViewById(R.id.dialog_input_close);
+		final EditText dialog_input_edit = (EditText) ADDdialog.findViewById(R.id.dialog_input_edit);
+		final Button dialog_input_but = (Button) ADDdialog.findViewById(R.id.dialog_input_but);
+		TextView InputTitile = (TextView) ADDdialog.findViewById(R.id.InputTitile);
+		InputTitile.setText("服务器地址");
+		dialog_input_edit.setHint("请输入服务器IP..");
+		dialog_input_edit.setText(FridApplication.Server);
+
+		dialog_input_close.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				ADDdialog.dismiss();
+			}
+		});
+
+		dialog_input_but.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				/*if(dialog_input_edit.getText().toString().equals(AppData.SET_PASSWORD)){
+					sm.ReturnData(dialog_input_edit.getText().toString());
+					ADDdialog.dismiss();
+				}else
+					Toast.makeText(context, "设置密码错误，请重试！", 0).show();*/
+				String msg = dialog_input_edit.getText().toString();
+				if(msg!=null&&!msg.equals("")&&msg.length()>4){
+					sm.ReturnData(dialog_input_edit.getText().toString());
+					ADDdialog.dismiss();
+				}else
+					Toast.makeText(context, "格式错误，保存失败！", 0).show();
+
+			}
+		});
+	}
 
 
 	/**回调方法*/

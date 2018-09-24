@@ -13,6 +13,8 @@ import com.frid.pojo.DBLog;
 import com.frid.pojo.GsonUser;
 import com.frid.tool.ASHttp;
 import com.frid.tool.ASHttp.AsyncHttp;
+import com.frid.tool.VTool;
+import com.frid.tool.VTool.CallbackVT;
 import com.frid.view.RSActivity;
 import com.google.gson.Gson;
 
@@ -20,6 +22,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
@@ -28,6 +31,7 @@ import android.widget.EditText;
 public class LoginActivity extends RSActivity implements OnClickListener,OnCheckedChangeListener{
 	private EditText UserName,PassWord;
 	private CheckBox LoainSavePass,AILogin;
+	private Button LoginIpSetting;
 	@Override   
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -37,12 +41,14 @@ public class LoginActivity extends RSActivity implements OnClickListener,OnCheck
 	private void ini() {
 		findViewById(R.id.LoginRunBut).setOnClickListener(this);
 
+		LoginIpSetting =(Button) findViewById(R.id.LoginIpSetting);
 		UserName =(EditText) findViewById(R.id.UserName);
 		PassWord =(EditText) findViewById(R.id.PassWord);
 		LoainSavePass = (CheckBox) findViewById(R.id.LoainSavePass);  
 		AILogin = (CheckBox) findViewById(R.id.AILogin);  
 		LoainSavePass.setOnCheckedChangeListener(this);
 		AILogin.setOnCheckedChangeListener(this);
+		LoginIpSetting.setOnClickListener(this);
 
 		//判断记住密码多选框的状态  
 		if(FridApplication.sp.getBoolean("ISCHECK", false))  
@@ -86,6 +92,24 @@ public class LoginActivity extends RSActivity implements OnClickListener,OnCheck
 			}else 
 				Toast("账号或密码不可为空.");
 			break;
+
+
+		case R.id.LoginIpSetting: //IP设置
+			VTool.inputPassWordDialog(this, new CallbackVT() {
+				@Override
+				public void ReturnData(String msg) {
+					super.ReturnData(msg);
+					VTool.inputIPDialog(LoginActivity.this, new CallbackVT() {
+						@Override
+						public void ReturnData(String msg) {
+							super.ReturnData(msg);
+							FridApplication.insertIdentity("Server",msg);
+							Toast("保存成功.");
+						}
+					});
+				}
+			});
+			break;
 		}
 	}
 	private void loginService() {
@@ -99,8 +123,8 @@ public class LoginActivity extends RSActivity implements OnClickListener,OnCheck
 
 					Gson g = new Gson();
 					final GsonUser gu = g.fromJson(msg, GsonUser.class);
-					
-//					int i = gu.getPermissions().length;
+
+					//					int i = gu.getPermissions().length;
 
 					if(gu.getResponseCode().equals("0000"))
 						LoadingClose("登录成功!",true, new CallDialog() {

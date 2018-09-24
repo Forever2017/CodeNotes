@@ -146,7 +146,7 @@
 
     <!-- 第 2 部分 -->
 
-    <LinearLayout
+    <LinearLayout android:visibility="gone"
         android:id="@+id/QueryTable2"
         android:layout_width="fill_parent"
         android:layout_height="@dimen/length_200"

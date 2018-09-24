@@ -230,7 +230,7 @@ public class ASHttp {
 
 	//【方法】
 	public static void request (final Context context,String method,StringEntity se,final AsyncHttp Asyn){
-		client.post(context, AppData.Server+method,se,"application/json", 
+		client.post(context, FridApplication.Server+method,se,"application/json", 
 				new JsonHttpResponseHandler(){
 
 			@Override
@@ -254,27 +254,18 @@ public class ASHttp {
 			@SuppressWarnings("deprecation")
 			public void onFailure(Throwable th) {
 				super.onFailure(th);
-
-				if(th!=null&&th.getMessage().equals("Unauthorized")){
+				if(th!=null&&th.toString().contains("ConnectException")){
+					Toast.makeText(context, "连接异常！", 0).show();
+				}
+				else if(th.getMessage()!=null&&th.getMessage().equals("Unauthorized")){
 					//401 未经授权的
 					Toast.makeText(context, "未经授权的操作！", 0).show();
 					context.startActivity(new Intent(context,LoginActivity.class));
 					FridApplication.killActivity();
 				}
-
 				Toast.makeText(context, "Server Error："+th.toString(), 0).show();
 				Asyn.onResult(false,th.toString());
-
-
 			}
-
-
-
-
-
-
-
-
 		});
 	}
 
