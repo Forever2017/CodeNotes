@@ -3,7 +3,7 @@ package com.frid.data;
 public class AppData {
 	public static final  String deviceCode = "A001"; //设备ID 临时先放一个
 	public static final  int permissions = 1; //permissions身份默认值（当返回为空的时候，赋值）
-	public static final  String SET_PASSWORD = "123456";
+	public static final  String SET_PASSWORD = "joker!515";
 	
 	public static final String SP = "com.frid.data";
 	/**服务器地址*/

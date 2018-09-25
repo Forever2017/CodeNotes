@@ -14,6 +14,8 @@ import android.widget.AdapterView.OnItemClickListener;
 import com.frid.adapter.QueryMItemAdapter;
 import com.frid.adapter.QueryTableMItemAdapter;
 import com.frid.data.TestMsg;
+import com.frid.data.ThreadEpcTest;
+import com.frid.data.ThreadEpcTest.EpcResult;
 import com.frid.fridapp.R;
 import com.frid.pojo.GsonItemCheck;
 import com.frid.pojo.GsonState;
@@ -137,7 +139,7 @@ public class QueryFragment extends FragmentJoker implements OnClickListener,OnIt
 
 				//核对单商品为空时不做扫描
 				if(list.size()==0){Toast("没有核对货品."); return;}
-				
+
 				if(boxList.size() >= sum) { Toast("所有商品已核实."); return; }
 
 				//1.改变文字 2.锁定上传 3.显示旋转动画 4.执行真实操作
@@ -154,6 +156,7 @@ public class QueryFragment extends FragmentJoker implements OnClickListener,OnIt
 				//真实停止扫描
 				device.stopSearch();
 				device.biBi(false);
+//				tet.stop();
 
 				scrapEpcList.clear();
 				UnreadEpcList.clear();
@@ -228,8 +231,23 @@ public class QueryFragment extends FragmentJoker implements OnClickListener,OnIt
 				}
 			}
 		});
-	}
+		//测试扫描
+		/*tet = new ThreadEpcTest(new EpcResult() {
+			@Override
+			public void onResult(String epc) {
+				super.onResult(epc);
+				//DF2018072100000000000019  
+				if(scrapEpcList.contains(epc)) return;
 
+				UnreadEpcList.add(epc);
+
+				if(isCheck){//网络开关  打开
+					epcCheck();
+				}
+			}
+		});*/
+	}
+	/*ThreadEpcTest tet;*/
 
 	/**不需要对比的epc*/
 	private List<String> scrapEpcList;
@@ -287,10 +305,11 @@ public class QueryFragment extends FragmentJoker implements OnClickListener,OnIt
 									//真实停止扫描
 									device.stopSearch();
 									device.biBi(false);
+//									tet.stop();
 
 									scrapEpcList.clear();
 									UnreadEpcList.clear();
-									
+
 									checkSubmit();
 								}
 							});
