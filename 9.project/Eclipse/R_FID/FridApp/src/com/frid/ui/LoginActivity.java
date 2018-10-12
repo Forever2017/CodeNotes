@@ -65,7 +65,7 @@ public class LoginActivity extends RSActivity implements OnClickListener,OnCheck
 			{   
 				//设置默认是自动登录状态  
 				AILogin.setChecked(true);  
-				//跳转界面  
+				//跳转界面   
 				Loading("登录中..");
 				loginService();
 				/**
