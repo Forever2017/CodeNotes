@@ -8,6 +8,7 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -17,6 +18,7 @@ public class NormalTitleBar extends RelativeLayout implements View.OnClickListen
 	protected RelativeLayout mRootView;
 	protected TextView titleTextView;
 	protected ImageView backImageView;
+	Button TitleButRight;
 	protected String mTitle = "";
 	protected boolean left_visible = true;
 
@@ -50,8 +52,10 @@ public class NormalTitleBar extends RelativeLayout implements View.OnClickListen
 
 	protected void init(Context context, TypedArray attrs) {
 		titleTextView = (TextView) mRootView.findViewById(R.id.titleTextView);
+		TitleButRight = (Button) mRootView.findViewById(R.id.TitleButRight);
 		backImageView = (ImageView) mRootView.findViewById(R.id.backImageView);
 		backImageView.setOnClickListener(this);
+		TitleButRight.setOnClickListener(this);
 		if (attrs != null) {
 			mTitle = attrs.getString(R.styleable.TopBar_title);
 			titleTextView.setText(mTitle);
@@ -65,8 +69,8 @@ public class NormalTitleBar extends RelativeLayout implements View.OnClickListen
 		left_visible = b;
 		backImageView.setVisibility(left_visible?View.VISIBLE:View.GONE);
 	}
-	
-	
+
+
 	protected void recycleAttributeSet(TypedArray attributes) {
 		if (attributes != null) {
 			attributes.recycle();
@@ -77,11 +81,34 @@ public class NormalTitleBar extends RelativeLayout implements View.OnClickListen
 		mTitle = title;
 		titleTextView.setText(mTitle);
 	}
+	public void setRight(String text) {
+		TitleButRight.setVisibility(View.VISIBLE);
+		TitleButRight.setText(text);
+	}
+	rClick rclick;
+	public void rightOnClick(rClick rclick){
+		this.rclick = rclick;
+	}
+	public static abstract class rClick{
+		public void onResult(String msg){};
+	}
 
 	@Override
 	public void onClick(View v) {
-		getActivity().setResult(Activity.RESULT_CANCELED);
-		getActivity().onBackPressed();
+		switch (v.getId()) {
+		case R.id.backImageView:
+			getActivity().setResult(Activity.RESULT_CANCELED);
+			getActivity().onBackPressed();
+			break;
+		case R.id.TitleButRight:
+			if(rclick!=null)
+				rclick.onResult("点击右边键");
+			break;
+
+		default:
+			break;
+		}
+
 	}
 
 	private Activity getActivity() {

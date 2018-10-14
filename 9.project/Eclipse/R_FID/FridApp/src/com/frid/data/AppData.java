@@ -1,9 +1,8 @@
 package com.frid.data;
 
 public class AppData {
-	public static final  String deviceCode = "A001"; //设备ID 临时先放一个
 	public static final  int permissions = 1; //permissions身份默认值（当返回为空的时候，赋值）
-	public static final  String SET_PASSWORD = "joker!515";
+	public static final  String SET_PASSWORD = "Knight2018";
 	
 	public static final String SP = "com.frid.data";
 	/**服务器地址*/
@@ -12,13 +11,16 @@ public class AppData {
 	//========Service方法========/api
 	//【登录】
 	/**登录*/   
-	public static final String Login = "/api/security/"+deviceCode+"/login";
+//	public static String Login = "/api/security/"+FridApplication.DeviceNumber+"/login";
 
 	/** 注销 Logout */
-	public static final String Logout = "/api/security/"+deviceCode+"/logout";
+//	public static String Logout = "/api/security/"+FridApplication.DeviceNumber+"/logout";
 
 	/** 获取新Token GetNewToken */
-	public static final String GetNewToken = "/api/security/"+deviceCode+"/GetNewToken";
+//	public static String GetNewToken = "/api/security/"+FridApplication.DeviceNumber+"/GetNewToken";
+	
+	
+	
 	//【入库\盘点 单】
 	/** 获取盘点任务列表  GetStockCountTasks */
 	public static final String GetStockCountTasks = "/api/warehouse/Getstockcounttasks";

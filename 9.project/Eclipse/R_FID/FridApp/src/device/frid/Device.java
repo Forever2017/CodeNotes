@@ -55,9 +55,10 @@ public class Device implements MultiLableCallBack {
 			{
 				Boolean rett=UHFClient.mUHF.command(CommandType.GET_FIRMWARE_VERSION, mWare);
 				if(rett)
-				{
-					//Log.e("TAG", "Ver."+mWare.major_version+"."+mWare.minor_version+"."+mWare.revision_version);
-					if(mWare.major_version==1
+				{	
+					//有的设备major_version返回3，但是无从考证这个版本号，暂时定位，能获得固件信息，就默认连接上，不用版本号固定
+					return true;
+					/*if(mWare.major_version==1
 							&&(mWare.minor_version==0||mWare.minor_version==1
 							||mWare.minor_version==2||mWare.minor_version==3
 									)
@@ -70,7 +71,7 @@ public class Device implements MultiLableCallBack {
 					{
 						//Log.e("设备信息", "Ver."+mWare.major_version+"."+mWare.minor_version+"."+mWare.revision_version);
 						return true;
-					}
+					}*/
 				}
 			}
 			count++;

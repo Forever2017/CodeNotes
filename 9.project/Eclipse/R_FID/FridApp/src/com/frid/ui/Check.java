@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.frid.adapter.MItemAdapter;
+import com.frid.data.FridApplication;
 import com.frid.data.TestMsg;
 import com.frid.fridapp.R;
 import com.frid.pojo.GsonItem;
@@ -19,6 +20,7 @@ import com.frid.tool.ASHttp;
 import com.frid.tool.ASHttp.AsyncHttp;
 import com.frid.tool.JsonTool;
 import com.frid.view.NormalTitleBar;
+import com.frid.view.NormalTitleBar.rClick;
 import com.frid.view.RFActivity;
 import com.google.gson.Gson;
 import com.pnikosis.materialishprogress.ProgressWheel;
@@ -63,6 +65,15 @@ public class Check extends RFActivity implements OnClickListener{
 		CheckTitle.setTitle(getString(R.string.Check));
 		CheckScan.setText(getResources().getString(R.string.Scan));
 		CheckUpload.setText(getResources().getString(R.string.Upload));
+		CheckTitle.setRight("刷新");
+		CheckTitle.rightOnClick(new rClick() {
+			@Override
+			public void onResult(String msg) {
+				super.onResult(msg);
+				data();
+				Toast("刷新完成.");
+			}
+		});
 		data();
 
 	}
@@ -85,6 +96,25 @@ public class Check extends RFActivity implements OnClickListener{
 			};
 		} );
 	}
+	private void upladList() {
+		/*盘点上传*/
+		ASHttp.UploadStockCountResult(this,new JsonTool().getSCR(StockCountCode, gc.getList()),new AsyncHttp() {
+			public void onResult(boolean b, String msg) {
+				/**这里需要做逻辑操作*/
+				if(b){
+					GsonState gs = new Gson().fromJson(msg, GsonState.class);
+					if(gs.getResponseCode().equals("0000"))/**获取数据成功*/
+					{
+						Toast("上传成功.");
+						finish();
+					}	
+					else
+						Toast("上传失败. msg:"+msg);
+				}else
+					Toast("服务器异常. msg:"+msg);
+			};
+		} );
+	}
 
 	@Override
 	public void onClick(View v) {
@@ -93,24 +123,20 @@ public class Check extends RFActivity implements OnClickListener{
 			if(gc.getList().size() == 0){
 				Toast("货品为空.");
 			}else{
-				/*盘点上传*/
-				ASHttp.UploadStockCountResult(this,new JsonTool().getSCR(StockCountCode, gc.getList()),new AsyncHttp() {
-					public void onResult(boolean b, String msg) {
-						/**这里需要做逻辑操作*/
-						if(b){
-							GsonState gs = new Gson().fromJson(msg, GsonState.class);
-							if(gs.getResponseCode().equals("0000"))/**获取数据成功*/
-							{
-								Toast("上传成功.");
-								finish();
-							}	
-							else
-								Toast("上传失败. msg:"+msg);
-						}else
-							Toast("服务器异常. msg:"+msg);
-					};
-				} );
-			}
+				if(EPC_NUMBER>=list.size()){
+					//全部找到
+					upladList();
+				}else{
+					//有没找到的
+					if(FridApplication.Identity == 3){
+						//有管理员权限
+						upladList();
+					}else{
+						//没有管理员权限
+						Toast("没有权限,请盘点到全部货物！");
+					}
+				}
+			}  
 			break;
 
 		case R.id.CheckScan://扫描

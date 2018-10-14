@@ -15,11 +15,13 @@ public class UHFClient
 	{
 		if (instance == null) 
 		{
+			mUHF=new UHF("/dev/ttyMT3",Linuxc.BAUD_RATE_115200,1,0);
+			
+			
 			//mUHF=new UHF("/dev/ttyMT0",Linuxc.BAUD_RATE_115200,1,0);
 			//mUHF=new UHF("/dev/ttySAC3",Linuxc.BAUD_RATE_115200,1,0);
 			//mUHF=new UHF("/dev/ttyMSM2",Linuxc.BAUD_RATE_115200,1,0);//0 2
 			//mUHF=new UHF("/dev/ttyHSL0",Linuxc.BAUD_RATE_115200,1,0);
-			mUHF=new UHF("/dev/ttyMT3",Linuxc.BAUD_RATE_115200,1,0);
 			//mUHF=new UHF("/dev/ttyS5",Linuxc.BAUD_RATE_115200,1,0);//0 2
 			
 			mUHF.com_fd=mUHF.transfer_open(mUHF);

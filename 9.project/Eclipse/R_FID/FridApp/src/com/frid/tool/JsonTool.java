@@ -67,7 +67,7 @@ public class JsonTool {
 		public SCR(String StockCountCode, List<GsonItem> list) {
 			this.StockCountCode = StockCountCode;
 			this.Token = FridApplication.token;
-			this.DeviceCode = AppData.deviceCode;
+			this.DeviceCode = FridApplication.DeviceNumber;
 			for (GsonItem gsonItem : list) 
 				StockCountResult.add(new SCRItem(gsonItem.getId(), gsonItem.getState()+""));
 		}
@@ -82,7 +82,7 @@ public class JsonTool {
 		public EPC(String StockTransferExternalId, List<GsonItemCheck> qlist) {
 			this.StockTransferExternalId = StockTransferExternalId;
 			this.Token = FridApplication.token;
-			this.DeviceCode = AppData.deviceCode;
+			this.DeviceCode = FridApplication.DeviceNumber;
 			for (GsonItemCheck gsonItem : qlist) 
 				Epcs.add(gsonItem.getEpc());
 		}
@@ -96,7 +96,7 @@ public class JsonTool {
 		
 		public Product(List<DBGsonProduct> list) {
 			this.Token = FridApplication.token;
-			this.DeviceCode = AppData.deviceCode;
+			this.DeviceCode = FridApplication.DeviceNumber;
 			for (DBGsonProduct dbp : list) 
 				ProductItemList.add(new ProductItem(dbp.getEpc(), dbp.getInputWaybillNumber(), dbp.getState()));
 		}
@@ -109,7 +109,7 @@ public class JsonTool {
 		
 		public TLog(List<DBLog> list) {
 			this.Token = FridApplication.token;
-			this.DeviceCode = AppData.deviceCode;
+			this.DeviceCode = FridApplication.DeviceNumber;
 			TerminalOperationList.addAll(list);
 		}
 	}

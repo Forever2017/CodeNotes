@@ -122,6 +122,7 @@
             android:background="@drawable/button_style"
             android:text="@string/login"
             android:textColor="@android:color/white" />
+
     </LinearLayout>
 
     <Button
@@ -129,9 +130,19 @@
         android:layout_width="@dimen/length_70"
         android:layout_height="@dimen/length_40"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
         android:background="@drawable/button_style"
         android:text="IP设置"
+        android:textColor="@android:color/white" />
+
+    <Button android:layout_marginLeft="@dimen/length_10"
+        android:id="@+id/DeviceNumber"
+        android:layout_width="@dimen/length_70"
+        android:layout_height="@dimen/length_40"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/LoginIpSetting"
+        android:background="@drawable/button_style"
+        android:text="设备号"
         android:textColor="@android:color/white" />
 
 </RelativeLayout>

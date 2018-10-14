@@ -40,6 +40,23 @@
         android:paddingLeft="@dimen/length_10"
         android:text="同步周期" />
 
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@drawable/shape_line" />
+
+    <Button
+        android:id="@+id/DeviceNumber"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/length_50"
+        android:background="@drawable/item_style"
+        android:drawableLeft="@drawable/tab_04_pressed"
+        android:drawablePadding="@dimen/length_10"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/length_10"
+        android:text="设备号"
+        android:visibility="gone" />
+
     <Button
         android:id="@+id/SynchSwitch"
         android:layout_width="fill_parent"
@@ -50,14 +67,15 @@
         android:drawablePadding="@dimen/length_10"
         android:gravity="center_vertical"
         android:paddingLeft="@dimen/length_10"
-        android:text="[测试] 关闭 自动同步" />
+        android:text="[测试] 关闭 自动同步"
+        android:visibility="gone" />
 
     <View
         android:layout_width="fill_parent"
         android:layout_height="1.0px"
         android:background="@drawable/shape_line" />
 
-    <Button android:visibility="gone"
+    <Button
         android:layout_width="fill_parent"
         android:layout_height="@dimen/length_50"
         android:background="@drawable/item_style"
@@ -65,7 +83,8 @@
         android:drawablePadding="@dimen/length_10"
         android:gravity="center_vertical"
         android:paddingLeft="@dimen/length_10"
-        android:text="[测试] 暂无" />
+        android:text="[测试] 暂无"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/SettingExit"

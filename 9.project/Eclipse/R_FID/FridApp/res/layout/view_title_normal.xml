@@ -27,4 +27,15 @@
         android:paddingTop="@dimen/length_10"
         android:src="@drawable/title_bar_back" />
 
+    <Button
+        android:id="@+id/TitleButRight"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:background="@color/TitleColorMIn"
+        android:minWidth="@dimen/length_50"
+        android:text="刷新"
+        android:textColor="@color/White"
+        android:visibility="gone" />
+
 </RelativeLayout>

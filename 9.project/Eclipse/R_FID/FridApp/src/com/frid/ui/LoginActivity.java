@@ -31,7 +31,7 @@ import android.widget.EditText;
 public class LoginActivity extends RSActivity implements OnClickListener,OnCheckedChangeListener{
 	private EditText UserName,PassWord;
 	private CheckBox LoainSavePass,AILogin;
-	private Button LoginIpSetting;
+	private Button LoginIpSetting,DeviceNumber;
 	@Override   
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -42,6 +42,7 @@ public class LoginActivity extends RSActivity implements OnClickListener,OnCheck
 		findViewById(R.id.LoginRunBut).setOnClickListener(this);
 
 		LoginIpSetting =(Button) findViewById(R.id.LoginIpSetting);
+		DeviceNumber =(Button) findViewById(R.id.DeviceNumber);
 		UserName =(EditText) findViewById(R.id.UserName);
 		PassWord =(EditText) findViewById(R.id.PassWord);
 		LoainSavePass = (CheckBox) findViewById(R.id.LoainSavePass);  
@@ -49,6 +50,7 @@ public class LoginActivity extends RSActivity implements OnClickListener,OnCheck
 		LoainSavePass.setOnCheckedChangeListener(this);
 		AILogin.setOnCheckedChangeListener(this);
 		LoginIpSetting.setOnClickListener(this);
+		DeviceNumber.setOnClickListener(this);
 
 		//判断记住密码多选框的状态  
 		if(FridApplication.sp.getBoolean("ISCHECK", false))  
@@ -99,11 +101,28 @@ public class LoginActivity extends RSActivity implements OnClickListener,OnCheck
 				@Override
 				public void ReturnData(String msg) {
 					super.ReturnData(msg);
-					VTool.inputIPDialog(LoginActivity.this, new CallbackVT() {
+					VTool.inputIPDialog(LoginActivity.this,"服务器地址","请输入服务器IP..",FridApplication.Server, new CallbackVT() {
 						@Override
 						public void ReturnData(String msg) {
 							super.ReturnData(msg);
 							FridApplication.insertIdentity("Server",msg);
+							Toast("保存成功.");
+						}
+					});
+				}
+			});
+			break;
+		case R.id.DeviceNumber:
+			VTool.inputPassWordDialog(this, new CallbackVT() {
+				@Override
+				public void ReturnData(String msg) {
+					super.ReturnData(msg);
+					VTool.inputIPDialog(LoginActivity.this,"设备号","请输入设备号..",
+							FridApplication.DeviceNumber, new CallbackVT() {
+						@Override
+						public void ReturnData(String msg) {
+							super.ReturnData(msg);
+							FridApplication.insertIdentity("DeviceNumber",msg);
 							Toast("保存成功.");
 						}
 					});
@@ -140,6 +159,8 @@ public class LoginActivity extends RSActivity implements OnClickListener,OnCheck
 								FridApplication.insertIdentity("Identity",
 										gu.getPermissions().length==0?AppData.permissions:
 											Integer.parseInt(gu.getPermissions()[0]));
+
+
 								startActivity(new Intent(LoginActivity.this,Main.class));
 								finish();
 							}

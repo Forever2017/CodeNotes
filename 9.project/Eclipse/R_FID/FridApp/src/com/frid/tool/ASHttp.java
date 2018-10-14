@@ -30,9 +30,11 @@ public class ASHttp {
 		/*{
 		    "UserName":"Yanfeng",
 		    "Password":"123456"
-		}*/
+		}*/  
 		StringEntity se = JsonTool.createJson(new String[]{"UserName",UserName},new String[]{"Password",Password});
-		request(context,AppData.Login,se,Asyn);
+		
+		String Login = "/api/security/"+FridApplication.DeviceNumber+"/login";
+		request(context,Login,se,Asyn);
 	}
 
 	/** 注销 Logout */
@@ -41,8 +43,9 @@ public class ASHttp {
 		    "Token":"D71DBD9608E94C4C8FFC5C99E4146DA1",
 		    "DeviceCode":"T001"
 		}*/
-		StringEntity se = JsonTool.createJson(new String[]{"Token",Token},new String[]{"DeviceCode",AppData.deviceCode});
-		request(context,AppData.Logout,se,Asyn);
+		StringEntity se = JsonTool.createJson(new String[]{"Token",Token},new String[]{"DeviceCode",FridApplication.DeviceNumber});
+		String Logout = "/api/security/"+FridApplication.DeviceNumber+"/logout";
+		request(context,Logout,se,Asyn);
 	}
 
 	/** 获取新Token GetNewToken */
@@ -51,7 +54,8 @@ public class ASHttp {
 		    "RefreshToken":"0539209CBAC94C52A945CC6E72B3C41F"
 		}*/
 		StringEntity se = JsonTool.createJson(new String[]{"RefreshToken",RefreshToken});
-		request(context,AppData.GetNewToken,se,Asyn);
+		String GetNewToken = "/api/security/"+FridApplication.DeviceNumber+"/GetNewToken";
+		request(context,GetNewToken,se,Asyn);
 	}
 
 	//【入库\盘点 单】
@@ -64,7 +68,7 @@ public class ASHttp {
 		    "DeviceCode":"T001"
 		}*/
 		//	StringEntity se = JsonTool.createJson(new String[]{"Token",TestMsg.TestToken},new String[]{"DeviceCode","T001"});
-		StringEntity se = JsonTool.createJson(new String[]{"Token",FridApplication.token},new String[]{"DeviceCode",AppData.deviceCode});
+		StringEntity se = JsonTool.createJson(new String[]{"Token",FridApplication.token},new String[]{"DeviceCode",FridApplication.DeviceNumber});
 		request(context,AppData.GetStockCountTasks,se,Asyn);
 	}
 
@@ -76,7 +80,7 @@ public class ASHttp {
 		    "Token":"559231438C32494AB32C4F3895A7E10A",
 		    "DeviceCode":"A001"
 		}*/
-		StringEntity se = JsonTool.createJson(new String[]{"StockCountCode",StockCountCode},new String[]{"Token",FridApplication.token},new String[]{"DeviceCode",AppData.deviceCode});
+		StringEntity se = JsonTool.createJson(new String[]{"StockCountCode",StockCountCode},new String[]{"Token",FridApplication.token},new String[]{"DeviceCode",FridApplication.DeviceNumber});
 		request(context,AppData.GetStockCountRfidList,se,Asyn);
 	}
 
@@ -100,7 +104,7 @@ public class ASHttp {
 			　　"Token":"7ABB666574A94D48B6A7C55DF52F2FDB",
 			　　"DeviceCode":"A001"
 		  }*/
-		StringEntity se = JsonTool.createJson(new String[]{"Token",FridApplication.token},new String[]{"DeviceCode",AppData.deviceCode});
+		StringEntity se = JsonTool.createJson(new String[]{"Token",FridApplication.token},new String[]{"DeviceCode",FridApplication.DeviceNumber});
 
 		request(context,AppData.queryMyMist,se,Asyn);
 	}	
@@ -112,7 +116,7 @@ public class ASHttp {
 			　　"DeviceCode":"A001"
 			}*/
 
-		StringEntity se = JsonTool.createJson(new String[]{"StockTransferExternalId",id},new String[]{"Token",FridApplication.token},new String[]{"DeviceCode",AppData.deviceCode});
+		StringEntity se = JsonTool.createJson(new String[]{"StockTransferExternalId",id},new String[]{"Token",FridApplication.token},new String[]{"DeviceCode",FridApplication.DeviceNumber});
 
 		request(context,AppData.inconfirm,se,Asyn);
 	}
@@ -123,7 +127,7 @@ public class ASHttp {
 			　　"Token":"BF2C1E181F65446C940A6A31327E6B84",
 			　　"DeviceCode":"A001"
 			}*/
-		StringEntity se = JsonTool.createJson(new String[]{"Token",FridApplication.token},new String[]{"DeviceCode",AppData.deviceCode});
+		StringEntity se = JsonTool.createJson(new String[]{"Token",FridApplication.token},new String[]{"DeviceCode",FridApplication.DeviceNumber});
 
 		request(context,AppData.queryproductitemlist,se,Asyn);
 	}		
@@ -133,7 +137,7 @@ public class ASHttp {
 			　　"Token":"BF2C1E181F65446C940A6A31327E6B84",
 			　　"DeviceCode":"A001"
 			}*/
-		StringEntity se = JsonTool.createJson(new String[]{"Token",FridApplication.token},new String[]{"DeviceCode",AppData.deviceCode});
+		StringEntity se = JsonTool.createJson(new String[]{"Token",FridApplication.token},new String[]{"DeviceCode",FridApplication.DeviceNumber});
 
 		request(context,AppData.confirmstockback,se,Asyn);
 	}
@@ -148,7 +152,7 @@ public class ASHttp {
 			"Token":"7ABB666574A94D48B6A7C55DF52F2FDB",
 			"DeviceCode":"A001"
 		}*/
-		StringEntity se = JsonTool.createJson(new String[]{"Status","0"},new String[]{"Token",FridApplication.token},new String[]{"DeviceCode",AppData.deviceCode});
+		StringEntity se = JsonTool.createJson(new String[]{"Status","0"},new String[]{"Token",FridApplication.token},new String[]{"DeviceCode",FridApplication.DeviceNumber});
 
 		request(context,AppData.QueryList,se,Asyn);
 	}
@@ -161,8 +165,8 @@ public class ASHttp {
 			"DeviceCode":"A001"
 		}*/
 
-		//StringEntity se = JsonTool.createJson(new String[]{"StockTransferExternalId",id},new String[]{"Token",TestMsg.TestToken},new String[]{"DeviceCode",AppData.deviceCode});
-		StringEntity se = JsonTool.createJson(new String[]{"StockTransferExternalId",id},new String[]{"Token",FridApplication.token},new String[]{"DeviceCode",AppData.deviceCode});
+		//StringEntity se = JsonTool.createJson(new String[]{"StockTransferExternalId",id},new String[]{"Token",TestMsg.TestToken},new String[]{"DeviceCode",FridApplication.DeviceNumber});
+		StringEntity se = JsonTool.createJson(new String[]{"StockTransferExternalId",id},new String[]{"Token",FridApplication.token},new String[]{"DeviceCode",FridApplication.DeviceNumber});
 
 		request(context,AppData.QueryDetail,se,Asyn);
 	}
@@ -187,7 +191,7 @@ public class ASHttp {
 			　　"DeviceCode":"A001"
 			}*/
 
-		StringEntity se = JsonTool.createJson(new String[]{"EPC",EPC},new String[]{"Token",FridApplication.token},new String[]{"DeviceCode",AppData.deviceCode});
+		StringEntity se = JsonTool.createJson(new String[]{"EPC",EPC},new String[]{"Token",FridApplication.token},new String[]{"DeviceCode",FridApplication.DeviceNumber});
 
 		request(context,AppData.CheckRfid,se,Asyn);
 	}
@@ -198,7 +202,7 @@ public class ASHttp {
 			　　"Token":"BF2C1E181F65446C940A6A31327E6B84",
 			　　"DeviceCode":"A001"
 			}*/
-		StringEntity se = JsonTool.createJson(new String[]{"Token",FridApplication.token},new String[]{"DeviceCode",AppData.deviceCode});
+		StringEntity se = JsonTool.createJson(new String[]{"Token",FridApplication.token},new String[]{"DeviceCode",FridApplication.DeviceNumber});
 
 		request(context,AppData.GetWaybillList,se,Asyn);
 	}

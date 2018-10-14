@@ -14,6 +14,7 @@ public class FridApplication extends Application{
 	public static SharedPreferences sp;
 	/**服务器地址*/
 	public static String Server;//"http://47.97.223.76:80";
+	public static String DeviceNumber;//A001
 
 	//基本数据
 	public static String UserID;
@@ -55,6 +56,7 @@ public class FridApplication extends Application{
 	 * */
 	public static void refreshData() {
 		Server = sp.getString("Server", "http://47.97.223.76:80");
+		DeviceNumber = sp.getString("DeviceNumber", "A001");
 
 		userName = sp.getString("userName", "");
 		passWord = sp.getString("passWord", "");
