@@ -18,7 +18,7 @@ public class NormalTitleBar extends RelativeLayout implements View.OnClickListen
 	protected RelativeLayout mRootView;
 	protected TextView titleTextView;
 	protected ImageView backImageView;
-	Button TitleButRight;
+	protected Button TitleButRight;
 	protected String mTitle = "";
 	protected boolean left_visible = true;
 
