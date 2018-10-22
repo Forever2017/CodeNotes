@@ -52,7 +52,10 @@ public class PListAdapter extends BaseAdapter{
 		holder.ItemState.setVisibility(View.VISIBLE);
 		holder.ItemContent.setText(list.get(position).getName());
 		switch (list.get(position).getState()) {
-		/** 0入库 1出库 2盘点   */
+		/**	0 入库
+			1 出库
+			2 正常盘点
+			3 返库*/
 		case 0:
 			holder.ItemState.setText("入库");
 			holder.ItemState.setTextColor(context.getResources().getColor(R.color.TitleColorMax));
@@ -61,9 +64,13 @@ public class PListAdapter extends BaseAdapter{
 			holder.ItemState.setText("出库");
 			holder.ItemState.setTextColor(context.getResources().getColor(R.color.DeepPink));
 			break;
-		default:
+		case 2:
 			holder.ItemState.setText("盘点");
 			holder.ItemState.setTextColor(context.getResources().getColor(R.color.Orange));
+			break;
+		default://3
+			holder.ItemState.setText("返库");
+			holder.ItemState.setTextColor(context.getResources().getColor(R.color.MainItemGrey));
 			break;
 		}
 		return convertView;

@@ -107,7 +107,7 @@ public class Box extends RFActivity implements OnItemClickListener,OnClickListen
 		final DBGsonProduct temp = list.get(i);
 		switch (temp.getState()) {
 		case DBGsonProduct.INSTOCK:/** 正常 */
-			VTool.Interaction(this,R.drawable.test_box,temp.getName(),temp.getId(),"取消操作", "销售展示", new CallbackVT() {
+			VTool.Interaction(true,this,R.drawable.test_box,temp.getName(),temp.getEpc(),"取消操作", "销售展示", new CallbackVT() {
 				@Override
 				public void InteractionYes() {
 					super.InteractionYes();
@@ -120,7 +120,7 @@ public class Box extends RFActivity implements OnItemClickListener,OnClickListen
 			});
 			break;
 		case DBGsonProduct.SHOWING:/** 展示中 */
-			VTool.Interaction(this,R.drawable.test_box,temp.getName(),temp.getId(),"未购买", "客户购买", new CallbackVT() {
+			VTool.Interaction(true,this,R.drawable.test_box,temp.getName(),temp.getEpc(),"未购买", "客户购买", new CallbackVT() {
 				@Override
 				public void InteractionYes() {//
 					super.InteractionYes();
@@ -167,7 +167,7 @@ public class Box extends RFActivity implements OnItemClickListener,OnClickListen
 			//已售出的点击无反应
 			break;
 		case DBGsonProduct.ABNORMAL:/** 异常 */
-			VTool.InteractionBox(this,temp.getName(),temp.getId(),"标签损毁", "货品丢失","关闭", new CallbackVT() {
+			VTool.InteractionBox(this,temp.getName(),temp.getEpc(),"标签损毁", "货品丢失","关闭", new CallbackVT() {
 				@Override
 				public void InteractionYes() {//货品丢失
 					super.InteractionYes();
@@ -197,7 +197,7 @@ public class Box extends RFActivity implements OnItemClickListener,OnClickListen
 			break;
 		default:
 			//没有的话就当正常处理吧。。。
-			VTool.Interaction(this,R.drawable.test_box,temp.getName(),temp.getId(),"取消操作", "销售展示", new CallbackVT() {
+			VTool.Interaction(true,this,R.drawable.test_box,temp.getName(),temp.getEpc(),"取消操作", "销售展示", new CallbackVT() {
 				@Override
 				public void InteractionYes() {
 					super.InteractionYes();

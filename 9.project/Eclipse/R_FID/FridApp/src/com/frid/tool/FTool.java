@@ -25,7 +25,7 @@ public class FTool {
 		drawable.setBounds(0, 0,ii,ii);
 		tv.setCompoundDrawables(null, drawable, null, null);
 	}
-	
+
 	/**
 	 * 确保传输不会报错~
 	 * */
@@ -62,7 +62,7 @@ public class FTool {
 		String str = df.format(date);
 		return str;
 	}
-	
+
 	/**
 	 * 生成随机字符串
 	 * */ 
@@ -233,5 +233,17 @@ public class FTool {
 		return temp;
 	}
 
-
+	/**
+	 * EPC只显示后10位
+	 * */
+	public static String inteString(String epc) {
+		if(epc!=null&&!epc.equals("")&&epc.length()>9)
+			return epc.substring(epc.length()-10, epc.length());
+		else
+			return epc;
+	}
 }
+
+
+
+

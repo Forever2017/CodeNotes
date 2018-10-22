@@ -3,6 +3,7 @@ import java.util.List;
 
 import com.frid.fridapp.R;
 import com.frid.pojo.GsonItemCheck;
+import com.frid.tool.FTool;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -55,7 +56,7 @@ public class QueryMItemAdapter extends BaseAdapter{
 		} 
 		holder.ItemContent.setText(list.get(position).getName());
 
-		holder.ItemItemID.setText(list.get(position).getEpc());
+		holder.ItemItemID.setText(FTool.inteString(list.get(position).getEpc()));
 
 		return convertView;
 	}

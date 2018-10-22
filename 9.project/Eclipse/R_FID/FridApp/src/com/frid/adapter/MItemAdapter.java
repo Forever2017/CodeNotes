@@ -3,6 +3,7 @@ import java.util.List;
 
 import com.frid.fridapp.R;
 import com.frid.pojo.GsonItem;
+import com.frid.tool.FTool;
 
 import android.content.Context;
 import android.util.Log;
@@ -61,13 +62,19 @@ public class MItemAdapter extends BaseAdapter{
 		} catch (Exception e) {
 			Log.e("","");
 		}
+		
+		
+		
 		//商品码：NP00916，单件号：SP1
 		if(type==5) holder.ItemItemID.setText("商品码："+list.get(position).getProductCode()+"，单件号："+list.get(position).getSubProductCode());
 
-		else if(type==0) holder.ItemItemID.setText(list.get(position).getId());
+		else if(type==0) holder.ItemItemID.setText(FTool.inteString(list.get(position).getId()));
 
-		else holder.ItemItemID.setText(list.get(position).getNumber().equals("1")?"暂未匹配":list.get(position).getNumber());
+		else holder.ItemItemID.setText(list.get(position).getNumber().equals("1")?"暂未匹配":FTool.inteString(list.get(position).getNumber()));
 
+		
+		
+		
 		if(list.get(position).getState() == 0){
 			holder.ItemContent.setTextColor(context.getResources().getColor(R.color.MainItemGrey));
 			holder.ItemItemID.setTextColor(context.getResources().getColor(R.color.MainItemGrey));

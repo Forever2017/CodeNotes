@@ -52,16 +52,30 @@ public class VTool {
 	 * */
 	public static void Interaction(Context context,int resourceId,String title,String content,String noBut,String yesBut,final CallbackVT cra) {
 		Interaction = new SweetAlertDialog(context,SweetAlertDialog.WARNING_TYPE);
-		Interaction(title,content,noBut,yesBut,cra);
+		Interaction(false,title,content,noBut,yesBut,cra);
 		Interaction.setWarningImage(resourceId);
 	}
 	public static void Interaction(Context context,String title,String content,String noBut,String yesBut,final CallbackVT cra) {
 		Interaction = new SweetAlertDialog(context,SweetAlertDialog.WARNING_TYPE);
-		Interaction(title,content,noBut,yesBut,cra);
-	}		
-	public static void Interaction(String title,String content,String noBut,String yesBut,final CallbackVT cra) {
+		Interaction(false,title,content,noBut,yesBut,cra);
+	}	
+	
+	public static void Interaction(boolean epc,Context context,int resourceId,String title,String content,String noBut,String yesBut,final CallbackVT cra) {
+		Interaction = new SweetAlertDialog(context,SweetAlertDialog.WARNING_TYPE);
+		Interaction(epc,title,content,noBut,yesBut,cra);
+		Interaction.setWarningImage(resourceId);
+	}
+	public static void Interaction(boolean epc,Context context,String title,String content,String noBut,String yesBut,final CallbackVT cra) {
+		Interaction = new SweetAlertDialog(context,SweetAlertDialog.WARNING_TYPE);
+		Interaction(epc,title,content,noBut,yesBut,cra);
+	}
+	
+	public static void Interaction(boolean epc,String title,String content,String noBut,String yesBut,final CallbackVT cra) {
 		Interaction.setTitleText(title);//大标题
-		Interaction.setContentText(content);//内容
+		
+		if(epc)Interaction.setContentText(FTool.inteString(content));//显示EPC
+		else Interaction.setContentText(content);//内容
+		
 		Interaction.setCancelText(noBut);//取消按钮
 		Interaction.setConfirmText(yesBut);//确认按钮
 		Interaction.showCancelButton(true);
@@ -87,7 +101,8 @@ public class VTool {
 	public static void InteractionBox(Context context,String title,String content,String noBut,String yesBut,String close,final CallbackVT cra) {
 		Interaction = new SweetAlertDialog(context,SweetAlertDialog.WARNING_TYPE);
 		Interaction.setTitleText(title);//大标题
-		Interaction.setContentText(content);//内容
+//		Interaction.setContentText(content);//内容
+		Interaction.setContentText(FTool.inteString(content));//显示EPC
 		Interaction.setCancelText(noBut);//取消按钮
 		Interaction.setConfirmText(yesBut);//确认按钮
 		Interaction.showCancelButton(true);

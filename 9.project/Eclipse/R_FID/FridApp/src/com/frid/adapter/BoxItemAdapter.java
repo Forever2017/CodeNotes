@@ -2,6 +2,8 @@ package com.frid.adapter;
 import java.util.List;
 import com.frid.fridapp.R;
 import com.frid.pojo.DBGsonProduct;
+import com.frid.tool.FTool;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -51,7 +53,7 @@ public class BoxItemAdapter extends BaseAdapter{
 			holder = (ViewHolder) convertView.getTag();
 		} 
 		holder.ItemContent.setText(list.get(position).getName());
-		holder.ItemItemID.setText(list.get(position).getEpc());
+		holder.ItemItemID.setText(FTool.inteString(list.get(position).getEpc()));
 		holder.ItemState.setVisibility(View.VISIBLE);
 
 		/**=====商品状态====
