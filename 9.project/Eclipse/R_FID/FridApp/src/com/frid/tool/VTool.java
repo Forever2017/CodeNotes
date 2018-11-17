@@ -59,7 +59,7 @@ public class VTool {
 		Interaction = new SweetAlertDialog(context,SweetAlertDialog.WARNING_TYPE);
 		Interaction(false,title,content,noBut,yesBut,cra);
 	}	
-	
+
 	public static void Interaction(boolean epc,Context context,int resourceId,String title,String content,String noBut,String yesBut,final CallbackVT cra) {
 		Interaction = new SweetAlertDialog(context,SweetAlertDialog.WARNING_TYPE);
 		Interaction(epc,title,content,noBut,yesBut,cra);
@@ -69,13 +69,13 @@ public class VTool {
 		Interaction = new SweetAlertDialog(context,SweetAlertDialog.WARNING_TYPE);
 		Interaction(epc,title,content,noBut,yesBut,cra);
 	}
-	
+
 	public static void Interaction(boolean epc,String title,String content,String noBut,String yesBut,final CallbackVT cra) {
 		Interaction.setTitleText(title);//大标题
-		
+
 		if(epc)Interaction.setContentText(FTool.inteString(content));//显示EPC
 		else Interaction.setContentText(content);//内容
-		
+
 		Interaction.setCancelText(noBut);//取消按钮
 		Interaction.setConfirmText(yesBut);//确认按钮
 		Interaction.showCancelButton(true);
@@ -101,7 +101,7 @@ public class VTool {
 	public static void InteractionBox(Context context,String title,String content,String noBut,String yesBut,String close,final CallbackVT cra) {
 		Interaction = new SweetAlertDialog(context,SweetAlertDialog.WARNING_TYPE);
 		Interaction.setTitleText(title);//大标题
-//		Interaction.setContentText(content);//内容
+		//		Interaction.setContentText(content);//内容
 		Interaction.setContentText(FTool.inteString(content));//显示EPC
 		Interaction.setCancelText(noBut);//取消按钮
 		Interaction.setConfirmText(yesBut);//确认按钮
@@ -185,6 +185,60 @@ public class VTool {
 			}
 		});
 	}
+
+
+	//不通用  选择送货员
+	public static void SelectPeopleDialog(Context context,final CallbackVT sm) {
+		//新建自己风格的dialog
+		final Dialog ADDdialog = new Dialog(context,R.style.MyDialog);
+		ADDdialog.setContentView(R.layout.dialog_query_setting);
+		ADDdialog.show();
+
+		TextView DialogTitle = (TextView) ADDdialog.findViewById(R.id.DialogTitle);
+		DialogTitle.setText("选择配送员");
+		
+		ListView listview = (ListView) ADDdialog.findViewById(R.id.dialog_query_setting_list);
+		Button dialog_login_setting_close = (Button) ADDdialog.findViewById(R.id.dialog_query_setting_close);
+
+		final List<GsonItem> list = new ArrayList<GsonItem>();
+		final MListAdapter ma = new MListAdapter(context, list);
+		listview.setAdapter(ma);
+
+		ASHttp.DeliverymanlistList(context,new AsyncHttp() {
+			public void onResult(boolean b, String msg) {
+			//	msg = TestMsg.updateMSG("QueryList", msg);
+
+				if(b){
+					Gson g = new Gson();
+					GsonStock gc = g.fromJson(msg, GsonStock.class);
+					if(gc.getResponseCode().equals("0000")){/**获取数据成功*/
+
+						list.clear();
+						list.addAll(gc.getList());
+						ma.notifyDataSetChanged();
+
+					}
+				}
+			};
+
+		} );
+
+		listview.setOnItemClickListener(new OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int i,
+					long arg3) {
+				sm.ReturnData(list.get(i).getId());
+				ADDdialog.dismiss();
+			}
+		});
+		dialog_login_setting_close.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				ADDdialog.dismiss();
+			}
+		});
+	}
+
 
 	//不通用  输入运单号
 	public static void inputDialog(final Context context,final List<String> blist, final CallbackVT sm) {

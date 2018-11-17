@@ -45,8 +45,8 @@ public class JsonTool {
 		return new Gson().toJson(new SCR(StockCountCode,list));
 	}
 	/**获取 上传的【核对】结果 */
-	public String getEpcCheck(String StockTransferExternalId,List<GsonItemCheck> qlist) {
-		return new Gson().toJson(new EPC(StockTransferExternalId,qlist));
+	public String getEpcCheck(int StockTransferExternalId,List<GsonItemCheck> qlist) {
+		return new Gson().toJson(new EPC2(StockTransferExternalId,qlist));
 	}
 	/**获取 上传的【仓库同步】数据*/
 	public String getProduct(List<DBGsonProduct> list) {
@@ -81,6 +81,22 @@ public class JsonTool {
 		
 		public EPC(String StockTransferExternalId, List<GsonItemCheck> qlist) {
 			this.StockTransferExternalId = StockTransferExternalId;
+			this.Token = FridApplication.token;
+			this.DeviceCode = FridApplication.DeviceNumber;
+			for (GsonItemCheck gsonItem : qlist) 
+				Epcs.add(gsonItem.getEpc());
+		}
+
+	}
+	
+	class EPC2{
+		private int DeliverymanId;
+		private String Token;
+		private String DeviceCode;
+		private List<String> Epcs = new ArrayList<String>();
+		
+		public EPC2(int DeliverymanId, List<GsonItemCheck> qlist) {
+			this.DeliverymanId = DeliverymanId;
 			this.Token = FridApplication.token;
 			this.DeviceCode = FridApplication.DeviceNumber;
 			for (GsonItemCheck gsonItem : qlist) 

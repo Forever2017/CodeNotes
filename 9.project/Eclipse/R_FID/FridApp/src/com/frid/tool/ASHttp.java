@@ -156,6 +156,23 @@ public class ASHttp {
 
 		request(context,AppData.QueryList,se,Asyn);
 	}
+	
+	/** 核对单列表 querylist
+	 *  */
+	public static void DeliverymanlistList(Context context,final AsyncHttp Asyn){
+		/*{
+			"OutWarehouseCode":“”,
+			"InWarehouseCode":“”,
+			"Status":0,
+			"Token":"7ABB666574A94D48B6A7C55DF52F2FDB",
+			"DeviceCode":"A001"
+		}*/
+		StringEntity se = JsonTool.createJson(new String[]{"Status","0"},new String[]{"Token",FridApplication.token},new String[]{"DeviceCode",FridApplication.DeviceNumber});
+
+		request(context,AppData.Deliverymanlist,se,Asyn);
+	}
+	
+	
 
 	/** 核对单详情（商品列表） querydetail*/
 	public static void QueryDetail(Context context,String id,final AsyncHttp Asyn){
@@ -173,7 +190,7 @@ public class ASHttp {
 
 	/** 上传核实订单 （提交核实，传一堆EPC上去） UploadEpcOfStockTransfer*/
 	public static void UploadEpc(Context context,String uploadMsg,final AsyncHttp Asyn){
-		uploadMsg = TestMsg.updateMSG("UploadEpc", uploadMsg);
+//		uploadMsg = TestMsg.updateMSG("UploadEpc", uploadMsg);
 		StringEntity se = null;
 		try {
 			se = new StringEntity(uploadMsg);

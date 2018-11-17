@@ -8,7 +8,7 @@
     
     <string name="tab_title_02">盘点</string>
     <string name="tab_title_03">保险箱</string>
-    <string name="tab_title_04">核对拣货单</string>
+    <string name="tab_title_04">创建移库单</string>
     <string name="tab_title_05">设置</string>
     
     <string name="Synchronization">手动同步</string>

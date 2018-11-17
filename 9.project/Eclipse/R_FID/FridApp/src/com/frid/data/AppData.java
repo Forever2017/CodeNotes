@@ -42,6 +42,9 @@ public class AppData {
 	//【核对】
 	/** 核对单列表 querylist*/
 	public static final String QueryList = "/api/warehouse/stocktransferrequest/querylist";
+	
+	/** 获得送货员ID*/
+	public static final String Deliverymanlist = "/api/metadata/deliverymanlist";
 
 	/** 核对单详情（商品列表） querydetail*/
 	public static final String QueryDetail = "/api/warehouse/stocktransferrequest/querydetail";

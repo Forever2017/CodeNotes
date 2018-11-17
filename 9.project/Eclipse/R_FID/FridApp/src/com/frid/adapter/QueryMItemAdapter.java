@@ -20,9 +20,12 @@ public class QueryMItemAdapter extends BaseAdapter{
 	private ViewHolder holder;
 	private Context context;
 
-	public QueryMItemAdapter(Context context, List<GsonItemCheck> list){
+	private DelItem di;
+
+	public QueryMItemAdapter(Context context, List<GsonItemCheck> list,DelItem di){
 		this.list = list;
 		this.context = context;
+		this.di = di;
 	}
 
 	@Override
@@ -49,6 +52,7 @@ public class QueryMItemAdapter extends BaseAdapter{
 
 			holder.ItemContent = (TextView) convertView.findViewById(R.id.ItemItemContent);
 			holder.ItemItemID   = (TextView) convertView.findViewById(R.id.ItemItemID);
+			holder.ItemItemState   = (TextView) convertView.findViewById(R.id.ItemItemState);
 
 			convertView.setTag(holder);
 		} else {
@@ -58,10 +62,24 @@ public class QueryMItemAdapter extends BaseAdapter{
 
 		holder.ItemItemID.setText(FTool.inteString(list.get(position).getEpc()));
 
+		holder.ItemItemState.setVisibility(View.VISIBLE);
+		holder.ItemItemState.setText("删除");
+		holder.ItemItemState.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				di.onResult(list.get(position).getEpc(),list.get(position).getId());
+			}
+		});
+
 		return convertView;
 	}
 
 	class ViewHolder {
-		TextView ItemContent,ItemItemID;
+		TextView ItemContent,ItemItemID,ItemItemState;
 	}
+
+	public static abstract class DelItem{
+		public void onResult(String epc,String id){};
+	}
+
 }

@@ -18,6 +18,7 @@ import com.frid.tool.VTool.CallbackVT;
 import com.frid.view.RSActivity;
 import com.google.gson.Gson;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;

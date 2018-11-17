@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class GsonStock extends GsonState {
 
-	@SerializedName(value = "stockCountTasks",alternate = {"productList", "stockTransferInfoList", "stockTransferDetail"})  
+	@SerializedName(value = "stockCountTasks",alternate = {"deliverymanList","productList", "stockTransferInfoList", "stockTransferDetail"})  
 	private List<GsonItem> list;
 
 	public List<GsonItem> getList() {

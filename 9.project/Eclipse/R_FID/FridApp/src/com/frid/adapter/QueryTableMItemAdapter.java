@@ -21,6 +21,11 @@ public class QueryTableMItemAdapter extends BaseAdapter{
 		this.list = list;
 		this.context = context;
 	}
+	
+	
+	
+	
+	
 
 	@Override
 	public int getCount() {
@@ -45,7 +50,6 @@ public class QueryTableMItemAdapter extends BaseAdapter{
 					R.layout.item_table, null);
 
 			holder.Name = (TextView) convertView.findViewById(R.id.TableItemName);
-			holder.Now   = (TextView) convertView.findViewById(R.id.TableItemNow);
 			holder.Sum   = (TextView) convertView.findViewById(R.id.TableItemSum);
 
 			convertView.setTag(holder);
@@ -55,15 +59,13 @@ public class QueryTableMItemAdapter extends BaseAdapter{
 		
 		holder.Name.setText(list.get(position).getName());
 		
-		holder.Sum.setText(list.get(position).getNumber());
-		
-		holder.Now.setText(list.get(position).getCurrent()+"");
+		holder.Sum.setText(list.get(position).getCurrent()+"");
 		
 		return convertView;
 	}
 
 	class ViewHolder {
-		TextView Name,Now,Sum;
+		TextView Name,Sum;
 	}
 
 }

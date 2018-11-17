@@ -66,7 +66,7 @@ public class TestMsg {
 		if(Switch == false) return;
 
 		/*测试数据*/
-		UserName.setText("Jinquan");
+		UserName.setText("Jianhua");
 		PassWord.setText("123456");
 	}
 	

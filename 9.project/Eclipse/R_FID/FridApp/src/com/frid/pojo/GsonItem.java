@@ -8,10 +8,10 @@ public class GsonItem implements Cloneable {
          "stockCountCode": "DE04E9B8581E412E98FCD58A3B995A68",
          "comment": "入库盘点7E075BDD22044A38A60E472D5CDE1BCF"
      }*/
-	@SerializedName(value = "stockCountCode",alternate = {"epc", "externalId", "productExternalId","id4"})  
+	@SerializedName(value = "stockCountCode",alternate = {"epc", "externalId", "productExternalId","id"})  
 	private String id;
 
-	@SerializedName(value = "comment",alternate = {"productName", "deliveryMan","name4"})  
+	@SerializedName(value = "comment",alternate = {"productName", "deliveryMan","name"})  
 	private String name;
 
 	@SerializedName(value = "requestNumber",alternate = {"number222"})  

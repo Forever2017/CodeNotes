@@ -22,15 +22,15 @@
             android:textSize="@dimen/font_size_18" />
 
         <Button
-            android:id="@+id/QueryNumber"
+            android:id="@+id/QueryReset"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
             android:background="@drawable/item_style"
             android:drawablePadding="@dimen/length_10"
-            android:drawableRight="@drawable/tab_04_pressed"
             android:gravity="center_vertical"
-            android:hint="选择核对单."
+            android:hint="重置"
             android:paddingLeft="@dimen/length_10"
             android:paddingRight="@dimen/length_10" />
     </RelativeLayout>
@@ -58,18 +58,9 @@
             <TextView
                 android:layout_width="100dip"
                 android:layout_height="fill_parent"
-                android:layout_weight="2"
+                android:layout_weight="3"
                 android:gravity="center"
                 android:text="商品名"
-                android:textColor="@color/TitleColorMax"
-                android:textSize="@dimen/font_size_16" />
-
-            <TextView
-                android:layout_width="@dimen/length_40"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="待检数"
                 android:textColor="@color/TitleColorMax"
                 android:textSize="@dimen/font_size_16" />
 
@@ -115,10 +106,10 @@
             <TextView
                 android:layout_width="100dip"
                 android:layout_height="fill_parent"
-                android:layout_weight="2"
+                android:layout_weight="3"
                 android:background="@color/CheckBlue"
                 android:gravity="center"
-                android:text="明细"
+                android:text="总和"
                 android:textColor="@color/White"
                 android:textSize="@dimen/font_size_16" />
 
@@ -131,22 +122,12 @@
                 android:text="0"
                 android:textColor="@color/TitleColorMax"
                 android:textSize="@dimen/font_size_16" />
-
-            <TextView
-                android:id="@+id/TableDetailCurrent"
-                android:layout_width="@dimen/length_40"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="0"
-                android:textColor="@color/TitleColorMax"
-                android:textSize="@dimen/font_size_16" />
         </LinearLayout>
     </RelativeLayout>
 
     <!-- 第 2 部分 -->
 
-    <LinearLayout 
+    <LinearLayout
         android:id="@+id/QueryTable2"
         android:layout_width="fill_parent"
         android:layout_height="@dimen/length_200"
@@ -155,7 +136,7 @@
         android:layout_marginRight="@dimen/length_10"
         android:layout_marginTop="@dimen/length_10"
         android:background="@color/White"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="fill_parent"
