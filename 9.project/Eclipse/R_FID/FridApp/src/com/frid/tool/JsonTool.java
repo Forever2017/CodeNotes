@@ -48,6 +48,11 @@ public class JsonTool {
 	public String getEpcCheck(int StockTransferExternalId,List<GsonItemCheck> qlist) {
 		return new Gson().toJson(new EPC2(StockTransferExternalId,qlist));
 	}
+	/**获取 上传的【核对】结果 */
+	public String getEpcCheckOld(String StockTransferExternalId,List<GsonItemCheck> qlist) {
+		return new Gson().toJson(new EPC(StockTransferExternalId,qlist));
+	}
+	
 	/**获取 上传的【仓库同步】数据*/
 	public String getProduct(List<DBGsonProduct> list) {
 		return new Gson().toJson(new Product(list));

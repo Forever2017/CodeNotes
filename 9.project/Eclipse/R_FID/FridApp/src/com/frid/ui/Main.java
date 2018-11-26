@@ -20,6 +20,7 @@ import com.frid.adapter.ProjectPagerAdapter;
 import com.frid.ui.fragment.BoxFragment;
 import com.frid.ui.fragment.ListFragment;
 import com.frid.ui.fragment.QueryFragment;
+import com.frid.ui.fragment.QueryFragmentOld;
 import com.frid.ui.fragment.SettingFragment;
 import com.frid.view.RSFragmentActivity;
 import com.polling.PollingService;
@@ -31,11 +32,11 @@ public class Main extends RSFragmentActivity implements OnClickListener,OnPageCh
 	private ProjectPagerAdapter mAdapter;
 	private List<Fragment> mFragments = new ArrayList<Fragment>();
 	/*底部四个按钮*/
-	private LinearLayout TabBtn_02,TabBtn_03,TabBtn_04,TabBtn_05;
+	private LinearLayout TabBtn_02,TabBtn_03,TabBtn_04,TabBtn_05,TabBtn_06;
 	/*四个子页面*/
-	private Fragment tab02,tab03,tab04,tab05;
+	private Fragment tab02,tab03,tab04,tab05,tab06;
 	/*按钮上的图标*/
-	private ImageButton ImgBut_02,ImgBut_03,ImgBut_04,ImgBut_05;
+	private ImageButton ImgBut_02,ImgBut_03,ImgBut_04,ImgBut_05,ImgBut_06;
 
 	private TextView MainState;
 	private Device device;
@@ -62,34 +63,40 @@ public class Main extends RSFragmentActivity implements OnClickListener,OnPageCh
 		TabBtn_03 = (LinearLayout) findViewById(R.id.id_tab_bottom_03);
 		TabBtn_04 = (LinearLayout) findViewById(R.id.id_tab_bottom_04);
 		TabBtn_05 = (LinearLayout) findViewById(R.id.id_tab_bottom_05);
+		TabBtn_06 = (LinearLayout) findViewById(R.id.id_tab_bottom_06);
 
 		TabBtn_02.setOnClickListener(this);
 		TabBtn_03.setOnClickListener(this);
 		TabBtn_04.setOnClickListener(this);
 		TabBtn_05.setOnClickListener(this);
-  
+		TabBtn_06.setOnClickListener(this);
+
 		ImgBut_02 = (ImageButton) TabBtn_02.findViewById(R.id.btn_tab_bottom_02);
 		ImgBut_03 = (ImageButton) TabBtn_03.findViewById(R.id.btn_tab_bottom_03);
 		ImgBut_04 = (ImageButton) TabBtn_04.findViewById(R.id.btn_tab_bottom_04);
 		ImgBut_05 = (ImageButton) TabBtn_05.findViewById(R.id.btn_tab_bottom_05);
+		ImgBut_06 = (ImageButton) TabBtn_06.findViewById(R.id.btn_tab_bottom_06);
 
 		tab02 = new ListFragment();//盘点
 		tab03 = new BoxFragment();//保险箱
 		tab04 = new QueryFragment();//核对
 		tab05 = new SettingFragment();//设置
+		tab06 = new QueryFragmentOld();//旧版核对单
 
 		/*mFragments.add(tab02);
 		mFragments.add(tab03); 
 		mFragments.add(tab04);
 		mFragments.add(tab05);*/
-		
+
 		/**  0仓管(盘点 核对 设置)    1送货(保险箱+设置) */
 		if(FridApplication.Identity == 0 || FridApplication.Identity == 3){
 			mFragments.add(tab02);
 			mFragments.add(tab04);
+			mFragments.add(tab06);
 			mFragments.add(tab05);
-			
+
 			TabBtn_03.setVisibility(View.GONE);
+			
 			/*TabBtn_02.setVisibility(View.VISIBLE);
 			TabBtn_03.setVisibility(View.GONE);
 			TabBtn_04.setVisibility(View.VISIBLE);
@@ -99,9 +106,11 @@ public class Main extends RSFragmentActivity implements OnClickListener,OnPageCh
 		}else{
 			mFragments.add(tab03); 
 			mFragments.add(tab05);
-			
+
 			TabBtn_02.setVisibility(View.GONE);
 			TabBtn_04.setVisibility(View.GONE);
+			TabBtn_06.setVisibility(View.GONE);
+			
 			/*TabBtn_02.setVisibility(View.GONE);
 			TabBtn_03.setVisibility(View.VISIBLE);
 			TabBtn_04.setVisibility(View.GONE);
@@ -111,9 +120,9 @@ public class Main extends RSFragmentActivity implements OnClickListener,OnPageCh
 			onClick(TabBtn_03);*/
 		}
 		onPageSelected(0);
-		
-		
-		
+
+
+
 		MainState = (TextView) findViewById(R.id.MainState);
 		/*MainState.setText(device.connection()?"连接正常.":"连接失败,请重启设备.");*/
 		//正常改成绿色，异常显示红色
@@ -124,7 +133,7 @@ public class Main extends RSFragmentActivity implements OnClickListener,OnPageCh
 			MainState.setText("连接失败,请重启设备.");
 			MainState.setTextColor(Color.RED);
 		}
-		
+
 	}
 
 	protected void resetTabBtn() 
@@ -133,6 +142,7 @@ public class Main extends RSFragmentActivity implements OnClickListener,OnPageCh
 		ImgBut_03.setImageResource(R.drawable.tab_03_normal);
 		ImgBut_04.setImageResource(R.drawable.tab_04_normal);
 		ImgBut_05.setImageResource(R.drawable.tab_05_normal);
+		ImgBut_06.setImageResource(R.drawable.tab_04_normal);
 	}
 	@Override
 	public void onClick(View v) {
@@ -149,10 +159,15 @@ public class Main extends RSFragmentActivity implements OnClickListener,OnPageCh
 				ImgBut_04.setImageResource(R.drawable.tab_04_pressed);
 				mViewPager.setCurrentItem(1);
 				break;
-			case R.id.id_tab_bottom_05:
+			case R.id.id_tab_bottom_06:
 				ImgBut_05.setImageResource(R.drawable.tab_05_pressed);
 				mViewPager.setCurrentItem(2);
 				break;
+			case R.id.id_tab_bottom_05:
+				ImgBut_05.setImageResource(R.drawable.tab_05_pressed);
+				mViewPager.setCurrentItem(3);
+				break;
+			
 			}
 		}else{
 			switch (v.getId())
@@ -167,9 +182,9 @@ public class Main extends RSFragmentActivity implements OnClickListener,OnPageCh
 				break;
 			}
 		}
-		
-		
-		
+
+
+
 		/*switch (v.getId())
 		{
 		case R.id.id_tab_bottom_02:
@@ -204,6 +219,9 @@ public class Main extends RSFragmentActivity implements OnClickListener,OnPageCh
 				ImgBut_04.setImageResource(R.drawable.tab_04_pressed);
 				break;
 			case 2:
+				ImgBut_06.setImageResource(R.drawable.tab_04_pressed);
+				break;
+			case 3:
 				ImgBut_05.setImageResource(R.drawable.tab_05_pressed);
 				break;
 			}
