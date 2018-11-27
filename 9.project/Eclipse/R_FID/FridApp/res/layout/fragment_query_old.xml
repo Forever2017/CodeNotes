@@ -155,8 +155,7 @@
         android:layout_marginRight="@dimen/length_10"
         android:layout_marginTop="@dimen/length_10"
         android:background="@color/White"
-        android:orientation="vertical"
-        android:visibility="gone" >
+        android:orientation="vertical" >
 
         <TextView
             android:layout_width="fill_parent"
