@@ -4,7 +4,7 @@ import android.widget.EditText;
 
 public class TestMsg {
 	/**是否使用测试数据*/
-	public static boolean Switch = true;
+	public static boolean Switch = false;
 	
 //	public static String TestToken = "D71DBD9608E94C4C8FFC5C99E4146DA1";
 

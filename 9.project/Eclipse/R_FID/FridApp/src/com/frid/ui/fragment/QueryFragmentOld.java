@@ -158,7 +158,7 @@ public class QueryFragmentOld extends FragmentJoker implements OnClickListener,O
 				//真实停止扫描
 				device.stopSearch();
 				device.biBi(false);
-								tet.stop();
+				//				tet.stop();
 
 				scrapEpcList.clear();
 				UnreadEpcList.clear();
@@ -166,7 +166,7 @@ public class QueryFragmentOld extends FragmentJoker implements OnClickListener,O
 			break;
 		case R.id.QueryUpload://提交核实
 			if(isSubmit){
-				ASHttp.UploadEpc(getActivity(),new JsonTool().getEpcCheckOld(StockTransferExternalId, boxList), new AsyncHttp() {
+				ASHttp.UploadEpcForReturn(getActivity(),new JsonTool().getEpcCheckOld(StockTransferExternalId, boxList), new AsyncHttp() {
 					public void onResult(boolean b, String msg) {
 						msg = TestMsg.updateMSG("Success", msg);
 						if(b){
@@ -219,10 +219,13 @@ public class QueryFragmentOld extends FragmentJoker implements OnClickListener,O
 		scrapEpcList.clear();
 		for (GsonItemCheck gi : boxList) scrapEpcList.add(gi.getEpc());
 		//
-		/*device.startSearch(new LoopEpc() {
+		device.startSearch(new LoopEpc() {
 			@Override
 			public void ReturnEpc(final String epc) {
 				super.ReturnEpc(epc);
+				
+				if(isSubmit) automaticStop();
+				
 				//DF2018072100000000000019  
 				if(scrapEpcList.contains(epc)) return;
 
@@ -232,9 +235,9 @@ public class QueryFragmentOld extends FragmentJoker implements OnClickListener,O
 					epcCheck();
 				}
 			}
-		});*/
+		});
 		//测试扫描
-		tet = new ThreadEpcTest(new EpcResult() {
+		/*tet = new ThreadEpcTest(new EpcResult() {
 			@Override
 			public void onResult(String epc) {
 				super.onResult(epc);
@@ -247,9 +250,9 @@ public class QueryFragmentOld extends FragmentJoker implements OnClickListener,O
 					epcCheck();
 				}
 			}
-		});
+		});*/
 	}
-	ThreadEpcTest tet;
+	//	ThreadEpcTest tet;
 
 	/**不需要对比的epc*/
 	private List<String> scrapEpcList;
@@ -295,36 +298,41 @@ public class QueryFragmentOld extends FragmentJoker implements OnClickListener,O
 						}
 						scrapEpcList.add(UnreadEpcList.get(0));
 						UnreadEpcList.remove(0);
-						epcCheck();
-						// 这里可能需要做“全部找到后，自动停止扫描”
-						if(sum == current){//全部找到
-							getActivity().runOnUiThread(new Runnable() {
-								@Override
-								public void run() {
-									//1.改变文字  2.锁定上传 3.显示旋转动画 4.执行真实操作
-									QueryScan.setText(getResources().getString(R.string.ScanGood));
-									pw.setVisibility(View.GONE);
-									//真实停止扫描
-									device.stopSearch();
-									device.biBi(false);
-									tet.stop();
 
-									scrapEpcList.clear();
-									UnreadEpcList.clear();
-
-									checkSubmit();
-								}
-							});
-						}
-					}else{
-						epcCheck();
+						automaticStop();
 					}
+					
+					epcCheck();
 				}
 			});
 		}else{//没有未读的epc
 			isCheck = true;
 		}
 
+	}
+
+	//扫描自动停止
+	private void automaticStop(){
+		getActivity().runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				checkSubmit();
+
+				if(!isSubmit) return;
+				
+				//1.改变文字  2.锁定上传 3.显示旋转动画 4.执行真实操作
+				QueryScan.setText(getResources().getString(R.string.ScanGood));
+				pw.setVisibility(View.GONE);
+				//真实停止扫描
+				device.stopSearch();
+				device.biBi(false);
+				//									tet.stop();
+
+				scrapEpcList.clear();
+				UnreadEpcList.clear();
+
+			}
+		});
 	}
 
 	/**判断是否可以“提交”，按钮 蓝色\灰色（全部核实即可提交）*/
@@ -354,13 +362,3 @@ public class QueryFragmentOld extends FragmentJoker implements OnClickListener,O
 
 
 }
-
-
-
-
-
-
-
-
-
-

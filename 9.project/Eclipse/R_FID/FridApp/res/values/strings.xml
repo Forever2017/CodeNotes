@@ -10,7 +10,7 @@
     <string name="tab_title_03">保险箱</string>
     <string name="tab_title_04">创建移库单</string>
     <string name="tab_title_05">设置</string>
-    <string name="tab_title_06">旧版核对单</string>
+    <string name="tab_title_06">返供应商核对</string>
     
     <string name="Synchronization">手动同步</string>
     <string name="login">登录</string>

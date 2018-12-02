@@ -1,217 +1,222 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/app_back"
-    android:orientation="vertical" >
+    android:layout_height="match_parent" >
 
     <RelativeLayout
-        android:id="@+id/QueryTitle"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/length_45"
-        android:background="@color/TitleColor" >
-
-        <TextView
-            android:id="@+id/titleTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/tab_title_04"
-            android:textColor="#FFFFFFFF"
-            android:textSize="@dimen/font_size_18" />
-
-        <Button
-            android:id="@+id/QueryReset"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:background="@drawable/item_style"
-            android:drawablePadding="@dimen/length_10"
-            android:gravity="center_vertical"
-            android:hint="重置"
-            android:paddingLeft="@dimen/length_10"
-            android:paddingRight="@dimen/length_10" />
-    </RelativeLayout>
-
-    <!-- 第 1 部分 -->
-    <!-- android:layout_height="@dimen/length_380" -->
-
-    <RelativeLayout
-        android:id="@+id/QueryTable"
-        android:layout_width="fill_parent"
-        android:layout_height="@dimen/length_380"
-        android:layout_below="@+id/QueryTitle"
-        android:layout_marginLeft="@dimen/length_10"
-        android:layout_marginRight="@dimen/length_10"
-        android:layout_marginTop="@dimen/length_10"
-        android:background="@color/White"
+        android:layout_height="match_parent"
+        android:background="@color/app_back"
         android:orientation="vertical" >
 
-        <LinearLayout
-            android:id="@+id/QueryTableHead"
+        <RelativeLayout
+            android:id="@+id/QueryTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/length_45"
+            android:background="@color/TitleColor" >
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/tab_title_04"
+                android:textColor="#FFFFFFFF"
+                android:textSize="@dimen/font_size_18" />
+
+            <Button
+                android:id="@+id/QueryReset"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/item_style"
+                android:drawablePadding="@dimen/length_10"
+                android:gravity="center_vertical"
+                android:hint="重置"
+                android:paddingLeft="@dimen/length_10"
+                android:paddingRight="@dimen/length_10" />
+        </RelativeLayout>
+
+        <!-- 第 1 部分 -->
+        <!-- android:layout_height="@dimen/length_380" -->
+
+        <RelativeLayout
+            android:id="@+id/QueryTable"
             android:layout_width="fill_parent"
-            android:layout_height="@dimen/length_40"
-            android:weightSum="4" >
+            android:layout_height="@dimen/length_380"
+            android:layout_below="@+id/QueryTitle"
+            android:layout_marginLeft="@dimen/length_10"
+            android:layout_marginRight="@dimen/length_10"
+            android:layout_marginTop="@dimen/length_10"
+            android:background="@color/White"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/QueryTableHead"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/length_40"
+                android:weightSum="4" >
+
+                <TextView
+                    android:layout_width="100dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="商品名"
+                    android:textColor="@color/TitleColorMax"
+                    android:textSize="@dimen/font_size_16" />
+
+                <TextView
+                    android:layout_width="@dimen/length_40"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="实检数"
+                    android:textColor="@color/TitleColorMax"
+                    android:textSize="@dimen/font_size_16" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/QueryLine1"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_below="@id/QueryTableHead"
+                android:background="@drawable/shape_line" />
+
+            <ListView
+                android:id="@+id/QueryTableCenter"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/length_300"
+                android:layout_above="@+id/QueryTableBottom"
+                android:layout_below="@id/QueryLine1"
+                android:divider="@color/app_back"
+                android:dividerHeight="@dimen/length_1"
+                android:fadingEdge="none"
+                android:fastScrollEnabled="false"
+                android:footerDividersEnabled="false"
+                android:headerDividersEnabled="false"
+                android:smoothScrollbar="true" >
+            </ListView>
+
+            <LinearLayout
+                android:id="@+id/QueryTableBottom"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/length_40"
+                android:layout_alignParentBottom="true"
+                android:weightSum="4" >
+
+                <TextView
+                    android:layout_width="100dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3"
+                    android:background="@color/CheckBlue"
+                    android:gravity="center"
+                    android:text="总和"
+                    android:textColor="@color/White"
+                    android:textSize="@dimen/font_size_16" />
+
+                <TextView
+                    android:id="@+id/TableDetailSum"
+                    android:layout_width="@dimen/length_40"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/TitleColorMax"
+                    android:textSize="@dimen/font_size_16" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- 第 2 部分 -->
+
+        <LinearLayout
+            android:id="@+id/QueryTable2"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/length_200"
+            android:layout_below="@id/QueryTable"
+            android:layout_marginLeft="@dimen/length_10"
+            android:layout_marginRight="@dimen/length_10"
+            android:layout_marginTop="@dimen/length_10"
+            android:background="@color/White"
+            android:orientation="vertical" >
 
             <TextView
-                android:layout_width="100dip"
-                android:layout_height="fill_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:text="商品名"
-                android:textColor="@color/TitleColorMax"
-                android:textSize="@dimen/font_size_16" />
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/length_40"
+                android:gravity="left"
+                android:paddingBottom="@dimen/length_3"
+                android:paddingLeft="@dimen/length_10"
+                android:paddingTop="@dimen/length_3"
+                android:text="商品列表"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_size_14" />
 
-            <TextView
-                android:layout_width="@dimen/length_40"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="实检数"
-                android:textColor="@color/TitleColorMax"
-                android:textSize="@dimen/font_size_16" />
+            <ListView
+                android:id="@+id/QueryList"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/length_1"
+                android:divider="@color/app_back"
+                android:dividerHeight="@dimen/length_1"
+                android:fadingEdge="none"
+                android:fastScrollEnabled="false"
+                android:footerDividersEnabled="false"
+                android:headerDividersEnabled="false"
+                android:smoothScrollbar="true" >
+            </ListView>
         </LinearLayout>
 
-        <View
-            android:id="@+id/QueryLine1"
-            android:layout_width="fill_parent"
-            android:layout_height="1.0px"
-            android:layout_below="@id/QueryTableHead"
-            android:background="@drawable/shape_line" />
-
-        <ListView
-            android:id="@+id/QueryTableCenter"
-            android:layout_width="fill_parent"
-            android:layout_height="@dimen/length_300"
-            android:layout_above="@+id/QueryTableBottom"
-            android:layout_below="@id/QueryLine1"
-            android:divider="@color/app_back"
-            android:dividerHeight="@dimen/length_1"
-            android:fadingEdge="none"
-            android:fastScrollEnabled="false"
-            android:footerDividersEnabled="false"
-            android:headerDividersEnabled="false"
-            android:smoothScrollbar="true" >
-        </ListView>
+        <!-- 第三 -->
 
         <LinearLayout
-            android:id="@+id/QueryTableBottom"
+            android:id="@+id/QueryTool"
             android:layout_width="fill_parent"
-            android:layout_height="@dimen/length_40"
+            android:layout_height="@dimen/length_100"
             android:layout_alignParentBottom="true"
-            android:weightSum="4" >
+            android:layout_below="@id/QueryTable2"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal" >
 
-            <TextView
-                android:layout_width="100dip"
-                android:layout_height="fill_parent"
-                android:layout_weight="3"
-                android:background="@color/CheckBlue"
-                android:gravity="center"
-                android:text="总和"
-                android:textColor="@color/White"
-                android:textSize="@dimen/font_size_16" />
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
 
-            <TextView
-                android:id="@+id/TableDetailSum"
-                android:layout_width="@dimen/length_40"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="0"
-                android:textColor="@color/TitleColorMax"
-                android:textSize="@dimen/font_size_16" />
+                <com.pnikosis.materialishprogress.ProgressWheel
+                    android:id="@+id/QueryProgressWheel"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    app:matProg_barColor="@color/TitleColorMIn"
+                    app:matProg_barWidth="5dp"
+                    app:matProg_circleRadius="100dp" />
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:gravity="center" >
+
+                    <Button
+                        android:id="@+id/QueryCheckScan"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/button_circle_blue_style"
+                        android:text="@string/ScanGood"
+                        android:textColor="@color/White" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/QueryUpload"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/button_circle_gray_style"
+                android:text="@string/Submit"
+                android:textColor="@color/White" />
         </LinearLayout>
     </RelativeLayout>
 
-    <!-- 第 2 部分 -->
-
-    <LinearLayout
-        android:id="@+id/QueryTable2"
-        android:layout_width="fill_parent"
-        android:layout_height="@dimen/length_200"
-        android:layout_below="@id/QueryTable"
-        android:layout_marginLeft="@dimen/length_10"
-        android:layout_marginRight="@dimen/length_10"
-        android:layout_marginTop="@dimen/length_10"
-        android:background="@color/White"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="@dimen/length_40"
-            android:gravity="left"
-            android:paddingBottom="@dimen/length_3"
-            android:paddingLeft="@dimen/length_10"
-            android:paddingTop="@dimen/length_3"
-            android:text="商品列表"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/font_size_14" />
-
-        <ListView
-            android:id="@+id/QueryList"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/length_1"
-            android:divider="@color/app_back"
-            android:dividerHeight="@dimen/length_1"
-            android:fadingEdge="none"
-            android:fastScrollEnabled="false"
-            android:footerDividersEnabled="false"
-            android:headerDividersEnabled="false"
-            android:smoothScrollbar="true" >
-        </ListView>
-    </LinearLayout>
-
-    <!-- 第三 -->
-
-    <LinearLayout
-        android:id="@+id/QueryTool"
-        android:layout_width="fill_parent"
-        android:layout_height="@dimen/length_100"
-        android:layout_alignParentBottom="true"
-        android:layout_below="@id/QueryTable2"
-        android:gravity="center_vertical|center_horizontal"
-        android:orientation="horizontal" >
-
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-
-            <com.pnikosis.materialishprogress.ProgressWheel
-                android:id="@+id/QueryProgressWheel"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:visibility="gone"
-                app:matProg_barColor="@color/TitleColorMIn"
-                app:matProg_barWidth="5dp"
-                app:matProg_circleRadius="100dp" />
-
-            <LinearLayout
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:gravity="center" >
-
-                <Button
-                    android:id="@+id/QueryCheckScan"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:background="@drawable/button_circle_blue_style"
-                    android:text="@string/ScanGood"
-                    android:textColor="@color/White" />
-            </LinearLayout>
-        </FrameLayout>
-
-        <Button
-            android:id="@+id/QueryUpload"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/button_circle_gray_style"
-            android:text="@string/Submit"
-            android:textColor="@color/White" />
-    </LinearLayout>
-
-</RelativeLayout>
+</ScrollView>

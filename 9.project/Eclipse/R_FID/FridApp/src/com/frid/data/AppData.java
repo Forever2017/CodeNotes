@@ -51,6 +51,10 @@ public class AppData {
 
 	/** 上传核实订单 （提交核实，传一堆EPC上去） UploadEpcOfStockTransfer*/
 	public static final String UploadEpc = "/api/warehouse/stocktransferrequest/uploadepc";
+	
+	/** 上传核实订单  uploadepcforreturn (旧版)*/
+	public static final String Uploadepcforreturn = "/api/warehouse/stocktransferrequest/uploadepcforreturn";
+	
 	//【其他】
 	/** 检查RFID 通过EPC的ID得到商品信息   CheckRfid*/
 	public static final String CheckRfid = "/api/warehouse/checkrfid";

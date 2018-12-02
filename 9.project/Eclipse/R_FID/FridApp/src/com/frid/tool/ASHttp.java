@@ -199,6 +199,18 @@ public class ASHttp {
 		}
 		request(context,AppData.UploadEpc,se,Asyn);
 	}
+	
+	/** 上传核实订单 （旧版） uploadepcforreturn*/
+	public static void UploadEpcForReturn(Context context,String uploadMsg,final AsyncHttp Asyn){
+//		uploadMsg = TestMsg.updateMSG("UploadEpc", uploadMsg);
+		StringEntity se = null;
+		try {
+			se = new StringEntity(uploadMsg);
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		request(context,AppData.Uploadepcforreturn,se,Asyn);
+	}
 	//【其他】
 	/** 检查RFID    CheckRfid========*/
 	public static void CheckRfid(Context context,String EPC,final AsyncHttp Asyn){
