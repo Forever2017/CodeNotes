@@ -272,6 +272,7 @@ public class Box extends RFActivity implements OnItemClickListener,OnClickListen
 
 	/**真实扫描逻辑*/
 	private void scanFrid() {
+		isStop = false;
 		device.startSearch(new LoopEpc() {
 			@Override
 			public void ReturnEpc(String epc) {
@@ -307,6 +308,8 @@ public class Box extends RFActivity implements OnItemClickListener,OnClickListen
 					runOnUiThread(new Runnable() {
 						@Override
 						public void run() {
+							if(isStop) return;//如果已经停止，就不再调用停止
+							
 							Toast("全部找到.");
 							//1.改变文字  2.锁定上传 3.显示旋转动画 4.执行真实操作
 							CheckScan.setText(getResources().getString(R.string.Scan));
@@ -323,7 +326,9 @@ public class Box extends RFActivity implements OnItemClickListener,OnClickListen
 	}
 
 	/**真实停止扫描逻辑*/
+	boolean isStop = false;//SDK的多线程有时会覆盖导致结果错误，加个锁..
 	private void scanStopFrid() {
+		isStop = true;//真实停止...
 		device.biBi(false);
 		device.stopSearch();
 		scrapEpcList.clear();
@@ -341,8 +346,8 @@ public class Box extends RFActivity implements OnItemClickListener,OnClickListen
 				PDao.update(dbg);
 			}
 			dbg.setIsExist(0);
-			mAdapter.notifyDataSetChanged();
 		}
+		mAdapter.notifyDataSetChanged();
 	}
 
 	/**返库流程*/
