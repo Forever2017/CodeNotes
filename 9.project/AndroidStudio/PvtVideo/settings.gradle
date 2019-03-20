@@ -1,6 +1,0 @@
-include ':app'
-
-include ':jokerLibrary'
-
-project(':jokerLibrary').projectDir =
-        new File(settingsDir, '../../../../JokerKit/jokerLibrary')
