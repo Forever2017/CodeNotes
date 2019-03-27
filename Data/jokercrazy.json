@@ -1,177 +1,178 @@
 {
-    "item":[
-        {
-            "word":"connection",
-            "trans":"n. 连接；关系；人脉；连接件",
-            "phonetic":"[kə'nɛkʃən]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"restart",
-            "trans":"vi. [计] 重新启动；重新开始
+  "wordbook": {
+    "item": [
+      {
+        "word": "connection",
+        "trans": "n. 连接；关系；人脉；连接件",
+        "phonetic": "[kə'nɛkʃən]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "restart",
+        "trans": "vi. [计] 重新启动；重新开始
 vt. [计] 重新启动；重新开始
 n. 重新开始；返聘",
-            "phonetic":"[riː'stɑːt]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"client",
-            "trans":"n. [经] 客户；顾客；委托人",
-            "phonetic":"['klaɪənt]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"development",
-            "trans":"n. 发展；开发；发育；住宅小区（专指由同一开发商开发的）；[摄] 显影",
-            "phonetic":"[dɪ'vɛləpmənt]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"extends",
-            "trans":"v. 延伸；扩充；继承（extend的第三人称单数形式）",
-            "phonetic":"[ɪk'stɛndz]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"presenter",
-            "trans":"n. 提出者；推荐者；赠送者；任命者；主持人",
-            "phonetic":"[prɪ'zɛntɚ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Stop",
-            "trans":"vt. 停止；堵塞；断绝
+        "phonetic": "[riː'stɑːt]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "client",
+        "trans": "n. [经] 客户；顾客；委托人",
+        "phonetic": "['klaɪənt]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "development",
+        "trans": "n. 发展；开发；发育；住宅小区（专指由同一开发商开发的）；[摄] 显影",
+        "phonetic": "[dɪ'vɛləpmənt]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "extends",
+        "trans": "v. 延伸；扩充；继承（extend的第三人称单数形式）",
+        "phonetic": "[ɪk'stɛndz]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "presenter",
+        "trans": "n. 提出者；推荐者；赠送者；任命者；主持人",
+        "phonetic": "[prɪ'zɛntɚ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Stop",
+        "trans": "vt. 停止；堵塞；断绝
 vi. 停止；中止；逗留；被塞住
 n. 停止；车站；障碍；逗留
 过去式stopped 或 stopt
 过去分词stopped 或 stopt
 现在分词stopping",
-            "phonetic":"[stɒp]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"destroy",
-            "trans":"vt. 破坏；消灭；毁坏",
-            "phonetic":"[dɪˈstrɔɪ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"resume",
-            "trans":"n. 摘要；[管理] 履历，简历
+        "phonetic": "[stɒp]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "destroy",
+        "trans": "vt. 破坏；消灭；毁坏",
+        "phonetic": "[dɪˈstrɔɪ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "resume",
+        "trans": "n. 摘要；[管理] 履历，简历
 vt. 重新开始，继续；恢复，重新占用
 vi. 重新开始，继续",
-            "phonetic":"[rɪˈzjuːm; ˈrɛzjʊmeɪ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"start",
-            "trans":"vt. 开始；启动
+        "phonetic": "[rɪˈzjuːm; ˈrɛzjʊmeɪ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "start",
+        "trans": "vt. 开始；启动
 vi. 出发
 n. 开始；起点",
-            "phonetic":"[stɑːt]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Create",
-            "trans":"vt. 创造，创作；造成",
-            "phonetic":"[kriː'eɪt]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Pause",
-            "trans":"n. 暂停；间歇
+        "phonetic": "[stɑːt]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Create",
+        "trans": "vt. 创造，创作；造成",
+        "phonetic": "[kriː'eɪt]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Pause",
+        "trans": "n. 暂停；间歇
 vi. 暂停，停顿，中止；踌躇
 n. (Pause)人名；(德)保泽
 过去式paused
 过去分词paused
 现在分词pausing",
-            "phonetic":"[pɔːz]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"group",
-            "trans":"n. 组；团体
+        "phonetic": "[pɔːz]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "group",
+        "trans": "n. 组；团体
 adj. 群的；团体的
 vi. 聚合
 vt. 把…聚集；把…分组",
-            "phonetic":"[ɡrup]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"fragment",
-            "trans":"n. 碎片；片段或不完整部分
+        "phonetic": "[ɡrup]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "fragment",
+        "trans": "n. 碎片；片段或不完整部分
 vt. 使成碎片
 vi. 破碎或裂开",
-            "phonetic":"['fræɡmənt]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"save",
-            "trans":"vt. 节省；保存；储蓄；解救 
+        "phonetic": "['fræɡmənt]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "save",
+        "trans": "vt. 节省；保存；储蓄；解救 
 vi. 节省；挽救 
 prep. 除...之外 
 n. 救援 
 n. (Save)人名；(法)萨夫；(意、保、西、罗、塞、瑞典)萨薇 (女名)，萨韦",
-            "phonetic":"[seɪv]",
-            "tags":"android",
-            "progress":"-1"
-        },
-        {
-            "word":"state",
-            "trans":"n. 国家；州；情形 
+        "phonetic": "[seɪv]",
+        "tags": "android",
+        "progress": "-1"
+      },
+      {
+        "word": "state",
+        "trans": "n. 国家；州；情形 
 vt. 规定；声明；陈述 
 adj. 国家的；州的；正式的 
 n. (State)人名；(罗、瑞典)斯塔特；(英)斯泰特",
-            "phonetic":"[steɪt]",
-            "tags":"android",
-            "progress":"-1"
-        },
-        {
-            "word":"back",
-            "trans":"n. 后面；背部；靠背；足球等的后卫；书报等的末尾 
+        "phonetic": "[steɪt]",
+        "tags": "android",
+        "progress": "-1"
+      },
+      {
+        "word": "back",
+        "trans": "n. 后面；背部；靠背；足球等的后卫；书报等的末尾 
 vt. 支持；后退；背书；下赌注 
 vi. 后退；背靠；倒退 
 adv. 以前；向后地；来回地；上溯；回来；回原处 
 adj. 后面的；过去的；拖欠的 
 n. (Back)人名；(西、英、德、法、瑞典、捷)巴克",
-            "phonetic":"[bæk]",
-            "tags":"android",
-            "progress":"-1"
-        },
-        {
-            "word":"bundle",
-            "trans":"n. 束；捆 
+        "phonetic": "[bæk]",
+        "tags": "android",
+        "progress": "-1"
+      },
+      {
+        "word": "bundle",
+        "trans": "n. 束；捆 
 vt. 捆 
 vi. 匆忙离开",
-            "phonetic":"['bʌnd(ə)l]",
-            "tags":"android",
-            "progress":"-1"
-        },
-        {
-            "word":"instance",
-            "trans":"n. 实例；情况；建议 
+        "phonetic": "['bʌnd(ə)l]",
+        "tags": "android",
+        "progress": "-1"
+      },
+      {
+        "word": "instance",
+        "trans": "n. 实例；情况；建议 
 vt. 举...为例",
-            "phonetic":"['ɪnst(ə)ns]",
-            "tags":"android",
-            "progress":"-1"
-        },
-        {
-            "word":"Search",
-            "trans":"vi. 搜寻；调查；探求
+        "phonetic": "['ɪnst(ə)ns]",
+        "tags": "android",
+        "progress": "-1"
+      },
+      {
+        "word": "Search",
+        "trans": "vi. 搜寻；调查；探求
 vt. 搜索；搜寻；调查；搜查；探求
 n. 搜寻；探究，查究
 n. (Search)人名；(英)瑟奇
@@ -179,89 +180,89 @@ n. (Search)人名；(英)瑟奇
 过去式searched
 过去分词searched
 现在分词searching",
-            "phonetic":"[sɜːtʃ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"super",
-            "trans":"adj. 特级的；极好的
+        "phonetic": "[sɜːtʃ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "super",
+        "trans": "adj. 特级的；极好的
 n. 特级品，特大号；临时雇员
 n. (Super)人名；(英)休珀",
-            "phonetic":"['suːpə; 'sjuː-]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"abstract",
-            "trans":"n. 摘要；抽象；抽象的概念
+        "phonetic": "['suːpə; 'sjuː-]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "abstract",
+        "trans": "n. 摘要；抽象；抽象的概念
 adj. 抽象的；深奥的
 vt. 摘要；提取；使……抽象化；转移(注意力、兴趣等)；使心不在焉
 vi. 做摘要；写梗概",
-            "phonetic":"['æbstrækt]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"package",
-            "trans":"n. 包，包裹；套装软件，[计] 程序包
+        "phonetic": "['æbstrækt]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "package",
+        "trans": "n. 包，包裹；套装软件，[计] 程序包
 adj. 一揽子的
 vt. 打包；将…包装
 过去式packaged
 过去分词packaged
 现在分词packaging",
-            "phonetic":"['pækɪdʒ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"implements",
-            "trans":"n. 工具；器具；用具； 家具；服装；装备；手段；充当工具的人；【法律】履行(契约等)
+        "phonetic": "['pækɪdʒ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "implements",
+        "trans": "n. 工具；器具；用具； 家具；服装；装备；手段；充当工具的人；【法律】履行(契约等)
 vt. 执行，履行；贯彻，落实；使生效",
-            "phonetic":"['ɪmplɪm(ə)nts]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"runnable",
-            "trans":"adj. 可追捕的；可猎取的；适合猎取的",
-            "phonetic":"['rʌnəbl]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"blocked",
-            "trans":"adj. 堵塞的；被封锁的
+        "phonetic": "['ɪmplɪm(ə)nts]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "runnable",
+        "trans": "adj. 可追捕的；可猎取的；适合猎取的",
+        "phonetic": "['rʌnəbl]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "blocked",
+        "trans": "adj. 堵塞的；被封锁的
 v. 阻塞（block的过去分词）",
-            "phonetic":"[blɒkt]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"synchronized",
-            "trans":"同步
+        "phonetic": "[blɒkt]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "synchronized",
+        "trans": "同步
 同步代码块，修饰符",
-            "phonetic":"['sɪŋkrənaɪzd]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"exception",
-            "trans":"异常",
-            "phonetic":"[ɪk'sepʃ(ə)n; ek-]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"throw",
-            "trans":"抛出",
-            "phonetic":"[θrəʊ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"try",
-            "trans":"vt. 试图，努力；试验；审判；考验
+        "phonetic": "['sɪŋkrənaɪzd]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "exception",
+        "trans": "异常",
+        "phonetic": "[ɪk'sepʃ(ə)n; ek-]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "throw",
+        "trans": "抛出",
+        "phonetic": "[θrəʊ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "try",
+        "trans": "vt. 试图，努力；试验；审判；考验
 vi. 尝试；努力；试验
 n. 尝试；努力；试验
 n. (Try)人名；(英、印尼)特里；(柬)德里
@@ -269,27 +270,27 @@ n. (Try)人名；(英、印尼)特里；(柬)德里
 过去式tried
 过去分词tried
 现在分词trying",
-            "phonetic":"[traɪ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"catch",
-            "trans":"捕捉",
-            "phonetic":"[kætʃ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"finally",
-            "trans":"最后",
-            "phonetic":"['faɪnəlɪ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"read",
-            "trans":"vt. 阅读；读懂，理解
+        "phonetic": "[traɪ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "catch",
+        "trans": "捕捉",
+        "phonetic": "[kætʃ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "finally",
+        "trans": "最后",
+        "phonetic": "['faɪnəlɪ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "read",
+        "trans": "vt. 阅读；读懂，理解
 vi. 读；读起来
 n. 阅读；读物
 adj. 有学问的
@@ -297,1268 +298,1261 @@ n. (Read)人名；(英)里德
 过去式read
 过去分词read
 现在分词reading",
-            "phonetic":"[ri:d;red]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"write",
-            "trans":"vi. 写，写字；写作，作曲；写信
+        "phonetic": "[ri:d;red]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "write",
+        "trans": "vi. 写，写字；写作，作曲；写信
 vt. 写，书写；写信给；著述
 过去式wrote
 过去分词written
 现在分词writing",
-            "phonetic":"[raɪt]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"byte",
-            "trans":"n. 字节；8位元组",
-            "phonetic":"[baɪt]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"reader",
-            "trans":"读",
-            "phonetic":"['riːdə]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"writer",
-            "trans":"写",
-            "phonetic":"['raɪtə]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"iterator",
-            "trans":"n. 迭代器；迭代程序",
-            "phonetic":"[ɪtə'reɪtə]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"async",
-            "trans":"abbr. 异步，非同步（asynchronous）",
-            "phonetic":"[əˈsɪŋk]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"handler",
-            "trans":"n. 处理者；管理者；拳击教练；（犬马等的）训练者
+        "phonetic": "[raɪt]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "byte",
+        "trans": "n. 字节；8位元组",
+        "phonetic": "[baɪt]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "reader",
+        "trans": "读",
+        "phonetic": "['riːdə]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "writer",
+        "trans": "写",
+        "phonetic": "['raɪtə]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "iterator",
+        "trans": "n. 迭代器；迭代程序",
+        "phonetic": "[ɪtə'reɪtə]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "async",
+        "trans": "abbr. 异步，非同步（asynchronous）",
+        "phonetic": "[əˈsɪŋk]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "handler",
+        "trans": "n. 处理者；管理者；拳击教练；（犬马等的）训练者
 n. (Handler)人名；(法)昂德莱；(英)汉德勒",
-            "phonetic":"['hændlə]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"loop",
-            "trans":"循环",
-            "phonetic":"[luːp]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"song",
-            "trans":"n. 歌曲；歌唱；诗歌；鸣声
+        "phonetic": "['hændlə]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "loop",
+        "trans": "循环",
+        "phonetic": "[luːp]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "song",
+        "trans": "n. 歌曲；歌唱；诗歌；鸣声
 n. (Song)人名；(泰)颂；(柬)松；(英)桑；(老)宋；(越)双；(东南亚国家华语)松",
-            "phonetic":"[sɔŋ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"other",
-            "trans":"adj. 其他的，另外的
+        "phonetic": "[sɔŋ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "other",
+        "trans": "adj. 其他的，另外的
 pron. 另外一个",
-            "phonetic":"['ʌðɚ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"cause",
-            "trans":"n. 原因；事业；目标
+        "phonetic": "['ʌðɚ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "cause",
+        "trans": "n. 原因；事业；目标
 vt. 引起；使遭受",
-            "phonetic":"[kɔz]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"pull",
-            "trans":"vt. 拉；拔；拖
+        "phonetic": "[kɔz]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "pull",
+        "trans": "vt. 拉；拔；拖
 vi. 拉，拖；拔
 n. 拉，拉绳；拉力，牵引力；拖
 n. (Pull)人名；(法)皮尔；(德、瑞典)普尔",
-            "phonetic":"[pʊl]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"change",
-            "trans":"vt. 改变；交换
+        "phonetic": "[pʊl]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "change",
+        "trans": "vt. 改变；交换
 n. 变化；找回的零钱
 vi. 改变；兑换",
-            "phonetic":"[tʃendʒ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"way",
-            "trans":"n. 方法；道路；方向；行业；习惯
+        "phonetic": "[tʃendʒ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "way",
+        "trans": "n. 方法；道路；方向；行业；习惯
 adv. 大大地；远远地
 adj. 途中的
 n. (Way)人名；(中)见 Wei；(英、缅)韦",
-            "phonetic":"[we]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"chase",
-            "trans":"vt. 追逐；追捕；试图赢得；雕镂
+        "phonetic": "[we]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "chase",
+        "trans": "vt. 追逐；追捕；试图赢得；雕镂
 vi. 追逐；追赶；奔跑
 n. 追逐；追赶；追击
 n. (Chase)人名；(英)蔡斯；(法)沙斯",
-            "phonetic":"",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"wait",
-            "trans":"vt. 等候；推迟；延缓
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "wait",
+        "trans": "vt. 等候；推迟；延缓
 vi. 等待；耽搁；伺候用餐
 n. 等待；等候
 n. (Wait)人名；(英)韦特；(捷)魏特",
-            "phonetic":"[wet]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"enough",
-            "trans":"adv. 足够地，充足地
+        "phonetic": "[wet]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "enough",
+        "trans": "adv. 足够地，充足地
 n. 很多；充足
 adj. 充足的
 int. 够了！",
-            "phonetic":"[ɪ'nʌf]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"believe",
-            "trans":"vi. 信任；料想；笃信宗教
+        "phonetic": "[ɪ'nʌf]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "believe",
+        "trans": "vi. 信任；料想；笃信宗教
 vt. 相信；认为；信任",
-            "phonetic":"[bɪ'liv]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"running",
-            "trans":"n. 运转；赛跑；流出
+        "phonetic": "[bɪ'liv]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "running",
+        "trans": "n. 运转；赛跑；流出
 adj. 连续的；流动的；跑着的；运转着的
 v. 跑；运转（run的ing形式）；行驶
 n. (Running)人名；(英)朗宁",
-            "phonetic":"['rʌnɪŋ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"ready",
-            "trans":"adj. 准备好；现成的；迅速的；情愿的；快要…的
+        "phonetic": "['rʌnɪŋ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "ready",
+        "trans": "adj. 准备好；现成的；迅速的；情愿的；快要…的
 n. 现款；预备好的状态
 adv. 迅速地；预先
 vt. 使准备好
 n. (Ready)人名；(英)雷迪",
-            "phonetic":"['rɛdi]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"push",
-            "trans":"vt. 推动，增加；对…施加压力，逼迫；按；说服
+        "phonetic": "['rɛdi]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "push",
+        "trans": "vt. 推动，增加；对…施加压力，逼迫；按；说服
 vi. 推进；增加；努力争取
 n. 推，决心；大规模攻势；矢志的追求",
-            "phonetic":"[pʊʃ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"been",
-            "trans":"v. 是，有（be的过去分词）
+        "phonetic": "[pʊʃ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "been",
+        "trans": "v. 是，有（be的过去分词）
 n. (Been)人名；(挪)贝恩",
-            "phonetic":"[bɪn]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"while",
-            "trans":"conj. 虽然；然而；当……的时候
+        "phonetic": "[bɪn]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "while",
+        "trans": "conj. 虽然；然而；当……的时候
 n. 一会儿；一段时间
 vt. 消磨；轻松地度过",
-            "phonetic":"[hwaɪl]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"another",
-            "trans":"adj. 又一，另一；另外的；不同的
+        "phonetic": "[hwaɪl]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "another",
+        "trans": "adj. 又一，另一；另外的；不同的
 pron. 另一个；又一个
 prep. 另一个；另一个人",
-            "phonetic":"[ə'nʌðɚ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"leave",
-            "trans":"vt. 离开；留下；遗忘；委托
+        "phonetic": "[ə'nʌðɚ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "leave",
+        "trans": "vt. 离开；留下；遗忘；委托
 vi. 离开，出发；留下
 n. 许可，同意；休假",
-            "phonetic":"[liv]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"would",
-            "trans":"aux. 将，将要；愿意
+        "phonetic": "[liv]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "would",
+        "trans": "aux. 将，将要；愿意
 v. will的过去式",
-            "phonetic":"[wʊd; wəd]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"hide",
-            "trans":"vt. 隐藏；隐瞒；鞭打
+        "phonetic": "[wʊd; wəd]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "hide",
+        "trans": "vt. 隐藏；隐瞒；鞭打
 vi. 隐藏
 n. 躲藏；兽皮；躲藏处",
-            "phonetic":"[haɪd]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"truth",
-            "trans":"n. 真理；事实；诚实；实质",
-            "phonetic":"[truθ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"above",
-            "trans":"在上面",
-            "phonetic":"[ə'bʌv]",
-            "tags":"test",
-            "progress":"1"
-        },
-        {
-            "word":"tell",
-            "trans":"vt. 告诉，说；辨别；吩咐；断定
+        "phonetic": "[haɪd]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "truth",
+        "trans": "n. 真理；事实；诚实；实质",
+        "phonetic": "[truθ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "above",
+        "trans": "在上面",
+        "phonetic": "[ə'bʌv]",
+        "tags": "test",
+        "progress": "1"
+      },
+      {
+        "word": "tell",
+        "trans": "vt. 告诉，说；辨别；吩咐；断定
 vi. 讲述；告发，泄密；识别
 n. (Tell)人名；(英、德、瑞典)特尔；(罗、意)泰尔；(阿拉伯)塔勒",
-            "phonetic":"",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"something",
-            "trans":"pron. 某事；某物
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "something",
+        "trans": "pron. 某事；某物
 n. 重要的人；值得重视的事
 adv. 非常；有点；大约
 adj. 大约；有点象",
-            "phonetic":"['sʌmθɪŋ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"catching",
-            "trans":"adj. 传染性的；有魅力的
+        "phonetic": "['sʌmθɪŋ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "catching",
+        "trans": "adj. 传染性的；有魅力的
 v. 抓住（catch的ing形式）",
-            "phonetic":"['kætʃɪŋ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"just",
-            "trans":"adv. 只是，仅仅；刚才，刚刚；正好，恰好；实在；刚要
+        "phonetic": "['kætʃɪŋ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "just",
+        "trans": "adv. 只是，仅仅；刚才，刚刚；正好，恰好；实在；刚要
 adj. 公正的，合理的；正直的，正义的；正确的；公平的；应得的
 n. (Just)人名；(英)贾斯特；(法)朱斯特；(德、匈、波、捷、挪)尤斯特；(西)胡斯特",
-            "phonetic":"[dʒʌst]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"asking",
-            "trans":"n. 请求
+        "phonetic": "[dʒʌst]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "asking",
+        "trans": "n. 请求
 v. 问（ask的现在分词）",
-            "phonetic":"['æskɪŋ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"heart",
-            "trans":"n. 心脏；感情；勇气；心形；要点
+        "phonetic": "['æskɪŋ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "heart",
+        "trans": "n. 心脏；感情；勇气；心形；要点
 vt. 鼓励；铭记
 vi. 结心
 n. (Heart)人名；(英)哈特",
-            "phonetic":"[hɑrt]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"stay",
-            "trans":"vi. 停留；坚持；暂住；停下
+        "phonetic": "[hɑrt]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "stay",
+        "trans": "vi. 停留；坚持；暂住；停下
 vt. 坚持；暂住；抑制
 n. 逗留；停止；支柱",
-            "phonetic":"[steɪ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"maybe",
-            "trans":"adv. 也许；可能；大概
+        "phonetic": "[steɪ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "maybe",
+        "trans": "adv. 也许；可能；大概
 n. 可能性；不确定性",
-            "phonetic":"['mebi]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"beautiful",
-            "trans":"adj. 美丽的
+        "phonetic": "['mebi]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "beautiful",
+        "trans": "adj. 美丽的
 出色地
 出色的
 迷人的
 迷人地",
-            "phonetic":"['bjʊtəfəl]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"gone",
-            "trans":"adj. 离去的；死去的；用光的
+        "phonetic": "['bjʊtəfəl]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "gone",
+        "trans": "adj. 离去的；死去的；用光的
 v. 去（go的过去分词）",
-            "phonetic":"[ɡɔn]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"us",
-            "trans":"pron. 我们",
-            "phonetic":"[əs; ʌs]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"up",
-            "trans":"adv. 起来；上涨；向上
+        "phonetic": "[ɡɔn]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "us",
+        "trans": "pron. 我们",
+        "phonetic": "[əs; ʌs]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "up",
+        "trans": "adv. 起来；上涨；向上
 prep. 在…之上；向…的较高处
 adj. 涨的；起床的；向上的
 n. 上升；繁荣",
-            "phonetic":"[ʌp]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"away",
-            "trans":"adv. 离去，离开；在远处",
-            "phonetic":"[əˈwe]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"hiding",
-            "trans":"n. 隐匿；躲藏处；殴打
+        "phonetic": "[ʌp]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "away",
+        "trans": "adv. 离去，离开；在远处",
+        "phonetic": "[əˈwe]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "hiding",
+        "trans": "n. 隐匿；躲藏处；殴打
 n. (Hiding)人名；(瑞典)希丁",
-            "phonetic":"['haɪdɪŋ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"sing",
-            "trans":"vi. 唱歌；歌颂；鸣叫；呼号
+        "phonetic": "['haɪdɪŋ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "sing",
+        "trans": "vi. 唱歌；歌颂；鸣叫；呼号
 vt. 唱；用诗赞颂；唱着使
 n. 演唱；鸣声；呼啸声
 n. (Sing)人名；(老、德、泰)辛",
-            "phonetic":"[sɪŋ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"will",
-            "trans":"n. 意志；决心；情感；遗嘱；意图；心愿
+        "phonetic": "[sɪŋ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "will",
+        "trans": "n. 意志；决心；情感；遗嘱；意图；心愿
 vt. 决心要；遗赠；用意志力使
 vi. 愿意；下决心
 aux. 将；愿意；必须",
-            "phonetic":"[wɪl]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"coming",
-            "trans":"adj. 即将到来的；接着的；前途有望的
+        "phonetic": "[wɪl]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "coming",
+        "trans": "adj. 即将到来的；接着的；前途有望的
 n. 来到；到达
 v. 来（come的ing形式）",
-            "phonetic":"['kʌmɪŋ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"say",
-            "trans":"vt. 讲；说明；例如；声称；假设；指明
+        "phonetic": "['kʌmɪŋ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "say",
+        "trans": "vt. 讲；说明；例如；声称；假设；指明
 vi. 讲；表示；念；假定；背诵
 
 n. (Say)人名；(土)萨伊；(法、老、柬)赛；(英)塞伊；(匈、罗)绍伊",
-            "phonetic":"[se]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"each",
-            "trans":"adj. 每；各自的
+        "phonetic": "[se]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "each",
+        "trans": "adj. 每；各自的
 adv. 每个；各自
 pron. 每个；各自",
-            "phonetic":"[itʃ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"part",
-            "trans":"n. 部分；角色；零件；一些；片段
+        "phonetic": "[itʃ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "part",
+        "trans": "n. 部分；角色；零件；一些；片段
 vt. 分离；分配；分开
 vi. 断裂；分手
 adv. 部分地
 adj. 部分的
 n. (Part)人名；(英、瑞典)帕特；(泰)巴；(法)帕尔",
-            "phonetic":"[pɑrt]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"ask",
-            "trans":"vt. 问，询问；要求；需要；邀请；讨价
+        "phonetic": "[pɑrt]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "ask",
+        "trans": "vt. 问，询问；要求；需要；邀请；讨价
 vi. 问，询问；要求
 n. (Ask)人名；(芬、瑞典)阿斯克",
-            "phonetic":"[æsk]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"walk",
-            "trans":"n. 步行，走；散步
+        "phonetic": "[æsk]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "walk",
+        "trans": "n. 步行，走；散步
 vi. 走，步行；散步
 vt. 散步；走过
 n. (Walk)人名；(德、葡)瓦尔克；(英)沃克",
-            "phonetic":"[wɔːk]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"make",
-            "trans":"vt. 使得；进行；布置，准备，整理；制造；认为；获得；形成；安排；引起；构成
+        "phonetic": "[wɔːk]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "make",
+        "trans": "vt. 使得；进行；布置，准备，整理；制造；认为；获得；形成；安排；引起；构成
 vi. 开始；前进；增大；被制造
 n. 制造；构造；性情
 n. (Make)人名；(塞、南非)马克",
-            "phonetic":"[mek]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Gradle",
-            "trans":"",
-            "phonetic":"",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Library",
-            "trans":"n. 图书馆，藏书室；文库
+        "phonetic": "[mek]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Gradle",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Library",
+        "trans": "n. 图书馆，藏书室；文库
 复数libraries",
-            "phonetic":"[ˈlaɪbrərɪ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"build",
-            "trans":"vt. 建立；建筑
+        "phonetic": "[ˈlaɪbrərɪ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "build",
+        "trans": "vt. 建立；建筑
 vi. 建筑；建造
 n. 构造；体形；体格
 过去式built
 过去分词built
 现在分词building",
-            "phonetic":"[bɪld]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Import",
-            "trans":"n. 进口，进口货；输入；意思，含义；重要性
+        "phonetic": "[bɪld]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Import",
+        "trans": "n. 进口，进口货；输入；意思，含义；重要性
 vt. 输入，进口；含…的意思
 vi. 输入，进口",
-            "phonetic":"[ɪm'pɔːt; 'ɪm-]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Project",
-            "trans":"vi. 设计；计划；表达；投射
+        "phonetic": "[ɪm'pɔːt; 'ɪm-]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Project",
+        "trans": "vi. 设计；计划；表达；投射
 vt. 设计；计划；发射；放映
 n. 工程；计划；事业",
-            "phonetic":"[prəˈdʒekt; ˈprɒdʒekt]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"File",
-            "trans":"n. 文件；档案；文件夹；锉刀
+        "phonetic": "[prəˈdʒekt; ˈprɒdʒekt]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "File",
+        "trans": "n. 文件；档案；文件夹；锉刀
 vt. 提出；锉；琢磨；把…归档
 vi. 列队行进；用锉刀锉
 n. (File)人名；(匈、塞)菲莱
 过去式filed
 过去分词filed
 现在分词fileing",
-            "phonetic":"[faɪl]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Stars",
-            "trans":"n. 明星类，明星（star的复数形式）
+        "phonetic": "[faɪl]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Stars",
+        "trans": "n. 明星类，明星（star的复数形式）
 v. 点缀；成辐射状开裂；使担任主角（star的第三人称单数）
 abbr. specialized training and reassignment students 经过专门训练后再分配的学生；stationary automotive road stimulator (Toyota) 汽车公路固定刺激物（丰田汽车）",
-            "phonetic":"[stɑ:z]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Looper",
-            "trans":"n. 打环的人；打环装置；尺蠖（等于measuring worm）
+        "phonetic": "[stɑ:z]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Looper",
+        "trans": "n. 打环的人；打环装置；尺蠖（等于measuring worm）
 
 n. (Looper)人名；(英)卢珀",
-            "phonetic":"['luːpə]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Broadcast",
-            "trans":"vt. 播送，播放；（无线电或电视）广播；播撒（种子）
+        "phonetic": "['luːpə]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Broadcast",
+        "trans": "vt. 播送，播放；（无线电或电视）广播；播撒（种子）
 
 vi. 广播，播送；播放
 
 n. 广播；播音；广播节目
 
 adj. 广播的",
-            "phonetic":"['brɔːdkɑːst]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Receiver",
-            "trans":"n. 接收器；接受者；收信机；收款员，接待者",
-            "phonetic":"[rɪ'siːvə]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Content",
-            "trans":"n. 内容，目录；满足；容量
+        "phonetic": "['brɔːdkɑːst]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Receiver",
+        "trans": "n. 接收器；接受者；收信机；收款员，接待者",
+        "phonetic": "[rɪ'siːvə]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Content",
+        "trans": "n. 内容，目录；满足；容量
 
 adj. 满意的
 
 vt. 使满足
 
 n. (Content)人名；(法)孔唐",
-            "phonetic":"[kən'tent]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Provider",
-            "trans":"n. 供应者；养家者",
-            "phonetic":"[prə'vaɪdə]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Bar",
-            "trans":"n. 条，棒；酒吧；障碍
+        "phonetic": "[kən'tent]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Provider",
+        "trans": "n. 供应者；养家者",
+        "phonetic": "[prə'vaɪdə]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Bar",
+        "trans": "n. 条，棒；酒吧；障碍
 
 vt. 禁止；阻拦
 
 prep. 除……外
 
 n. (Bar)人名；(阿拉伯、德、法、俄、罗、捷、波、葡、以)巴尔",
-            "phonetic":"[bɑː]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"action",
-            "trans":"n. 行动；活动；功能；战斗；情节
+        "phonetic": "[bɑː]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "action",
+        "trans": "n. 行动；活动；功能；战斗；情节
 
 n. (Action)人名；(英)埃克申",
-            "phonetic":"['ækʃ(ə)n]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"plugin",
-            "trans":"n. 插件；相关插件 
+        "phonetic": "['ækʃ(ə)n]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "plugin",
+        "trans": "n. 插件；相关插件 
 n. (Plugin)人名；(俄)普卢金",
-            "phonetic":"[plʌgɪn]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"basics",
-            "trans":"n. 基础；基本要素（basic的复数） 
+        "phonetic": "[plʌgɪn]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "basics",
+        "trans": "n. 基础；基本要素（basic的复数） 
 n. (Basics)人名；(匈)鲍希奇",
-            "phonetic":"['besɪks]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"default",
-            "trans":"默认的（修饰符）",
-            "phonetic":"[dɪ'fɔːlt; 'diːfɔːlt]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"install",
-            "trans":"vt. 安装；任命；安顿",
-            "phonetic":"[ɪnˈstɔ:l]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"protocol",
-            "trans":"n. 协议；草案；礼仪 
+        "phonetic": "['besɪks]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "default",
+        "trans": "默认的（修饰符）",
+        "phonetic": "[dɪ'fɔːlt; 'diːfɔːlt]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "install",
+        "trans": "vt. 安装；任命；安顿",
+        "phonetic": "[ɪnˈstɔ:l]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "protocol",
+        "trans": "n. 协议；草案；礼仪 
 vt. 拟定 
 vi. 拟定",
-            "phonetic":"['prəʊtəkɒl]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"general",
-            "trans":"adj. 一般的，普通的；综合的；大体的 
+        "phonetic": "['prəʊtəkɒl]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "general",
+        "trans": "adj. 一般的，普通的；综合的；大体的 
 n. 一般；将军，上将；常规 
 n. (General)人名；(英)杰纳勒尔",
-            "phonetic":"['dʒen(ə)r(ə)l]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"editor",
-            "trans":"n. 编者，编辑；社论撰写人；编辑装置 
+        "phonetic": "['dʒen(ə)r(ə)l]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "editor",
+        "trans": "n. 编者，编辑；社论撰写人；编辑装置 
 Editor: 编辑 | 编辑器 | 总编辑",
-            "phonetic":"['edɪtə]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"actions",
-            "trans":"n. 行动（action的复数）；动作 
+        "phonetic": "['edɪtə]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "actions",
+        "trans": "n. 行动（action的复数）；动作 
 Actions: 动作 | 活动 | 行动",
-            "phonetic":"['ækʃ(ə)nz]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"base",
-            "trans":"n. 基础；底部；垒 
+        "phonetic": "['ækʃ(ə)nz]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "base",
+        "trans": "n. 基础；底部；垒 
 adj. 卑鄙的；低劣的 
 vt. 以…作基础 
 n. (Base)人名；(日)马濑(姓)",
-            "phonetic":"[beɪs]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"event",
-            "trans":"n. 事件，大事；项目；结果",
-            "phonetic":"[ɪ'vent]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"life",
-            "trans":"n. 生活，生存；寿命",
-            "phonetic":"[laɪf]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"virtual",
-            "trans":"adj. 虚拟的；实质上的，事实上的（但未在名义上或正式获承认）",
-            "phonetic":"[ˈvɜ:tʃuəl]",
-            "tags":"android",
-            "progress":"-1"
-        },
-        {
-            "word":"methods",
-            "trans":"n. 方法，方式；研究方法（method的复数）",
-            "phonetic":"",
-            "tags":"android",
-            "progress":"-1"
-        },
-        {
-            "word":"reflection",
-            "trans":"n. 反射；沉思；映象",
-            "phonetic":"[rɪ'flekʃ(ə)n]",
-            "tags":"android",
-            "progress":"-1"
-        },
-        {
-            "word":"callable",
-            "trans":"adj. 随时可偿还的；请求即付的",
-            "phonetic":"['kɔːləb(ə)l]",
-            "tags":"android",
-            "progress":"-1"
-        },
-        {
-            "word":"thread",
-            "trans":"n. 线；螺纹；思路；衣服；线状物；玻璃纤维；路线 
+        "phonetic": "[beɪs]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "event",
+        "trans": "n. 事件，大事；项目；结果",
+        "phonetic": "[ɪ'vent]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "life",
+        "trans": "n. 生活，生存；寿命",
+        "phonetic": "[laɪf]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "virtual",
+        "trans": "adj.  虚拟的；实质上的，事实上的（但未在名义上或正式获承认）",
+        "phonetic": "[ˈvɜ:tʃuəl]",
+        "tags": "android",
+        "progress": "-1"
+      },
+      {
+        "word": "methods",
+        "trans": "n. 方法，方式；研究方法（method的复数）",
+        "tags": "android",
+        "progress": "-1"
+      },
+      {
+        "word": "reflection",
+        "trans": "n. 反射；沉思；映象",
+        "phonetic": "[rɪ'flekʃ(ə)n]",
+        "tags": "android",
+        "progress": "-1"
+      },
+      {
+        "word": "callable",
+        "trans": "adj. 随时可偿还的；请求即付的",
+        "phonetic": "['kɔːləb(ə)l]",
+        "tags": "android",
+        "progress": "-1"
+      },
+      {
+        "word": "thread",
+        "trans": "n. 线；螺纹；思路；衣服；线状物；玻璃纤维；路线 
 vt. 穿过；穿线于；使交织 
 vi. 通过；穿透过",
-            "phonetic":"[θred]",
-            "tags":"android",
-            "progress":"-1"
-        },
-        {
-            "word":"factory",
-            "trans":"n. 工厂；制造厂；代理店",
-            "phonetic":"['fækt(ə)rɪ]",
-            "tags":"android",
-            "progress":"-1"
-        },
-        {
-            "word":"intern",
-            "trans":"n. 实习生，实习医师 
+        "phonetic": "[θred]",
+        "tags": "android",
+        "progress": "-1"
+      },
+      {
+        "word": "factory",
+        "trans": "n. 工厂；制造厂；代理店",
+        "phonetic": "['fækt(ə)rɪ]",
+        "tags": "android",
+        "progress": "-1"
+      },
+      {
+        "word": "intern",
+        "trans": "n. 实习生，实习医师 
 vt. 拘留，软禁 
 vi. 作实习医师",
-            "phonetic":"['ɪntɜːn]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"offset",
-            "trans":"n. 抵消，补偿；平版印刷；支管 
+        "phonetic": "['ɪntɜːn]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "offset",
+        "trans": "n. 抵消，补偿；平版印刷；支管 
 vt. 抵消；弥补；用平版印刷术印刷 
 vi. 装支管",
-            "phonetic":"['ɒfset]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"count",
-            "trans":"vt. 计算；认为 
+        "phonetic": "['ɒfset]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "count",
+        "trans": "vt. 计算；认为 
 vi. 计数；有价值 
 n. 计数；计算；伯爵 
 n. (Count)人名；(法、德、南非)伯爵(欧洲贵族头衔)， 康特(人名)",
-            "phonetic":"[kaʊnt]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"compare",
-            "trans":"vt. 比拟，喻为；[语]构成 
+        "phonetic": "[kaʊnt]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "compare",
+        "trans": "vt. 比拟，喻为；[语]构成 
 vi. 相比，匹敌；比较，区别；比拟（常与to连用） 
 n. 比较 
 n. (Compare)人名；(意)孔帕雷 
 Compare: 比较 | 对照 | 相比较",
-            "phonetic":"[kəm'peə]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"contains",
-            "trans":"n. 包含 
+        "phonetic": "[kəm'peə]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "contains",
+        "trans": "n. 包含 
 v. 包含；容纳；包含某字符串（contain的单三形式）",
-            "phonetic":"[kən'teinz]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"index",
-            "trans":"n. 指标；指数；索引；指针 
+        "phonetic": "[kən'teinz]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "index",
+        "trans": "n. 指标；指数；索引；指针 
 vt. 指出；编入索引中 
 vi. 做索引",
-            "phonetic":"['ɪndeks]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"last",
-            "trans":"n. 末尾，最后；上个；鞋楦（做鞋的模型） 
+        "phonetic": "['ɪndeks]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "last",
+        "trans": "n. 末尾，最后；上个；鞋楦（做鞋的模型） 
 adj. 最后的；最近的，最新的；仅剩的；最不可能…的 
 vt. 度过，拖过；使维持 
 adv. 最后地；上次，最近；最后一点 
 vi. 持续；维持，够用；持久 
 n. (Last)人名；(英、德、葡、罗、瑞典)拉斯特",
-            "phonetic":"[lɑːst]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"lang",
-            "trans":"abbr. 语言（language） 
+        "phonetic": "[lɑːst]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "lang",
+        "trans": "abbr. 语言（language） 
 java.lang.string",
-            "phonetic":"[læŋ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"properties",
-            "trans":"n. 性能；道具，内容（property的复数形式） 
+        "phonetic": "[læŋ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "properties",
+        "trans": "n. 性能；道具，内容（property的复数形式） 
 Properties: 属性 | 性能 | 特性",
-            "phonetic":"['prɒpətɪz]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"offline",
-            "trans":"n. 脱机；挂线;
+        "phonetic": "['prɒpətɪz]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "offline",
+        "trans": "n. 脱机；挂线;
 adj. 脱机的；离线的，未连线的;
 adv. 未连线地",
-            "phonetic":"[ɒf'laɪn]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"failed",
-            "trans":"v. 失败，不成功（fail的过去式和过去分词） 
+        "phonetic": "[ɒf'laɪn]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "failed",
+        "trans": "v. 失败，不成功（fail的过去式和过去分词） 
 adj. 已失败的，不成功的 
 failed: 失败 | 接口失效 | 不及格",
-            "phonetic":"[feɪld]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"none",
-            "trans":"pron. 没有人；一个也没有；没有任何东西;
+        "phonetic": "[feɪld]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "none",
+        "trans": "pron. 没有人；一个也没有；没有任何东西;
 adj. 没有的，一点没有的;
 adv. 决不，一点也不;
 n. (None)人名；(葡、罗)诺内；(日)野根(姓)",
-            "phonetic":"[nʌn]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"scrollbars",
-            "trans":"n. 滚动条（scrollbar的复数）",
-            "phonetic":"",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"dependencies",
-            "trans":"n. 依赖性，相关性；管理",
-            "phonetic":"[di'pendənsiz]",
-            "tags":"android",
-            "progress":"-1"
-        },
-        {
-            "word":"dependency",
-            "trans":"n. 属国；从属；从属物",
-            "phonetic":"[dɪ'pend(ə)nsɪ]",
-            "tags":"android",
-            "progress":"-1"
-        },
-        {
-            "word":"Bottom",
-            "trans":"n. 底部；末端；臀部；尽头;
+        "phonetic": "[nʌn]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "scrollbars",
+        "trans": "n. 滚动条（scrollbar的复数）",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "dependencies",
+        "trans": "n. 依赖性，相关性；管理",
+        "phonetic": "[di'pendənsiz]",
+        "tags": "android",
+        "progress": "-1"
+      },
+      {
+        "word": "dependency",
+        "trans": "n. 属国；从属；从属物",
+        "phonetic": "[dɪ'pend(ə)nsɪ]",
+        "tags": "android",
+        "progress": "-1"
+      },
+      {
+        "word": "Bottom",
+        "trans": "n. 底部；末端；臀部；尽头;
 adj. 底部的;
 vt. 装底；测量深浅；查明真相;
 vi. 到达底部；建立基础;
 n. (Bottom)人名；(英)博顿",
-            "phonetic":"['bɒtəm]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Navigation",
-            "trans":"n. 航行；航海",
-            "phonetic":"[nævɪ'geɪʃ(ə)n]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Constraint",
-            "trans":"n. [数] 约束；局促，态度不自然；强制",
-            "phonetic":"[kən'streɪnt]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Config",
-            "trans":"n. 配置，布局；显示配置信息命令",
-            "phonetic":"[kən'fɪɡ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"custom",
-            "trans":"n. 习惯，惯例；风俗；海关，关税；经常光顾；[总称]（经常性的）顾客;
+        "phonetic": "['bɒtəm]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Navigation",
+        "trans": "n. 航行；航海",
+        "phonetic": "[nævɪ'geɪʃ(ə)n]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Constraint",
+        "trans": "n. [数] 约束；局促，态度不自然；强制",
+        "phonetic": "[kən'streɪnt]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Config",
+        "trans": "n. 配置，布局；显示配置信息命令",
+        "phonetic": "[kən'fɪɡ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "custom",
+        "trans": "n. 习惯，惯例；风俗；海关，关税；经常光顾；[总称]（经常性的）顾客;
 adj. （衣服等）定做的，定制的",
-            "phonetic":"['kʌstəm]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Retrofit",
-            "trans":"vt. 改进；[计] 更新；式样翻新;
+        "phonetic": "['kʌstəm]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Retrofit",
+        "trans": "vt. 改进；[计] 更新；式样翻新;
 n. 式样翻新；花样翻新",
-            "phonetic":"['retrəʊfɪt]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Observable",
-            "trans":"adj. 显著的；觉察得到的；看得见的;
+        "phonetic": "['retrəʊfɪt]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Observable",
+        "trans": "adj. 显著的；觉察得到的；看得见的;
 n. [物] 可观察量；感觉到的事物",
-            "phonetic":"[əb'zɜːvəbl]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"subscribe",
-            "trans":"vi. 订阅；捐款；认购；赞成；签署;
+        "phonetic": "[əb'zɜːvəbl]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "subscribe",
+        "trans": "vi. 订阅；捐款；认购；赞成；签署;
 vt. 签署；赞成；捐助",
-            "phonetic":"[səb'skraɪb]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"monitor",
-            "trans":"n. 监视器；监听器；监控器；显示屏；班长;
+        "phonetic": "[səb'skraɪb]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "monitor",
+        "trans": "n. 监视器；监听器；监控器；显示屏；班长;
 vt. 监控",
-            "phonetic":"['mɒnɪtə]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"support",
-            "trans":"vt. 支持，支撑，支援；扶持，帮助；赡养，供养;
+        "phonetic": "['mɒnɪtə]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "support",
+        "trans": "vt. 支持，支撑，支援；扶持，帮助；赡养，供养;
 n. 支持，维持；支援，供养；支持者，支撑物",
-            "phonetic":"[sə'pɔːt]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"profiler",
-            "trans":"n. 分析器，分析工具；仿形铣床；[测] 断面仪",
-            "phonetic":"['prəufailə]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"requires",
-            "trans":"n. 需要；要求；需求（require的复数）;
+        "phonetic": "[sə'pɔːt]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "profiler",
+        "trans": "n. 分析器，分析工具；仿形铣床；[测] 断面仪",
+        "phonetic": "['prəufailə]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "requires",
+        "trans": "n. 需要；要求；需求（require的复数）;
 vt. 需要（require的第三人称单数形式）",
-            "phonetic":"",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"higher",
-            "trans":"adj. 更高的，较高的（high的比较级）",
-            "phonetic":"[ˈhaɪə(r)]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"learn",
-            "trans":"vt. 学习；得知；认识到;
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "higher",
+        "trans": "adj. 更高的，较高的（high的比较级）",
+        "phonetic": "[ˈhaɪə(r)]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "learn",
+        "trans": "vt. 学习；得知；认识到;
 vi. 学习；获悉",
-            "phonetic":"[lɜːn]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"terminal",
-            "trans":"n. 末端；终点；终端机；极限 
+        "phonetic": "[lɜːn]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "terminal",
+        "trans": "n. 末端；终点；终端机；极限 
 adj. 末端的；终点的；晚期的",
-            "phonetic":"['tɜːmɪn(ə)l]",
-            "tags":"android",
-            "progress":"-1"
-        },
-        {
-            "word":"native",
-            "trans":"adj. 本国的；土著的；天然的；与生俱来的；天赋的 
+        "phonetic": "['tɜːmɪn(ə)l]",
+        "tags": "android",
+        "progress": "-1"
+      },
+      {
+        "word": "native",
+        "trans": "adj. 本国的；土著的；天然的；与生俱来的；天赋的 
 n. 本地人；土产；当地居民",
-            "phonetic":"['neɪtɪv]",
-            "tags":"android",
-            "progress":"-1"
-        },
-        {
-            "word":"clean",
-            "trans":"adj. 清洁的，干净的；清白的 
+        "phonetic": "['neɪtɪv]",
+        "tags": "android",
+        "progress": "-1"
+      },
+      {
+        "word": "clean",
+        "trans": "adj. 清洁的，干净的；清白的 
 vt. 使干净 
 vi. 打扫，清扫 
 adv. 完全地 
 n. 打扫 
 n. (Clean)人名；(英)克林",
-            "phonetic":"[kliːn]",
-            "tags":"android",
-            "progress":"-1"
-        },
-        {
-            "word":"entity",
-            "trans":"n. 实体；存在；本质",
-            "phonetic":"['entɪtɪ]",
-            "tags":"android",
-            "progress":"-1"
-        },
-        {
-            "word":"done",
-            "trans":"adj. 已完成的；做好了的；煮熟的；合乎礼仪的；合乎规矩 
+        "phonetic": "[kliːn]",
+        "tags": "android",
+        "progress": "-1"
+      },
+      {
+        "word": "entity",
+        "trans": "n. 实体；存在；本质",
+        "phonetic": "['entɪtɪ]",
+        "tags": "android",
+        "progress": "-1"
+      },
+      {
+        "word": "done",
+        "trans": "adj. 已完成的；做好了的；煮熟的；合乎礼仪的；合乎规矩 
 int. 表示接受建议 
 v. 做（do的过去分词） 
 n. （西、罗）多内（人名）；（英）多恩（人名）",
-            "phonetic":"[dʌn]",
-            "tags":"android",
-            "progress":"-1"
-        },
-        {
-            "word":"compile",
-            "trans":"vt. 编译；编制；编辑； 汇编",
-            "phonetic":"[kəm'paɪl]",
-            "tags":"android",
-            "progress":"-1"
-        },
-        {
-            "word":"length",
-            "trans":"n. 长度，长；时间的长短；（语）音长",
-            "phonetic":"[leŋθ]",
-            "tags":"android",
-            "progress":"-1"
-        },
-        {
-            "word":"machine",
-            "trans":"n. 机械，机器；机构；机械般工作的人 
+        "phonetic": "[dʌn]",
+        "tags": "android",
+        "progress": "-1"
+      },
+      {
+        "word": "compile",
+        "trans": "vt. 编译；编制；编辑； 汇编",
+        "phonetic": "[kəm'paɪl]",
+        "tags": "android",
+        "progress": "-1"
+      },
+      {
+        "word": "length",
+        "trans": "n. 长度，长；时间的长短；（语）音长",
+        "phonetic": "[leŋθ]",
+        "tags": "android",
+        "progress": "-1"
+      },
+      {
+        "word": "machine",
+        "trans": "n. 机械，机器；机构；机械般工作的人 
 vt. 用机器制造 
 n. (Machine)人名；(意)马基内",
-            "phonetic":"[mə'ʃiːn]",
-            "tags":"android",
-            "progress":"-1"
-        },
-        {
-            "word":"array",
-            "trans":"n. 数组，阵列；排列，列阵；大批，一系列；衣服 
+        "phonetic": "[mə'ʃiːn]",
+        "tags": "android",
+        "progress": "-1"
+      },
+      {
+        "word": "array",
+        "trans": "n. 数组，阵列；排列，列阵；大批，一系列；衣服 
 vt. 排列，部署；打扮",
-            "phonetic":"[ə'reɪ]",
-            "tags":"android",
-            "progress":"-1"
-        },
-        {
-            "word":"exclude",
-            "trans":"vt. 排除；排斥；拒绝接纳；逐出",
-            "phonetic":"[ɪk'skluːd; ek-]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Instance",
-            "trans":"n. 实例；情况；建议;
+        "phonetic": "[ə'reɪ]",
+        "tags": "android",
+        "progress": "-1"
+      },
+      {
+        "word": "exclude",
+        "trans": "vt. 排除；排斥；拒绝接纳；逐出",
+        "phonetic": "[ɪk'skluːd; ek-]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Instance",
+        "trans": "n. 实例；情况；建议;
 vt. 举...为例",
-            "phonetic":"['ɪnst(ə)ns]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"method",
-            "trans":"n. 方法；条理；类函数;
+        "phonetic": "['ɪnst(ə)ns]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "method",
+        "trans": "n. 方法；条理；类函数;
 adj. 使用体验派表演方法的",
-            "phonetic":"['meθəd]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"analytics",
-            "trans":"n. [化学][数] 分析学；解析学",
-            "phonetic":"[ænə'lɪtɪks]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Cloud",
-            "trans":"n. 云；阴云；云状物；一大群；黑斑;
+        "phonetic": "['meθəd]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "analytics",
+        "trans": "n. [化学][数] 分析学；解析学",
+        "phonetic": "[ænə'lɪtɪks]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Cloud",
+        "trans": "n. 云；阴云；云状物；一大群；黑斑;
 vt. 使混乱；以云遮敝；使忧郁；玷污;
 vi. 阴沉；乌云密布;
 n. (Cloud)人名；(法)克卢；(英)克劳德",
-            "phonetic":"[klaʊd]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"cover",
-            "trans":"vt. 包括；采访，报导；涉及；行走（一段路程）；掩护；翻唱;
+        "phonetic": "[klaʊd]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "cover",
+        "trans": "vt. 包括；采访，报导；涉及；行走（一段路程）；掩护；翻唱;
 n. 封面，封皮；盖子；掩蔽物;幌子，借口;
 vi. 覆盖；代替；敷衍；给…投保；;
 n. (Cover)人名；(英)科弗；(意)科韦尔",
-            "phonetic":"['kʌvə]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"collections",
-            "trans":"n. 收集（collection的复数）；集合物件",
-            "phonetic":"[kə'lekʃn]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"config",
-            "trans":"n. 配置，布局；显示配置信息命令",
-            "phonetic":"[kən'fɪɡ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"choose",
-            "trans":"vt. 选择，决定;
+        "phonetic": "['kʌvə]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "collections",
+        "trans": "n. 收集（collection的复数）；集合物件",
+        "phonetic": "[kə'lekʃn]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "config",
+        "trans": "n. 配置，布局；显示配置信息命令",
+        "phonetic": "[kən'fɪɡ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "choose",
+        "trans": "vt. 选择，决定;
 vi. 选择，挑选",
-            "phonetic":"[tʃuːz]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"area",
-            "trans":"n. 区域，地区；面积；范围;
+        "phonetic": "[tʃuːz]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "area",
+        "trans": "n. 区域，地区；面积；范围;
 n. (Area)人名；(西)阿雷亚",
-            "phonetic":"['eərɪə]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Resources",
-            "trans":"n. [计][环境] 资源；物力（resource的复数）;
+        "phonetic": "['eərɪə]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Resources",
+        "trans": "n. [计][环境] 资源；物力（resource的复数）;
 v. 向…提供资金（resource的第三人称单数）",
-            "phonetic":"[rɪˈsɔːsiz]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"query",
-            "trans":"n. 疑问，质问；疑问号 ；[计] 查询;
+        "phonetic": "[rɪˈsɔːsiz]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "query",
+        "trans": "n. 疑问，质问；疑问号 ；[计] 查询;
 vt. 询问；对……表示疑问;
 vi. 询问；表示怀疑",
-            "phonetic":"['kwɪərɪ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"measure",
-            "trans":"n. 测量；措施；程度；尺寸;
+        "phonetic": "['kwɪərɪ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "measure",
+        "trans": "n. 测量；措施；程度；尺寸;
 vt. 测量；估量；权衡;
 vi. 测量；估量",
-            "phonetic":"['meʒə]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"region",
-            "trans":"n. 地区；范围；部位",
-            "phonetic":"['riːdʒ(ə)n]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Material",
-            "trans":"adj. 重要的；物质的，实质性的；肉体的;
+        "phonetic": "['meʒə]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "region",
+        "trans": "n. 地区；范围；部位",
+        "phonetic": "['riːdʒ(ə)n]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Material",
+        "trans": "adj. 重要的；物质的，实质性的；肉体的;
 n. 材料，原料；物资；布料",
-            "phonetic":"[mə'tɪərɪəl]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Design",
-            "trans":"vt. 设计；计划；构思;
+        "phonetic": "[mə'tɪərɪəl]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Design",
+        "trans": "vt. 设计；计划；构思;
 n. 设计；图案;
 vi. 设计",
-            "phonetic":"[dɪ'zaɪn]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Presenter",
-            "trans":"n. 提出者；推荐者；赠送者；任命者",
-            "phonetic":"[prɪ'zentə]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Hybrid",
-            "trans":"n. 杂种，混血儿；混合物;
+        "phonetic": "[dɪ'zaɪn]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Presenter",
+        "trans": "n. 提出者；推荐者；赠送者；任命者",
+        "phonetic": "[prɪ'zentə]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Hybrid",
+        "trans": "n. 杂种，混血儿；混合物;
 adj. 混合的；杂种的",
-            "phonetic":"['haɪbrɪd]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Restful",
-            "trans":"adj. 宁静的；安静的；给人休息的",
-            "phonetic":"['res(t)fʊl; -f(ə)l]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Mosaic",
-            "trans":"n. 全球最早一款可以显示图片的浏览器名称;
+        "phonetic": "['haɪbrɪd]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Restful",
+        "trans": "adj. 宁静的；安静的；给人休息的",
+        "phonetic": "['res(t)fʊl; -f(ə)l]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Mosaic",
+        "trans": "n. 全球最早一款可以显示图片的浏览器名称;
 n. 马赛克；镶嵌；镶嵌细工",
-            "phonetic":"[mə(ʊ)'zeɪɪk]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"Accounts",
-            "trans":"账号",
-            "phonetic":"[ə'kaʊnt]",
-            "tags":"test",
-            "progress":"1"
-        },
-        {
-            "word":"revert",
-            "trans":"vi. 回复；重提；返祖遗传；归还
+        "phonetic": "[mə(ʊ)'zeɪɪk]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "Accounts",
+        "trans": "账号",
+        "phonetic": "[ə'kaʊnt]",
+        "tags": "test",
+        "progress": "1"
+      },
+      {
+        "word": "revert",
+        "trans": "vi. 回复；重提；返祖遗传；归还
 
 vt. 使回复原状
 
 n. 恢复原状者
 
 n. (Revert)人名；(西)雷韦特；(法)勒韦尔",
-            "phonetic":"[rɪ'vɜːt]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"History",
-            "trans":"n. 历史，历史学；历史记录；来历",
-            "phonetic":"['hɪst(ə)rɪ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"merge",
-            "trans":"vt. 合并；使合并；吞没
+        "phonetic": "[rɪ'vɜːt]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "History",
+        "trans": "n. 历史，历史学；历史记录；来历",
+        "phonetic": "['hɪst(ə)rɪ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "merge",
+        "trans": "vt. 合并；使合并；吞没
 
 vi. 合并；融合
 
 n. (Merge)人名；(意)梅尔杰",
-            "phonetic":"[mɜːdʒ]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"continue",
-            "trans":"vi. 继续，延续；仍旧，连续
+        "phonetic": "[mɜːdʒ]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "continue",
+        "trans": "vi. 继续，延续；仍旧，连续
 
 vt. 继续说…；使…继续；使…延长",
-            "phonetic":"[kən'tɪnjuː]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"cancel",
-            "trans":"vt. 取消；删去
+        "phonetic": "[kən'tɪnjuː]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "cancel",
+        "trans": "vt. 取消；删去
 
 vi. 取消；相互抵消
 
@@ -1567,36 +1561,56 @@ vi. 取消，撤销
 n. 取消，撤销
 
 n. (Cancel)人名；(法)康塞尔",
-            "phonetic":"['kæns(ə)l]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"profile",
-            "trans":"n. 侧面；轮廓；外形；剖面；简况
+        "phonetic": "['kæns(ə)l]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "profile",
+        "trans": "n. 侧面；轮廓；外形；剖面；简况
 
 vt. 描…的轮廓；扼要描述
 
 vi. 给出轮廓",
-            "phonetic":"['prəʊfaɪl]",
-            "tags":"android",
-            "progress":"1"
-        },
-        {
-            "word":"trans",
-            "trans":"abbr. 翻译（translate）;
+        "phonetic": "['prəʊfaɪl]",
+        "tags": "android",
+        "progress": "1"
+      },
+      {
+        "word": "trans",
+        "trans": "abbr. 翻译（translate）;
 pref. 表“横穿”；表“进入”;
 n. 传动装置；变速箱",
-            "phonetic":"[trɑːnz]",
-            "tags":"",
-            "progress":"1"
-        },
-        {
-            "word":"Description",
-            "trans":"n. 描述，描写；类型；说明书",
-            "phonetic":"[dɪ'skrɪpʃ(ə)n]",
-            "tags":"",
-            "progress":"1"
-        }
-    ]
+        "phonetic": "[trɑːnz]",
+        "progress": "1"
+      },
+      {
+        "word": "Description",
+        "trans": "n. 描述，描写；类型；说明书",
+        "phonetic": "[dɪ'skrɪpʃ(ə)n]",
+        "progress": "1"
+      },
+      {
+        "word": "abnormal",
+        "trans": "adj. 反常的，不规则的；变态的",
+        "phonetic": "[æb'nɔːml]",
+        "progress": "1"
+      },
+      {
+        "word": "batch",
+        "trans": "n. 一批；一炉；一次所制之量;
+vt. 分批处理;
+n. (Batch)人名；(英)巴奇",
+        "phonetic": "[bætʃ]",
+        "progress": "1"
+      },
+      {
+        "word": "contain",
+        "trans": "vt. 包含；控制；容纳；牵制（敌军）;
+vi. 含有；自制",
+        "phonetic": "[kən'teɪn]",
+        "progress": "1"
+      }
+    ]
+  }
 }
